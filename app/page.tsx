@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Evidence } from './evidence';
 import { Film } from './film';
 
@@ -12,7 +13,7 @@ export default function Home() {
   <header className="site-header" id="top">
    <a className="wordmark" href="#top" aria-label="X couture ページの先頭">X<span>couture</span><span className="wordmark-dot">.</span></a>
    <span className="header-caption">PORTFOLIO / CASE STUDY</span>
-   <a className="header-link" href="#contributions">私の取り組み <span aria-hidden="true">↘</span></a>
+   <Link className="header-link" href="/knitted-vj-system">02 — Knitted VJ <span aria-hidden="true">↗</span></Link>
   </header>
   <main>
    <section className="hero wrap" aria-labelledby="project-title">
@@ -52,6 +53,6 @@ export default function Home() {
    <section className="output-section" id="output"><div className="wrap"><div className="output-heading"><Label n="06">OUTPUT</Label><div><p className="english-heading">From digital.<br/><em>To expression.</em></p><h2>デジタルファッションを、届ける。</h2></div></div><div className="output-intro"><span className="eyebrow">01 / COLLABORATION</span><div><h3>yoshiokubo × X couture</h3><p>Rakuten Fashion Week TOKYO 2022 A/Wにおいて、X coutureとして3DCG・画像合成などの技術を提供しました。</p></div></div><Film/><div className="output-caption"><span>Rakuten Fashion Week TOKYO 2022 A/W</span><a href="https://rakutenfashionweektokyo.com/jp/brands/detail/yoshio-kubo/" target="_blank" rel="noreferrer">公式ブランドページ <span aria-hidden="true">↗</span></a></div><figure className="fashion-week-team"><a className="team-photo-link" href="/assets/fashion-week-team.png" target="_blank" rel="noreferrer" aria-label="Rakuten Fashion Weekのチーム写真を拡大"><img src="/assets/fashion-week-team.png" width="1986" height="1478" loading="lazy" alt="Rakuten Fashion Week TOKYOでのチーム集合写真"/></a><Caption no="09">Rakuten Fashion Week TOKYO 2022 A/Wでのチーム集合写真。</Caption></figure><div className="service-output"><div><span className="eyebrow">02 / DIGITAL FASHION SERVICE</span><h3>自分の写真で、<br/>デジタルの衣服を着る。</h3><p>購入者の写真にデジタルドレスを合成し、デジタルファッションを身にまとうビジュアルとして提供しました。</p><span className="service-caption">写真 × 3DCG × 画像合成</span></div><figure><img src="/assets/compositing.png" width="2258" height="1244" loading="lazy" alt="人物写真にデジタルドレスを合成するPhotoshopの制作画面"/><Caption no="10">自社サービスに関連する画像合成の制作工程。チーム制作。</Caption></figure></div></div></section>
    <section className="reflection wrap section-grid section-space" id="reflection"><Label n="07">REFLECTION</Label><div><h2>制作を理解し、<br/>協働する環境を考える。</h2><p className="body-copy">制作を前進させるには、スケジュールだけでなく、メンバーが役割を把握し、学び、課題を共有できる環境を整える必要があると学びました。</p><p className="body-copy">また、自ら制作に触れることで、作業の難しさを具体的に理解する機会を得ました。仕組みを考えることと、現場で手を動かすこと。その両方から、チームの制作を支える経験になりました。</p><div className="reflection-line">Designing the conditions<br/><em>for a creative team to move.</em></div></div></section>
    <section className="credits wrap section-grid"><Label n="08">ROLE / CREDITS</Label><div><div className="credits-heading"><h2>私の担当</h2><span>CGインターンチーム10人のPM</span></div><ul>{roles.map((role,i)=><li key={role}><span>{String(i+1).padStart(2,'0')}</span>{role}</li>)}</ul><p className="credit-note">掲載する作品・映像はチームによる成果です。Blender・Photoshopの画面はチームの制作工程として掲載し、私自身の制作支援については活動報告に基づいて記載しています。</p></div></section>
-  </main><footer className="wrap"><a className="footer-title" href="#top">X <em>couture</em><span aria-hidden="true">↑</span></a><div><span>VIRTUAL FASHION / 2021–2022</span><a href="#top">ページの先頭へ ↑</a></div></footer>
+  <section className="project-switch wrap"><span className="eyebrow">NEXT PROJECT / 02</span><Link href="/knitted-vj-system"><span>Knitted <em>VJ System</em></span><span aria-hidden="true">↗</span></Link><p>計算機に、人間のやわらかさを。<br/>構想からTOKYO NODEでの本番運用まで、約1週間。</p></section></main><footer className="wrap"><a className="footer-title" href="#top">X <em>couture</em><span aria-hidden="true">↑</span></a><div><span>VIRTUAL FASHION / 2021–2022</span><a href="#top">ページの先頭へ ↑</a></div></footer>
  </>;
 }
