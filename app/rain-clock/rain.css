@@ -1,0 +1,3 @@
+.rain-case h1{font-family:var(--serif);font-size:clamp(48px,7vw,104px);letter-spacing:.04em;line-height:1.2}.rain-hero{max-width:1050px;margin-inline:auto}.rain-hero img,.rain-detail img{border:1px solid var(--border);height:auto}.rain-case .rain-followup{margin-top:16px}.rain-detail{max-width:860px;margin-inline:auto}.rain-case .wave-exhibition-heading p{max-width:760px}.rain-case .metadata{grid-template-columns:1fr 2fr 1fr 1fr}@media(max-width:700px){.rain-case .metadata{grid-template-columns:1fr 1fr}.rain-case .wave-tagline{max-width:290px}}
+
+.rain-hero{max-width:none}.rain-hero>a{display:block;aspect-ratio:2.2;overflow:hidden}.rain-hero>a img{height:100%;object-fit:cover;object-position:center 52%;border:0}@media(max-width:700px){.rain-hero>a{aspect-ratio:4/3}}

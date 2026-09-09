@@ -1,0 +1,13 @@
+import { ProjectNav } from '../project-nav';
+import type { Metadata } from 'next';
+import '../ryusei-wave/wave.css';
+import './rain.css';
+export const dynamic = 'force-static';
+export const metadata: Metadata = {title:'雨粒時計 — Web Experiment',description:'雨が届くまでの時間で、空との距離を考える。雨粒の落下を時計に見立てたWebプロトタイプ。'};
+export default function RainClock(){return <div className="wave-case rain-case">
+<a className="skip" href="#overview">本文へ移動</a>
+<header className="site-header" id="top"><a className="wordmark" href="/">Portfolio<span className="wordmark-dot">.</span></a><span className="header-caption">PORTFOLIO / EXPERIMENT 05</span><a className="header-link" href="/summer">06 — 夏の存在証明 ↗</a></header>
+<main><section className="hero wrap"><div className="eyebrow hero-eyebrow"><span>PERSONAL PROJECT / WEB EXPERIMENT</span><span>2022</span></div><div className="title-row"><h1>雨粒時計</h1><p className="wave-tagline">雨が届くまでの時間で、空との距離を考える。</p></div><figure className="rain-hero"><a href="/assets/rain-clock/hero-leaf.png" target="_blank" rel="noreferrer" aria-label="雨粒時計のビジュアルを拡大"><img src="/assets/rain-clock/hero-leaf.png" width={1794} height={1790} alt="葉の上の水滴に、白い円と水平線を重ねた雨粒時計のビジュアル" fetchPriority="high"/></a><figcaption>雨粒時計のために制作したビジュアル。</figcaption></figure></section>
+<section className="wrap wave-about" id="overview"><p className="body-copy">傘を忘れ、雨に当たりながら帰った日。体に触れる雨粒を見て、遠くにある空が近く感じられました。その経験から、雨粒が空から地上へ届くまでの時間を、時計に見立てたWebプロトタイプを制作しました。</p><p className="body-copy rain-followup">東京の雲から地上までの高さを想定し、雨粒の大きさとあわせて、落下にかかる時間の表示を試しました。</p><dl className="metadata"><div><dt>DATE</dt><dd>2022.06</dd></div><div><dt>ROLE</dt><dd>個人制作／リサーチ・UI/UXデザイン</dd></div><div><dt>TOOLS</dt><dd>STUDIO</dd></div><div><dt>TYPE</dt><dd>Web Prototype</dd></div></dl></section>
+<section className="wrap wave-exhibition"><div className="wave-exhibition-heading"><span className="eyebrow">PROTOTYPE</span><p>雨粒の落下を、時間の経過として眺める。雨が届くまでの時間を通して、普段は意識しない空との距離を捉えるきっかけを目指しました。</p></div><figure className="rain-detail"><a href="/assets/rain-clock/02.png" target="_blank" rel="noreferrer" aria-label="条件の説明を開いた画面を拡大"><img src="/assets/rain-clock/02.png" width={3210} height={2056} alt="右側に説明を開いた雨粒時計。東京の雲から地上までの高さを約1500メートルとする制作時の設定を表示" loading="lazy"/></a><figcaption>説明を開いた画面。制作時に設定した高さや表示条件を掲載しています。</figcaption></figure></section><section className="project-switch wrap"><span className="eyebrow">NEXT PROJECT / 06</span><a href="/summer"><span>夏の存在証明</span><span aria-hidden="true">↗</span></a><p>音を重ねて、自分の夏をつくる。</p></section><ProjectNav current="/rain-clock"/></main>
+<footer className="wrap"><a className="footer-title" href="/ryusei-wave">Ryusei Wave<span aria-hidden="true">↗</span></a><div><span>PREVIOUS PROJECT / 04</span><a href="#top">ページの先頭へ ↑</a></div></footer></div>}

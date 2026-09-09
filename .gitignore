@@ -36,3 +36,9 @@ next-env.d.ts
 /.wrangler/
 /outputs/
 /work/
+
+# local editorial drafts and TypeScript cache
+/EDITORIAL_NOTES.md
+/LENS_CONTENT_DRAFT.md
+/LENS_CONTENT_DRAFT_V2.md
+/tsconfig.tsbuildinfo
