@@ -33,9 +33,18 @@ export default function FocusOn() {
    </section>
    <section className="overview wrap section-grid" id="overview" aria-label="プロジェクト概要">
     <Label n="01">OVERVIEW</Label>
-    <div><p className="intro">日々の疲れを記録し、信頼できる相手へ共有するアプリ「Focus on」のUX/UI改善を担当しました。</p><p className="body-copy">事前調査と既存ユーザーへのヒアリングをもとに、代表と機能の優先順位を整理。共有を始めやすくする機能を優先し、サイトマップ、画面遷移、UIとヒアリング用プロトタイプを制作しました。共有を支える機能は実装済みです。</p>
+    <div><p className="intro">日々の疲れを記録し、信頼できる相手へ共有するアプリ「Focus on」のUX/UI改善を担当しました。</p><p className="body-copy">事前調査と既存ユーザーへのヒアリングから、疲れを認識・言語化することに加え、周囲へ共有することにも大きなハードルがあると整理。代表と機能をA・B・Dに分類し、共有を始めるための機能群を優先度Aとして設計しました。優先度Aの機能群は実装済みです。</p>
     <div className="focus-award"><span className="eyebrow">AWARD</span><a href="https://cvg.nikkan.co.jp/osaka/oosaka_backnumber_2022" target="_blank" rel="noreferrer">第24回キャンパスベンチャーグランプリ大阪<br /><strong>最優秀賞受賞</strong> <span aria-hidden="true">↗</span></a><p>「発達障害児者支援アプリFocus on」の事業プランとしてチームで受賞。</p></div>
     <dl className="metadata"><div><dt>PERIOD</dt><dd>2023.06–12</dd></div><div><dt>ROLE</dt><dd>ユーザーリサーチ<br />UX・UI設計</dd></div><div><dt>RESEARCH</dt><dd>既存ユーザーへの<br />ヒアリング</dd></div><div><dt>STATUS</dt><dd>共有を支える機能を実装済み<br />掲載資料は設計時のもの</dd></div></dl></div>
+   </section>
+   <section className="focus-logic wrap" aria-labelledby="focus-logic-title">
+    <div className="focus-logic-heading"><span className="eyebrow">DECISION FLOW</span><h2 id="focus-logic-title">調査から、優先順位と実装へ。</h2></div>
+    <ol>
+     <li><span>01 / 調査</span><strong>疲れを伝えるまでの行動を調べる</strong><p>事前調査と既存ユーザーへのヒアリングから、利用状況と困りごとを整理。</p></li>
+     <li><span>02 / 発見</span><strong>「共有」まで進めないハードルを特定</strong><p>疲れに気づき、言葉にし、相手へ伝えるまでの各段階に負担があると捉えた。</p></li>
+     <li><span>03 / 判断</span><strong>共有を支える機能群を、優先度Aに</strong><p>代表と機能をA・B・Dに分類。短い投稿や共有相手の選択などを優先した。</p></li>
+     <li className="focus-logic-result"><span>04 / 結果</span><strong>優先度Aの機能群を実装</strong><p>私はリサーチ、優先順位づけ、サイトマップ、UIとプロトタイプを担当。コード実装はチームが担当した。</p></li>
+    </ol>
    </section>
    <nav className="chapter-nav wrap" aria-label="ページ内の目次"><span className="eyebrow">IN THIS PROJECT</span><div>{chapters.map(([id,title],i)=><a key={id} href={'#'+id}>{String(i+1).padStart(2,'0')} {title}</a>)}</div></nav>
    <section className="focus-direction" id="direction"><div className="wrap section-grid"><Label n="02">PROJECT AIM</Label><div>
@@ -72,8 +81,8 @@ export default function FocusOn() {
      <Evidence caption="ヒアリング用プロトタイプ。機能の説明を添え、画面を使って意見を聞くために制作。"><img src={base+'hearing-prototype.png'} alt="トップ、共有、ログ、カレンダーの画面と機能説明" width="1988" height="1072" loading="lazy" /></Evidence>
     </div>
     <div className="focus-research-proof">
-     <h3>共有のハードルを下げる機能を優先。</h3>
-     <p className="body-copy">疲れを認識するだけでなく、言葉にして周囲へ伝えることにもハードルがあると整理しました。今回の改善では、十分に説明できなくても共有を始められることを重視し、代表と機能をA・B・Dに分類。記録・投稿・共有に関わる機能を優先しました。資料では、この優先する機能群をAとして整理しています。</p>
+     <h3>共有を支える機能群を、優先度Aに。</h3>
+     <p className="body-copy">調査から、疲れを認識するだけでなく、言葉にして周囲へ伝えることにもハードルがあると整理しました。そこで、十分に説明できなくても共有を始められることを重視。代表と機能をA・B・Dに分類し、短い記録・投稿・共有に関わる機能群を優先度Aとしました。</p>
      <Evidence caption="共有を重視して機能の優先順位を整理し、サイトマップへ展開。資料のAは実装済みの機能群。"><Crop src="requirements.png" alt="A・B・Dに分類した機能の優先順位" box={[176,463,778,510]} /></Evidence>
     </div>
    </div></section>
@@ -108,7 +117,7 @@ export default function FocusOn() {
     </div></article>
    </section>
    <section className="output-section focus-output" id="output"><div className="wrap"><div className="section-grid"><Label n="05">OUTPUT</Label><div><h2>個別の改善を、<br />アプリ全体の画面と導線へつなぐ。</h2><p className="body-copy">入力・振り返り・共有の改善を、トップ、ログ、カレンダー、記録、共有、アラートなどの画面へ展開。画面構成と遷移フローを整理し、プロトタイプとしてまとめました。</p></div></div><Evidence caption="主要画面の一覧。記録から共有までの一連の体験を設計。"><Crop src="screens.png" alt="基本登録、ホーム、カレンダー、ログ、記録、アラートの主要画面一覧" box={[551,479,1421,526]} /></Evidence><details className="focus-details"><summary>画面構成と機能要件の資料を見る</summary><Evidence caption="機能要件を画面構成と遷移に落とし込んだサイトマップ。"><Crop src="requirements.png" alt="アプリのサイトマップ" box={[1040,444,864,683]} /></Evidence><a className="focus-source-link" href={base+'annotated-prototype.png'} target="_blank" rel="noreferrer">機能要件を記載したプロトタイプ資料を開く ↗</a></details></div></section>
-   <section className="wrap section-grid focus-section" id="validation"><Label n="06">STATUS / SCOPE</Label><div><h2>共有のハードルを下げる機能を実装。</h2><p className="body-copy">調査と代表との対話を踏まえ、状態を十分に説明できなくても周囲に伝えられることを重視。記録・投稿・共有を支える機能を優先して設計し、実装につながりました。私の担当は、事前調査、ヒアリング、機能の検討と優先順位づけ、サイトマップ・UI・プロトタイプの制作です。</p><p className="focus-note">掲載画像は設計時の資料です。現在の実装画面との完全一致や、B・Dの実装状況を示すものではありません。また、実装後の利用率・継続率や心理的な効果の検証結果は掲載していません。</p></div></section>
+   <section className="wrap section-grid focus-section" id="validation"><Label n="06">STATUS / SCOPE</Label><div><h2>優先度Aの機能群を、実装へ。</h2><p className="body-copy">調査で見つけた共有のハードルをもとに、状態を十分に説明できなくても周囲へ伝えられる機能群を優先度Aとして設計。短い記録・投稿・共有を支える機能は、チームによって実装されました。私は、事前調査、ヒアリング、機能の検討と優先順位づけ、サイトマップ・UI・プロトタイプの制作を担当しています。</p><p className="focus-note">掲載画像は設計時の資料です。現在の実装画面との完全一致や、B・Dの実装状況を示すものではありません。また、実装後の利用率・継続率や心理的な効果の検証結果は掲載していません。</p></div></section>
    <section className="wrap section-grid focus-section focus-reflection" id="reflection"><Label n="07">REFLECTION</Label><div><h2>ユーザーが表現できる範囲から、<br />体験を組み立てる。</h2><p className="body-copy">詳細な記録を求めることが、必ずしも使いやすさにつながるわけではありません。今回のリサーチでは、言語化の難しさに加え、共有へのためらいや反応を待つ不安まで捉え、設計で扱う必要があると考えました。</p><p className="body-copy">入力方法、情報の見せ方、共有相手の選択、共有後の応答を一続きの体験として設計したことが、このプロジェクトでの私の取り組みです。</p></div></section>
    <section className="credits wrap section-grid"><Label n="08">ROLE / CREDITS</Label><div><div className="credits-heading"><h2>私の担当</h2><span>UX/UI DESIGNER</span></div><ul>{['文献・ユーザー投稿の分析','既存ユーザーへのヒアリング','課題・インサイトの整理','カスタマージャーニーの作成','機能提案・優先順位づけ','サイトマップ・画面遷移の設計','主要画面のUI制作','機能・UIのヒアリング'].map((role,i)=><li key={role}><span>{String(i+1).padStart(2,'0')}</span>{role}</li>)}</ul><p className="credit-note">機能の優先順位は代表と共同で検討しました。コード実装は私の担当範囲には含めていません。</p></div></section>
    <ProjectNav current="/focus-on" />

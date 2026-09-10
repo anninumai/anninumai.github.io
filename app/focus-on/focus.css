@@ -12,6 +12,19 @@
 .focus-intro{max-width:920px;font-size:17px;line-height:1.95;margin-top:25px}
 .focus-intro p+p{margin-top:12px}.focus-intro strong{font-weight:600}
 .focus-case .metadata{margin-top:30px}
+.focus-logic{padding:58px 0 72px;border-top:1px solid var(--border)}
+.focus-logic-heading{display:flex;align-items:baseline;justify-content:space-between;gap:24px;margin-bottom:32px}
+.focus-logic-heading .eyebrow{color:var(--primary)}
+.focus-logic-heading h2{font-size:clamp(24px,3vw,42px)}
+.focus-logic ol{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid var(--border)}
+.focus-logic li{position:relative;min-height:250px;padding:24px 25px 28px;border-right:1px solid var(--border);background:#fff}
+.focus-logic li:last-child{border-right:0}
+.focus-logic li:not(:last-child)::after{content:'→';position:absolute;right:-14px;top:24px;z-index:1;display:grid;place-items:center;width:27px;height:27px;border-radius:50%;background:#fff;border:1px solid var(--border);color:var(--primary);font-size:14px}
+.focus-logic li>span{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--primary);margin-bottom:48px}
+.focus-logic li>strong{display:block;font-size:17px;line-height:1.65;font-weight:600}
+.focus-logic li>p{font-size:13px;line-height:1.85;color:#65716b;margin-top:14px}
+.focus-logic .focus-logic-result{background:var(--primary);color:#fff}
+.focus-logic .focus-logic-result>span,.focus-logic .focus-logic-result>p{color:#d9e9e1}
 .focus-hero-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:38px}
 .focus-evidence{margin:30px 0 0;min-width:0}
 .focus-evidence>img{display:block;width:100%;height:auto}
@@ -80,6 +93,8 @@
 .focus-case a:focus-visible,.focus-case summary:focus-visible{outline:3px solid #28684f;outline-offset:5px}
 @media(max-width:1000px){.focus-stage{height:290px;padding:16px}.focus-findings>div{grid-template-columns:25px 125px 1fr}.focus-share-pair{gap:30px}.focus-compare{gap:12px}}
 @media(max-width:760px){.focus-section{padding-block:55px}.focus-direction,.focus-output{padding-block:55px}.focus-case h1{font-size:72px}.focus-intro{font-size:15px}.focus-hero-grid{grid-template-columns:1fr;gap:25px}.focus-stage{height:320px}.focus-stage .focus-crop{max-width:290px}.focus-findings>div{grid-template-columns:26px 1fr;gap:8px}.focus-findings p{grid-column:2}.focus-design-heading{display:block;margin-bottom:35px}.focus-design-heading h2{margin-top:25px}.focus-input-layout{grid-template-columns:1fr;gap:25px}.focus-input-layout .focus-evidence{margin-inline:auto;max-width:350px}.focus-design-item{padding-block:35px}.focus-design-item+.focus-design-item{margin-top:15px}.focus-compare{grid-template-columns:1fr;max-width:360px;margin-inline:auto}.focus-share-pair{gap:20px}.focus-alert-grid{grid-template-columns:repeat(2,1fr);gap:20px}.focus-current{padding:22px}.focus-principles li{gap:15px;font-size:14px}.focus-feedback{padding:22px}}
+@media(max-width:900px){.focus-logic ol{grid-template-columns:1fr 1fr}.focus-logic li{min-height:220px}.focus-logic li:nth-child(2){border-right:0}.focus-logic li:nth-child(-n+2){border-bottom:1px solid var(--border)}.focus-logic li:nth-child(2)::after{content:'↓';right:24px;top:auto;bottom:-14px}.focus-logic li:nth-child(3)::after{content:'→'}}
+@media(max-width:560px){.focus-logic{padding:45px 0 55px}.focus-logic-heading{display:block}.focus-logic-heading h2{margin-top:18px}.focus-logic ol{grid-template-columns:1fr}.focus-logic li{min-height:0;border-right:0;border-bottom:1px solid var(--border);padding:22px}.focus-logic li:last-child{border-bottom:0}.focus-logic li>span{margin-bottom:24px}.focus-logic li:not(:last-child)::after,.focus-logic li:nth-child(2)::after,.focus-logic li:nth-child(3)::after{content:'↓';right:22px;top:auto;bottom:-14px}}
 @media(prefers-reduced-motion:reduce){.focus-case *{animation:none!important;transition:none!important}}
 .focus-interview-method{margin:24px 0;padding-left:1.3em;font-size:16px;line-height:1.9}
 .focus-interview-method li+li{margin-top:10px}
