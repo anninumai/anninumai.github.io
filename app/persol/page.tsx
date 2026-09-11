@@ -32,9 +32,9 @@ export default function PersolCase() {
   return <div className="persol-case">
     <a className="skip" href="#overview">本文へ移動</a>
     <header className="site-header" id="top">
-      <a className="wordmark persol-wordmark" href="#top" aria-label="PERSOLケーススタディの先頭">PERSOL<span>AI CAREER</span><span className="wordmark-dot">.</span></a>
+      <a className="wordmark" href="/" aria-label="作品一覧へ戻る">Portfolio<span className="wordmark-dot">.</span></a>
       <span className="header-caption">PORTFOLIO / CASE STUDY</span>
-      <a className="header-link" href="/">X couture <span aria-hidden="true">↗</span></a>
+      <a className="header-link" href="/x-couture">X couture <span aria-hidden="true">↗</span></a>
     </header>
 
     <main>
