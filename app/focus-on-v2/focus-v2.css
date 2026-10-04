@@ -153,12 +153,17 @@
 
 .focus-v2-character-gallery {
   display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
   margin-top: 42px;
 }
 
 .focus-v2-character-gallery .focus-v2-figure {
   margin-top: 0;
+}
+
+.focus-v2-character-gallery .focus-v2-figure:last-child {
+  grid-column: 1 / -1;
 }
 
 .focus-v2-character-gallery .focus-v2-figure > a {
@@ -302,8 +307,8 @@
     font-size: 15px;
   }
 
-  .focus-v2-character-visual {
-    min-height: 390px;
+  .focus-v2-character-gallery {
+    grid-template-columns: 1fr;
   }
 
   .focus-v2-ux-scope {
