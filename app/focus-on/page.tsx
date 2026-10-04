@@ -34,7 +34,7 @@ export default function FocusOn() {
    <section className="overview wrap section-grid" id="overview" aria-label="プロジェクト概要">
     <Label n="01">OVERVIEW</Label>
     <div><p className="intro">日々の疲れを記録し、信頼できる相手へ共有するアプリ「Focus on」のUX/UI改善を担当しました。</p><p className="body-copy">事前調査と既存ユーザーへのヒアリングから、疲れを認識・言語化することに加え、周囲へ共有することにも大きなハードルがあると整理。代表と機能をA・B・Dに分類し、共有を始めるための機能群を優先度Aとして設計しました。優先度Aの機能群は実装済みです。</p>
-    <div className="focus-award"><span className="eyebrow">AWARD</span><a href="https://cvg.nikkan.co.jp/osaka/oosaka_backnumber_2022" target="_blank" rel="noreferrer">第24回キャンパスベンチャーグランプリ大阪<br /><strong>最優秀賞受賞</strong> <span aria-hidden="true">↗</span></a><p>「発達障害児者支援アプリFocus on」の事業プランとしてチームで受賞。</p></div>
+    <div className="focus-award"><span className="eyebrow">AWARD</span><a href="https://cvg.nikkan.co.jp/cvg_osaka_backnumber" target="_blank" rel="noreferrer">第24回キャンパスベンチャーグランプリ大阪<br /><strong>最優秀賞受賞</strong> <span aria-hidden="true">↗</span></a><p>「発達障害児者支援アプリFocus on」の事業プランとしてチームで受賞。</p></div>
     <dl className="metadata"><div><dt>PERIOD</dt><dd>2023.06–12</dd></div><div><dt>ROLE</dt><dd>ユーザーリサーチ<br />UX・UI設計</dd></div><div><dt>RESEARCH</dt><dd>既存ユーザーへの<br />ヒアリング</dd></div><div><dt>STATUS</dt><dd>共有を支える機能を実装済み<br />掲載資料は設計時のもの</dd></div></dl></div>
    </section>
    <section className="focus-logic wrap" aria-labelledby="focus-logic-title">

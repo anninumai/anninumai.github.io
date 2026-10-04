@@ -202,7 +202,7 @@ export default function FocusOnV2() {
                 「発達障害児者支援アプリFocus on」の事業プランとして、チームで第24回キャンパスベンチャーグランプリ大阪の<strong>最優秀賞</strong>を受賞しました。
               </p>
               <a
-                href="https://cvg.nikkan.co.jp/osaka/oosaka_backnumber_2022"
+                href="https://cvg.nikkan.co.jp/cvg_osaka_backnumber"
                 target="_blank"
                 rel="noreferrer"
               >
