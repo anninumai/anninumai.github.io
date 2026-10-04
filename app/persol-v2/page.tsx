@@ -27,6 +27,10 @@ const sizes: Record<string, [number, number]> = {
   'interview-states.png': [1948, 1930],
   'brand-system.png': [3140, 1006],
   'color-rationale.png': [1772, 1362],
+  'future-network.png': [1168, 1388],
+  'future-career-park.png': [1108, 1394],
+  'interviewer-hypotheses.png': [1918, 1008],
+  'interviewer-design-proposals.png': [2260, 2034],
 };
 
 function Label({ children }: { n: string; children: ReactNode }) {
@@ -176,6 +180,39 @@ export default function PersolV2() {
                 className="persol-v2-review"
               />
             </div>
+          </div>
+        </section>
+
+        <section className="wrap section-grid persol-v2-additional" id="additional-proposals">
+          <Label n="03">FUTURE VISION / AVATAR RESEARCH</Label>
+          <div>
+            <p className="body-copy">
+              面接画面のUI設計に加え、将来のサービス体験とAI面接官の表現についても、別軸で提案しました。将来の体験設計では、AIが転職活動を補助する存在から自律的な代理人へ発展した場合を想定し、タレント・ディスカバリー・ネットワークやAIエージェントによる転職フェアのコンセプトを構想。関係者とのレビューを経て、外部UXパートナーが具体的な体験とUX/UIへ展開しました。また、別のAI面接サービスでは、面接官アバターの外見と振る舞いについて論文や事例を調査し、人間型・ロボット型・抽象型が与える安心感や信頼感、属性バイアスに関する仮説を整理。複数のビジュアル案と、面接画面での見え方や展開イメージを提案しました。
+            </p>
+            <div className="persol-v2-proposal-pair">
+              <Photo
+                name="future-network.png"
+                alt="自律型タレント・ディスカバリー・ネットワークのコンセプト資料"
+                caption="将来の体験案：自律型タレント・ディスカバリー・ネットワーク。"
+              />
+              <Photo
+                name="future-career-park.png"
+                alt="AIエージェントによる転職フェアのコンセプト資料"
+                caption="将来の体験案：AIエージェントによる転職フェア。"
+              />
+            </div>
+            <Photo
+              name="interviewer-hypotheses.png"
+              alt="人間型、ロボット型、抽象型のAI面接官を比較した仮説資料"
+              caption="別のAI面接サービスで、アバター表現の3つの方向性を比較。"
+              className="persol-v2-research-evidence"
+            />
+            <Photo
+              name="interviewer-design-proposals.png"
+              alt="人間型3D、デフォルメ、ロボット、ドット、波形など、AI面接官のビジュアル提案一覧"
+              caption="リサーチをもとに制作したAI面接官のビジュアル案と展開イメージ。"
+              className="persol-v2-research-evidence"
+            />
           </div>
         </section>
 
