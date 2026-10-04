@@ -85,6 +85,7 @@ figcaption{font-size:11px;line-height:1.7;letter-spacing:.01em}
 .v2-shared-header{position:absolute;z-index:50;inset:0 0 auto;height:100px;padding:0 3vw;display:flex;align-items:center;background:transparent;border-bottom:0;color:#2d2a25;font-family:var(--serif);font-size:17px;line-height:1;letter-spacing:0}
 .v2-shared-header a:hover{color:inherit}
 .v2-shared-header>a{display:inline-flex;align-items:center}
+.v2-shared-header .v2-about-link{margin-left:auto;font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.12em}
 .v2-knit-wordmark{display:inline-flex;align-items:flex-start;gap:2px}
 .v2-knit-space{width:6px;flex:none}
 .v2-knit-letter{display:grid;grid-template-columns:repeat(5,2px);grid-template-rows:repeat(7,3px);gap:.75px}

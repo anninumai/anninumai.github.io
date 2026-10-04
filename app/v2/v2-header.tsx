@@ -41,6 +41,7 @@ export function V2Header({ reserveSpace = false }: { reserveSpace?: boolean }) {
         <Link href="/v2" aria-label="annin | Aino Kishimoto">
           <KnitPixelWordmark />
         </Link>
+        <Link className="v2-about-link" href="/v2/about">ABOUT</Link>
       </header>
       {reserveSpace ? <div className="v2-shared-header-space" aria-hidden="true" /> : null}
     </>
