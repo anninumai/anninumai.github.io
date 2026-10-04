@@ -15,40 +15,27 @@ export function KnitBackground() {
   const photoRef = useRef<HTMLDivElement>(null);
   const gradientCanvasRef = useRef<HTMLCanvasElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const motifCanvasRef = useRef<HTMLCanvasElement>(null);
   const cursorShadowRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     const gradientCanvas = gradientCanvasRef.current;
-    const motifCanvas = motifCanvasRef.current;
     const photo = photoRef.current;
-    if (!canvas || !gradientCanvas || !motifCanvas || !photo) return;
+    if (!canvas || !gradientCanvas || !photo) return;
     const context = canvas.getContext('2d');
     const gradientContext = gradientCanvas.getContext('2d');
-    const motifContext = motifCanvas.getContext('2d');
-    if (!context || !gradientContext || !motifContext) return;
+    if (!context || !gradientContext) return;
     let resizeFrame = 0;
     let currentCamera = 0;
     let lastCursorCell = '';
     let lastShadowPosition: { x: number; y: number } | null = null;
     let lastShadowScale = 0;
-    let motifFrame = 0;
-    let lastMotifPaint = -Infinity;
+    let gradientFrame = 0;
     let lastGradientPaint = -Infinity;
-    let motifWidth = window.innerWidth;
-    let motifColumnGap = 1;
-    let motifRowGap = 1;
-    let motifRatio = 1;
+    let gradientColumnGap = 1;
+    let gradientRowGap = 1;
+    let gradientRatio = 1;
     const cursorShadowSource = document.createElement('canvas');
-    const motifTemplates: Array<Array<[number, number]>> = [
-      [[0, 0], [-1, 0], [1, 0], [0, -1], [0, 1], [-2, 0], [2, 0], [0, -2], [0, 2]],
-      [[0, -3], [-1, -2], [1, -2], [-2, -1], [2, -1], [-3, 0], [3, 0], [-2, 1], [2, 1], [-1, 2], [1, 2], [0, 3]],
-      [[0, 0], [0, -1], [0, 1], [-1, 0], [1, 0], [-2, -2], [2, -2], [-2, 2], [2, 2], [0, -3], [0, 3], [-3, 0], [3, 0]],
-      [[0, -3], [-1, -2], [1, -2], [-2, -1], [2, -1], [-3, 0], [3, 0], [-2, 1], [2, 1], [-1, 2], [1, 2], [0, 3], [0, 0]],
-    ];
-    const motifColors = ['#006fc7', '#f06480', '#36a978', '#7558c5'];
-    const motifAccents = ['#f3a400', '#006fc7', '#f06480', '#36a978'];
     const random = (seed: number) => {
       const value = Math.sin(seed * 12.9898 + 78.233) * 43758.5453;
       return value - Math.floor(value);
@@ -168,17 +155,17 @@ export function KnitBackground() {
 
     const paintMovingGradient = (time: number) => {
       const width = window.innerWidth;
-      const height = window.innerHeight + motifRowGap * 2;
-      const columnGap = motifColumnGap;
-      const rowGap = motifRowGap;
-      const ratio = motifRatio;
+      const height = window.innerHeight + gradientRowGap * 2;
+      const columnGap = gradientColumnGap;
+      const rowGap = gradientRowGap;
+      const ratio = gradientRatio;
       const stitchWidth = columnGap * 0.72;
       const stitchHeight = rowGap * 1.06;
       const paletteSteps = 12;
       const paths = Array.from({ length: paletteSteps }, () => new Path2D());
       const seconds = time * 0.001;
       const firstWorldRow = Math.floor(currentCamera / rowGap) - 1;
-      // Use world-space stitch coordinates, just like the sparkle motifs.
+      // Use world-space stitch coordinates shared with the knit texture.
       // A loop is either present or absent; changing the number of visible
       // loops creates the soft motion without tinting the whole photograph.
       const spatialScale = Math.max(width, 1);
@@ -224,100 +211,22 @@ export function KnitBackground() {
       }
     };
 
-    const resizeMotifCanvas = (width: number, columnGap: number, rowGap: number, ratio: number) => {
-      motifWidth = width;
-      motifColumnGap = columnGap;
-      motifRowGap = rowGap;
-      motifRatio = ratio;
-      motifCanvas.width = Math.round(width * ratio);
-      motifCanvas.height = Math.round(window.innerHeight * ratio);
-      motifCanvas.style.width = `${width}px`;
-      motifCanvas.style.height = `${window.innerHeight}px`;
-    };
-
-    const paintMotifs = (time: number) => {
-      const width = motifWidth;
-      const columnGap = motifColumnGap;
-      const rowGap = motifRowGap;
-      const ratio = motifRatio;
-      const height = window.innerHeight;
-      motifContext.setTransform(ratio, 0, 0, ratio, 0, 0);
-      motifContext.clearRect(0, 0, width, height);
-      motifContext.lineCap = 'round';
-      motifContext.lineJoin = 'round';
-      motifContext.lineWidth = Math.max(1.35, columnGap * 0.5);
-      const columnCount = width / columnGap;
-      const motifCount = Math.max(5, Math.round(width / 240));
-      const motifTileHeight = rowGap * 150;
-      const stitchWidth = columnGap * 0.72;
-      const stitchHeight = rowGap * 1.06;
-
-      for (let motif = 0; motif < motifCount; motif += 1) {
-        const period = 2600 + random(motif * 23 + 5) * 1800;
-        const shiftedTime = time + random(motif * 29 + 9) * period;
-        const cycle = Math.floor(shiftedTime / period);
-        const progress = (shiftedTime % period) / period;
-        if (progress >= 0.74) continue;
-        const fadeIn = Math.min(1, progress / 0.2);
-        const fadeOut = Math.min(1, (0.74 - progress) / 0.22);
-        const visiblePixelRatio = Math.min(fadeIn, fadeOut);
-        const seed = motif * 97 + cycle * 131 + 17;
-        const baseColumn = 8 + random(seed * 3) * Math.max(1, columnCount - 16);
-        const baseRow = Math.round(8 + random(seed * 7) * 134);
-        const template = motifTemplates[Math.floor(random(seed * 11) * motifTemplates.length)];
-        const spacing = random(seed * 13) > 0.72 ? 2 : 1;
-        const colorIndex = Math.floor(random(seed * 19) * motifColors.length);
-        const coreColor = motifColors[colorIndex];
-        const accentColor = motifAccents[colorIndex];
-        let screenBaseY = baseRow * rowGap - (currentCamera % motifTileHeight);
-        while (screenBaseY < -motifTileHeight * 0.25) screenBaseY += motifTileHeight;
-        while (screenBaseY > height + motifTileHeight * 0.25) screenBaseY -= motifTileHeight;
-        const copies = [screenBaseY - motifTileHeight, screenBaseY, screenBaseY + motifTileHeight];
-        motifContext.globalAlpha = 1;
-
-        for (const copyY of copies) {
-          if (copyY < -rowGap * 8 || copyY > height + rowGap * 8) continue;
-          for (let pixel = 0; pixel < template.length; pixel += 1) {
-            // Each knit loop is binary: fully coloured or absent. Different
-            // thresholds make the motif appear to dissolve softly as a whole.
-            const threshold = random(seed * 31 + pixel * 17 + 3);
-            if (threshold > visiblePixelRatio) continue;
-            const [offsetX, offsetY] = template[pixel];
-            const x = Math.round(baseColumn + offsetX * spacing) * columnGap;
-            const y = copyY + offsetY * spacing * rowGap;
-            const distance = Math.abs(offsetX) + Math.abs(offsetY);
-            motifContext.strokeStyle = distance >= 3 ? accentColor : coreColor;
-            motifContext.beginPath();
-            motifContext.moveTo(x - stitchWidth * 0.5, y - stitchHeight * 0.5);
-            motifContext.lineTo(x, y + stitchHeight * 0.5);
-            motifContext.lineTo(x + stitchWidth * 0.5, y - stitchHeight * 0.5);
-            motifContext.stroke();
-          }
-        }
-      }
-      motifContext.globalAlpha = 1;
-    };
-
-    const animateMotifs = (time: number) => {
+    const animateGradient = (time: number) => {
       if (document.hidden) {
-        motifFrame = 0;
+        gradientFrame = 0;
         return;
       }
       if (time - lastGradientPaint >= 90) {
         lastGradientPaint = time;
         paintMovingGradient(time);
       }
-      if (time - lastMotifPaint >= 32) {
-        lastMotifPaint = time;
-        paintMotifs(time);
-      }
-      motifFrame = requestAnimationFrame(animateMotifs);
+      gradientFrame = requestAnimationFrame(animateGradient);
     };
 
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     const onVisibilityChange = () => {
-      if (!document.hidden && !motifFrame && !reducedMotion.matches) {
-        motifFrame = requestAnimationFrame(animateMotifs);
+      if (!document.hidden && !gradientFrame && !reducedMotion.matches) {
+        gradientFrame = requestAnimationFrame(animateGradient);
       }
     };
 
@@ -367,9 +276,10 @@ export function KnitBackground() {
       context.lineWidth = Math.max(0.7, columnGap * 0.2);
       context.stroke(stitches);
       context.restore();
-      resizeMotifCanvas(width, columnGap, rowGap, ratio);
+      gradientColumnGap = columnGap;
+      gradientRowGap = rowGap;
+      gradientRatio = ratio;
       paintMovingGradient(performance.now());
-      paintMotifs(performance.now());
       positionTexture(currentCamera);
       if (lastShadowPosition) {
         drawCursorShadow(columnGap, rowGap);
@@ -390,7 +300,7 @@ export function KnitBackground() {
 
     draw();
     if (!reducedMotion.matches) {
-      motifFrame = requestAnimationFrame(animateMotifs);
+      gradientFrame = requestAnimationFrame(animateGradient);
     }
     document.addEventListener('visibilitychange', onVisibilityChange);
     window.addEventListener('resize', onResize);
@@ -399,7 +309,7 @@ export function KnitBackground() {
     document.documentElement.addEventListener('pointerleave', onPointerLeave);
     return () => {
       cancelAnimationFrame(resizeFrame);
-      cancelAnimationFrame(motifFrame);
+      cancelAnimationFrame(gradientFrame);
       document.removeEventListener('visibilitychange', onVisibilityChange);
       window.removeEventListener('resize', onResize);
       window.removeEventListener('v2-archive-camera', onCamera as EventListener);
@@ -413,7 +323,6 @@ export function KnitBackground() {
       <div className="v2-knit-photo" ref={photoRef} />
       <canvas className="v2-knit-gradient-overlay" ref={gradientCanvasRef} />
       <canvas className="v2-knit-stitch-overlay" ref={canvasRef} />
-      <canvas className="v2-knit-motif-overlay" ref={motifCanvasRef} />
       <canvas className="v2-knit-cursor-shadow" ref={cursorShadowRef} />
     </div>
   );

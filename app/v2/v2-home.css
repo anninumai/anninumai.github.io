@@ -5,7 +5,6 @@
 .v2-knit-background::after{content:"";position:absolute;z-index:3;inset:0;box-shadow:inset 0 0 110px rgb(107 101 90 / .055);pointer-events:none}
 .v2-knit-background>.v2-knit-stitch-overlay{position:absolute;z-index:2;display:block;width:100%;height:100%;opacity:.28}
 .v2-knit-background>.v2-knit-gradient-overlay{position:absolute;z-index:2;display:block;width:100%;height:100%;pointer-events:none;opacity:.7;will-change:transform}
-.v2-knit-background>.v2-knit-motif-overlay{position:absolute;z-index:2;top:0;left:0;display:block;width:100%;pointer-events:none;opacity:.5}
 .v2-knit-cursor-shadow{position:absolute;z-index:4;left:0;top:0;opacity:0;transform:translate3d(-80px,-80px,0);transition:opacity .12s ease;will-change:transform;pointer-events:none}
 .v2-knit-cursor-shadow.is-visible{opacity:1}
 .v2-index> :not(.v2-knit-background){position:relative;z-index:1}
