@@ -1,0 +1,54 @@
+.v2-index{position:relative;min-height:100vh;overflow:clip;background:#faf9f5}
+.v2-index>.v2-knit-background{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;background-color:#f7f6f1;contain:strict}
+.v2-knit-photo{position:absolute;z-index:1;left:0;width:100%;background-image:url('/assets/knit/white-stockinette-canvas.jpg');background-position:0 0;background-size:36vw auto;background-repeat:repeat;will-change:transform}
+.v2-knit-background::before{content:"";position:absolute;z-index:3;inset:0;background:radial-gradient(circle at 48% 28%,rgb(255 255 255 / .2),transparent 48%),linear-gradient(115deg,rgb(255 255 255 / .08),rgb(218 214 202 / .06));mix-blend-mode:soft-light;pointer-events:none}
+.v2-knit-background::after{content:"";position:absolute;z-index:3;inset:0;box-shadow:inset 0 0 110px rgb(107 101 90 / .055);pointer-events:none}
+.v2-knit-background>.v2-knit-stitch-overlay{position:absolute;z-index:2;display:block;width:100%;height:100%;opacity:.28}
+.v2-knit-background>.v2-knit-motif-overlay{position:absolute;z-index:2;top:0;left:0;display:block;width:100%;pointer-events:none;opacity:.5}
+.v2-knit-cursor-shadow{position:absolute;z-index:4;left:0;top:0;opacity:0;transform:translate3d(-80px,-80px,0);transition:opacity .12s ease;will-change:transform;pointer-events:none}
+.v2-knit-cursor-shadow.is-visible{opacity:1}
+.v2-index> :not(.v2-knit-background){position:relative;z-index:1}
+.v2-index ::selection{background:#ffe500;color:#006fc7}
+.v2-index>.v2-shared-header{position:fixed;z-index:20;inset:0 0 auto;background:transparent;border-bottom:0}
+.v2-index .v2-intro{background:linear-gradient(180deg,rgb(250 249 245 / .3),rgb(250 249 245 / .62))}
+.v2-index .work-gallery{background:transparent}
+.v2-index .work-copy{margin-top:-1px;padding:18px 0 12px;background:transparent}
+.v2-index .work-footer{background:rgb(250 249 245 / .68)}
+.v2-archive-track{position:relative;height:var(--archive-desktop-height)}
+.v2-archive-viewport{position:sticky;top:0;height:100svh;overflow:hidden}
+.v2-archive-world{position:absolute;inset:0}
+.v2-archive-card{position:absolute;z-index:2;top:var(--archive-card-desktop-top);width:min(39vw,600px)}
+.v2-archive-card.is-left{left:8.5vw}
+.v2-archive-card.is-right{right:8.5vw}
+.v2-archive-card>a{display:block;color:inherit}
+.v2-woven-image{position:relative;aspect-ratio:3/2;overflow:hidden;background:transparent;contain:layout paint style}
+.v2-woven-image>img,.v2-woven-image>canvas{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.v2-woven-image>img{opacity:1;filter:none}
+.v2-woven-image>canvas{opacity:0;transition:opacity .3s ease,filter .35s ease}
+.v2-woven-image>.v2-woven-knit{z-index:2}
+.v2-woven-image>.v2-woven-knit{filter:saturate(1.62) contrast(1.04) brightness(.99)}
+.v2-woven-image>.v2-woven-digital{z-index:3}
+.v2-woven-image.is-woven-ready>img{opacity:0}
+.v2-woven-image.is-woven-ready>.v2-woven-knit{opacity:1}
+.v2-woven-image.is-woven-ready>.v2-woven-digital{opacity:0}
+.v2-archive-card a:hover .v2-woven-knit,.v2-archive-card a:focus-visible .v2-woven-knit{opacity:1}
+.v2-archive-card a:hover .v2-woven-digital,.v2-archive-card a:focus-visible .v2-woven-digital{opacity:var(--digital-hover-opacity,.88)}
+.v2-woven-image.is-pointer-active>.v2-woven-knit{opacity:1}
+.v2-woven-image.is-pointer-active>.v2-woven-digital{opacity:var(--digital-hover-opacity,.88)}
+.v2-archive-copy{display:flex;align-items:flex-start;justify-content:space-between;gap:22px;padding-top:16px}
+.v2-embroidered-title{flex:1 1 auto;min-width:0;color:#006fc7;font-family:var(--sans);font-size:16px!important;font-weight:600;line-height:1.45;letter-spacing:.045em}
+.v2-archive-copy p{max-width:45%;margin-top:5px;color:var(--work-muted);font-size:10px;line-height:1.5;text-align:right}
+.v2-archive-end{position:absolute;top:var(--archive-end-desktop-top);left:50%;transform:translateX(-50%);color:var(--work-muted);font-size:10px;letter-spacing:.12em;white-space:nowrap}
+@media(max-width:700px){.v2-archive-track{height:var(--archive-mobile-height)}.v2-archive-card{top:var(--archive-card-mobile-top);width:78vw}.v2-archive-card.is-left{left:9vw}.v2-archive-card.is-right{right:9vw}.v2-archive-copy{display:block;padding-top:12px}.v2-archive-copy p{max-width:none;margin-top:4px;text-align:left}.v2-archive-end{top:var(--archive-end-mobile-top)}}
+@media(prefers-reduced-motion:reduce){.v2-archive-world{will-change:auto}.v2-archive-card{transition:none}.v2-woven-image>img,.v2-woven-image>canvas{transition:none}.v2-knit-cursor-shadow{display:none}}
+.v2-header-label{justify-self:end;font-size:10px;letter-spacing:.08em}
+.v2-intro{padding:clamp(42px,5vw,72px) var(--work-side);border-bottom:1px solid var(--work-line)}
+.v2-intro>p:first-child{font-size:10px;letter-spacing:.08em}
+.v2-intro h1{margin-top:34px;font-size:clamp(76px,13vw,190px);line-height:.84;letter-spacing:-.055em}
+.v2-intro h1 em{font-style:normal;font-weight:400}
+.v2-intro-copy{max-width:720px;margin-top:52px;font-size:20px;line-height:1.8;letter-spacing:.025em}
+.v2-index .work-gallery{display:block}
+.v2-index .v2-archive-copy h2{font-size:16px!important;line-height:1.45;letter-spacing:.045em}
+.v2-index .work-copy p{font-size:10px}
+.v2-index .work-footer>a{font-size:10px;letter-spacing:.08em}
+@media(max-width:700px){.v2-header-label{display:none}.v2-intro{padding-inline:22px}.v2-intro h1{font-size:72px}.v2-intro-copy{font-size:20px}.v2-index .v2-archive-copy h2{font-size:16px!important}}
