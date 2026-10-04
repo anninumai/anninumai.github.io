@@ -3,75 +3,70 @@
 import { useEffect, useLayoutEffect, useState, type CSSProperties } from 'react';
 import { usePathname } from 'next/navigation';
 
-let routeTransitionActive = false;
-let routeTransitionStartedAt = 0;
 const MINIMUM_LOADING_MS = 2000;
+const MAXIMUM_LOADING_MS = 6000;
 
 export function V2RouteReset() {
   const pathname = usePathname();
-  const [loading, setLoading] = useState(routeTransitionActive);
+  // Render the loader into the exported HTML, including direct/native navigation.
+  const [loading, setLoading] = useState(true);
   const [transitionId, setTransitionId] = useState(0);
 
   useEffect(() => {
-    const beginBackNavigation = () => {
-      routeTransitionActive = true;
-      routeTransitionStartedAt = Date.now();
-      setLoading(true);
-      setTransitionId((current) => current + 1);
+    const onPageShow = (event: PageTransitionEvent) => {
+      // A back/forward-cache restore reuses the existing React component.
+      if (event.persisted) setTransitionId((current) => current + 1);
     };
-    window.addEventListener('popstate', beginBackNavigation);
+    window.addEventListener('pageshow', onPageShow);
     return () => {
-      window.removeEventListener('popstate', beginBackNavigation);
+      window.removeEventListener('pageshow', onPageShow);
     };
   }, []);
 
   useLayoutEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
-    if (!routeTransitionActive) {
-      setLoading(false);
-      return;
+    if (transitionId === 0 && !window.location.hash) {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
     }
     setLoading(true);
-    if (!routeTransitionStartedAt) routeTransitionStartedAt = Date.now();
-
+    const startedAt = Date.now();
+    let disposed = false;
     let hideTimer = 0;
-    let maxTimer = 0;
-    const hide = () => {
-      window.clearTimeout(hideTimer);
-      const elapsed = Date.now() - routeTransitionStartedAt;
-      const remaining = Math.max(0, MINIMUM_LOADING_MS - elapsed);
-      hideTimer = window.setTimeout(() => {
-        routeTransitionActive = false;
-        routeTransitionStartedAt = 0;
-        setLoading(false);
-      }, remaining + 90);
+    const finish = () => {
+      if (disposed) return;
+      setLoading(false);
     };
-
-    if (pathname === '/v2') {
-      let readyCount = 0;
-      const onKnitReady = () => {
-        readyCount += 1;
-        if (readyCount >= 2) hide();
-      };
-      window.addEventListener('v2-knit-ready', onKnitReady);
-      const elapsed = Date.now() - routeTransitionStartedAt;
-      const remaining = Math.max(0, MINIMUM_LOADING_MS - elapsed);
-      maxTimer = window.setTimeout(() => {
-        window.clearTimeout(hideTimer);
-        routeTransitionActive = false;
-        routeTransitionStartedAt = 0;
-        setLoading(false);
-      }, remaining + 450);
-      return () => {
-        window.clearTimeout(hideTimer);
+    // A failed image or renderer must never leave navigation blocked.
+    const maxTimer = window.setTimeout(finish, MAXIMUM_LOADING_MS);
+    const isArchive = pathname.replace(/\/$/, '') === '/v2';
+    let assetsReady = false;
+    const checkReady = () => {
+      if (disposed || hideTimer || !assetsReady) return;
+      if (isArchive && document.querySelectorAll('.is-woven-ready').length < 2) return;
+      const remaining = Math.max(0, MINIMUM_LOADING_MS - (Date.now() - startedAt));
+      hideTimer = window.setTimeout(() => {
         window.clearTimeout(maxTimer);
-        window.removeEventListener('v2-knit-ready', onKnitReady);
-      };
-    } else hide();
+        finish();
+      }, remaining);
+    };
+    window.addEventListener('v2-knit-ready', checkReady);
+
+    const firstImages = [...document.images].filter((image) => {
+      const bounds = image.getBoundingClientRect();
+      return image.loading !== 'lazy' || (bounds.bottom > 0 && bounds.top < window.innerHeight);
+    });
+    Promise.allSettled([
+      document.fonts.ready,
+      ...firstImages.map((image) => image.decode()),
+    ]).then(() => {
+      assetsReady = true;
+      checkReady();
+    });
 
     return () => {
+      disposed = true;
       window.clearTimeout(hideTimer);
       window.clearTimeout(maxTimer);
+      window.removeEventListener('v2-knit-ready', checkReady);
     };
   }, [pathname, transitionId]);
 
@@ -97,7 +92,7 @@ export function V2RouteReset() {
   };
 
   return (
-    <div className={`v2-route-loader${loading ? ' is-active' : ''}`} style={loaderStyle} aria-hidden={!loading}>
+    <div className={`v2-route-loader${loading ? ' is-active' : ''}`} style={loaderStyle} role="status" aria-label="ページを読み込み中" aria-hidden={!loading}>
       <div
         className="v2-route-loader-mark"
         style={{ display: 'grid', justifyItems: 'center', gap: 15, color: '#006fc7', fontSize: 11, fontWeight: 600, letterSpacing: '.16em' }}

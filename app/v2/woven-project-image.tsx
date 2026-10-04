@@ -483,7 +483,7 @@ export function WovenProjectImage({ src, eager = false }: WovenProjectImageProps
 
     const onResize = () => {
       cancelAnimationFrame(resizeFrame);
-      resizeFrame = requestAnimationFrame(draw);
+      resizeFrame = requestAnimationFrame(() => draw());
     };
     const onPointerMove = (event: MouseEvent) => {
       frame.classList.add('is-pointer-active');

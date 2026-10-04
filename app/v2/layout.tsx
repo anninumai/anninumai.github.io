@@ -5,6 +5,7 @@ export default function V2Layout({ children }: { children: ReactNode }) {
   return (
     <>
       <V2RouteReset />
+      <noscript><style>{'.v2-route-loader{display:none!important}'}</style></noscript>
       {children}
     </>
   );
