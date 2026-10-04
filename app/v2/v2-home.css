@@ -1,4 +1,4 @@
-.v2-index{position:relative;min-height:100vh;overflow:visible;background:#faf9f5}
+.work-index.v2-index{position:relative;min-height:100vh;overflow:visible;background:#faf9f5}
 .v2-index>.v2-knit-background{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;background-color:#f7f6f1;contain:strict}
 .v2-knit-photo{position:absolute;z-index:1;left:0;width:100%;background-image:url('/assets/knit/white-stockinette-canvas.jpg');background-position:0 0;background-size:36vw auto;background-repeat:repeat;will-change:transform}
 .v2-knit-background::before{content:"";position:absolute;z-index:3;inset:0;background:radial-gradient(circle at 48% 28%,rgb(255 255 255 / .2),transparent 48%),linear-gradient(115deg,rgb(255 255 255 / .08),rgb(218 214 202 / .06));mix-blend-mode:soft-light;pointer-events:none}

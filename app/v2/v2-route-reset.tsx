@@ -13,29 +13,14 @@ export function V2RouteReset() {
   const [transitionId, setTransitionId] = useState(0);
 
   useEffect(() => {
-    const beginNavigation = (event: MouseEvent) => {
-      if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-      const target = event.target as Element | null;
-      const anchor = target?.closest<HTMLAnchorElement>('a[href]');
-      if (!anchor) return;
-      const destination = new URL(anchor.href, window.location.href);
-      if (destination.origin !== window.location.origin || !destination.pathname.startsWith('/v2')) return;
-      if (destination.pathname === window.location.pathname) return;
-      routeTransitionActive = true;
-      routeTransitionStartedAt = Date.now();
-      setLoading(true);
-      setTransitionId((current) => current + 1);
-    };
     const beginBackNavigation = () => {
       routeTransitionActive = true;
       routeTransitionStartedAt = Date.now();
       setLoading(true);
       setTransitionId((current) => current + 1);
     };
-    document.addEventListener('click', beginNavigation, true);
     window.addEventListener('popstate', beginBackNavigation);
     return () => {
-      document.removeEventListener('click', beginNavigation, true);
       window.removeEventListener('popstate', beginBackNavigation);
     };
   }, []);
