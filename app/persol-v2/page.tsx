@@ -25,6 +25,8 @@ const sizes: Record<string, [number, number]> = {
   'notifications.png': [1946, 1408],
   'loading-states.png': [2052, 1750],
   'interview-states.png': [1948, 1930],
+  'brand-system.png': [3140, 1006],
+  'color-rationale.png': [1772, 1362],
 };
 
 function Label({ children }: { n: string; children: ReactNode }) {
@@ -109,6 +111,20 @@ export default function PersolV2() {
                 caption="キャラクターの役割と振る舞いを具体的なUIへ展開。"
               />
             </div>
+            <figure className="persol-v2-film">
+              {/* oxlint-disable-next-line jsx-a11y/media-has-caption -- The supplied source has no caption track. */}
+              <video
+                controls
+                playsInline
+                preload="metadata"
+                poster={`${base}hero-together.png`}
+                aria-label="WITTOのコンセプトムービー"
+              >
+                <source src={`${base}character-interaction.mp4`} type="video/mp4" />
+                お使いのブラウザーでは動画を再生できません。
+              </video>
+              <figcaption>WITTOのコンセプトムービー。</figcaption>
+            </figure>
           </div>
         </section>
 
@@ -141,6 +157,18 @@ export default function PersolV2() {
                   caption="正常・エラー状態を簡潔に伝える通知を検討。"
                 />
               </div>
+              <Photo
+                name="brand-system.png"
+                alt="WITTOのネーミング、カラー、書体、ロゴ、UI、AIキャラクターを整理したFigmaのデザインルール"
+                caption="Figmaで整理したネーミング、カラー、書体、ロゴ、UIとキャラクターのデザインルール。"
+                className="persol-v2-design-reference"
+              />
+              <Photo
+                name="color-rationale.png"
+                alt="複数の配色案と選定理由を比較したトンマナ検討資料"
+                caption="配色の候補を比較し、目指すトンマナと選定理由を整理。"
+                className="persol-v2-design-reference"
+              />
               <Photo
                 name="interview-states.png"
                 alt="複数のAI面接UI案を比較した資料"

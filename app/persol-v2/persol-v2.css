@@ -258,6 +258,22 @@
   object-fit: cover;
 }
 
+.persol-v2-film {
+  max-width: 960px;
+  margin-top: 48px;
+}
+
+.persol-v2-film video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #f3f0f3;
+}
+
+.persol-v2-film figcaption {
+  margin-top: 8px;
+}
+
 .persol-v2-accessibility {
   padding-block: 110px;
   background: var(--persol-pale);
@@ -285,6 +301,10 @@
   aspect-ratio: 1.5;
   object-fit: contain;
   background: white;
+}
+
+.persol-v2-design-reference {
+  margin-top: 48px;
 }
 
 .persol-v2-scope {
