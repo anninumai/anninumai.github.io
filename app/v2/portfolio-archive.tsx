@@ -107,11 +107,6 @@ export function PortfolioArchive({ projects }: { projects: ArchiveProject[] }) {
               </a>
             </article>
           ))}
-          <p
-            className="v2-archive-end"
-          >
-            END OF ARCHIVE
-          </p>
         </div>
       </div>
     </main>

@@ -16,7 +16,7 @@ export function ProjectNavV2({ current }: { current: string }) {
       <span className="eyebrow">PORTFOLIO / SELECTED WORKS</span>
       <div>
         {projects.map(([href, name]) => (
-          <a key={href} href={href} aria-current={href === current ? 'page' : undefined}>{name}</a>
+          <a key={href} href={`${href}/`} aria-current={href === current ? 'page' : undefined}>{name}</a>
         ))}
       </div>
     </nav>

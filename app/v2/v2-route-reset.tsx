@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useLayoutEffect, useState, type CSSProperties } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState, type CSSProperties } from 'react';
 import { usePathname } from 'next/navigation';
 
 const MINIMUM_LOADING_MS = 2000;
@@ -11,14 +11,52 @@ export function V2RouteReset() {
   // Render the loader into the exported HTML, including direct/native navigation.
   const [loading, setLoading] = useState(true);
   const [transitionId, setTransitionId] = useState(0);
+  const departing = useRef(false);
 
   useEffect(() => {
+    let navigationTimer = 0;
+    let recoveryTimer = 0;
+    const clearNavigation = () => {
+      window.clearTimeout(navigationTimer);
+      window.clearTimeout(recoveryTimer);
+      departing.current = false;
+    };
+    const onLinkClick = (event: MouseEvent) => {
+      if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      const link = event.target instanceof Element ? event.target.closest<HTMLAnchorElement>('a[href]') : null;
+      if (!link || link.hasAttribute('download') || (link.target && link.target !== '_self')) return;
+      const destination = new URL(link.href, window.location.href);
+      if (destination.origin !== window.location.origin || !/^\/v2(?:\/|$)/.test(destination.pathname)) return;
+      const currentPath = window.location.pathname.replace(/\/$/, '');
+      const nextPath = destination.pathname.replace(/\/$/, '');
+      // Keep in-page anchors, image links, and new-tab actions native.
+      if ((currentPath === nextPath && destination.search === window.location.search) || /\.[^/]+$/.test(nextPath)) return;
+
+      event.preventDefault();
+      if (departing.current) return;
+      departing.current = true;
+      setLoading(true);
+      // Paint the outgoing loader before starting the full-document navigation.
+      // Explicit navigation avoids a re-render cancelling the anchor's default action.
+      destination.pathname = `${nextPath}/`;
+      navigationTimer = window.setTimeout(() => window.location.assign(destination.href), 300);
+      recoveryTimer = window.setTimeout(() => {
+        clearNavigation();
+        setLoading(false);
+      }, 10000);
+    };
     const onPageShow = (event: PageTransitionEvent) => {
       // A back/forward-cache restore reuses the existing React component.
-      if (event.persisted) setTransitionId((current) => current + 1);
+      if (event.persisted) {
+        clearNavigation();
+        setTransitionId((current) => current + 1);
+      }
     };
+    document.addEventListener('click', onLinkClick);
     window.addEventListener('pageshow', onPageShow);
     return () => {
+      clearNavigation();
+      document.removeEventListener('click', onLinkClick);
       window.removeEventListener('pageshow', onPageShow);
     };
   }, []);
@@ -32,7 +70,7 @@ export function V2RouteReset() {
     let disposed = false;
     let hideTimer = 0;
     const finish = () => {
-      if (disposed) return;
+      if (disposed || departing.current) return;
       setLoading(false);
     };
     // A failed image or renderer must never leave navigation blocked.
