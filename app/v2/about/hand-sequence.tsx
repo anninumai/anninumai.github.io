@@ -67,24 +67,9 @@ export function HandSequence() {
         <div ref={textRef} className="about-v2-formed-text">
           <span className="about-v2-text-index">0{paragraph + 1} / 03</span>
           <p key={paragraph}>{paragraphs[paragraph]}</p>
+          <button type="button" className="about-v2-next-text" onClick={() => setParagraph((current) => (current + 1) % paragraphs.length)} aria-label="次の自己紹介文を表示する">NEXT ↗</button>
         </div>
         <span className="about-v2-stage-hint" aria-hidden="true">MOVE YOUR CURSOR / HANDS IN MOTION</span>
-      </div>
-      <div className="about-v2-copy-controls" aria-label="紹介文を選ぶ">
-        {paragraphs.map((_, index) => (
-          <button
-            key={index}
-            type="button"
-            aria-label={`紹介文 ${index + 1}`}
-            aria-pressed={paragraph === index}
-            onClick={() => setParagraph(index)}
-          >
-            0{index + 1}
-          </button>
-        ))}
-      </div>
-      <div className="about-v2-full-text" aria-label="自己紹介の全文">
-        {paragraphs.map((copy) => <p key={copy}>{copy}</p>)}
       </div>
     </div>
   );

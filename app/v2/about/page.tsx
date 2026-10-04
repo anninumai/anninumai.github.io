@@ -58,11 +58,6 @@ export default function AboutV2Page() {
       </section>
 
       <section className="about-v2-records wrap" aria-label="経歴と活動">
-        <div className="about-v2-introduction">
-          <span className="about-v2-eyebrow">PROFILE / 02</span>
-          <p>感覚や身体性に寄り添い、<br />世界の感じ方を豊かにする体験を探る。</p>
-          <span>Research / UX・UI / Creative Technology</span>
-        </div>
         <div className="about-v2-record-grid">
           <section>
             <h2><span>03</span>Experience</h2>
@@ -87,7 +82,6 @@ export default function AboutV2Page() {
       </section>
     </main>
     <footer className="about-v2-footer wrap">
-      <Link href="/v2">Selected work <span aria-hidden="true">↗</span></Link>
       <a href="#top">BACK TO TOP ↑</a>
     </footer>
   </div>;
