@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { V2Header } from '../v2-header';
-import { HandSequence } from './hand-sequence';
 import './about-v2.css';
 
 export const dynamic = 'force-static';
@@ -53,10 +52,6 @@ export default function AboutV2Page() {
     <a className="skip" href="#about-v2-main">本文へ移動</a>
     <V2Header />
     <main id="about-v2-main">
-      <section className="about-v2-hands" aria-label="手の動きと自己紹介">
-        <HandSequence />
-      </section>
-
       <section className="about-v2-records wrap" aria-label="経歴と活動">
         <div className="about-v2-record-grid">
           <section>
