@@ -68,14 +68,9 @@
   object-fit: cover;
 }
 
-.x-v2-overview,
 .x-v2-collaboration,
 .x-v2-outcome {
   padding-block: 120px;
-}
-
-.x-v2-overview {
-  border-bottom: 1px solid var(--border);
 }
 
 .x-v2-lead {
@@ -127,6 +122,28 @@
 .x-v2-management img {
   object-fit: contain;
   background: white;
+}
+
+.x-v2-runway-film {
+  max-width: 1100px;
+  margin-top: 50px;
+}
+
+.x-v2-runway-film iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  background: #171717;
+}
+
+.x-v2-runway-film figcaption {
+  flex-wrap: wrap;
+}
+
+.x-v2-runway-film figcaption a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .x-v2-scope {
@@ -184,7 +201,6 @@
     margin-inline: calc(var(--gutter) * -1);
   }
 
-  .x-v2-overview,
   .x-v2-collaboration,
   .x-v2-outcome,
   .x-v2-system {

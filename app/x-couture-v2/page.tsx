@@ -18,6 +18,7 @@ const sizes: Record<string, [number, number]> = {
   '/assets/runway.png': [2226, 1260],
   '/assets/blender.png': [2260, 1222],
   '/assets/compositing.png': [2258, 1244],
+  '/assets/team-management.png': [3346, 1966],
   '/assets/team-management-detail.png': [2103, 1063],
   '/assets/technical-report-detail.png': [2140, 605],
   '/assets/knowledge.png': [1200, 1230],
@@ -94,9 +95,12 @@ export default function XCoutureV2() {
             ]}
           />
         </section>
-        <section className="wrap section-grid x-v2-overview">
-          <Label n="00">PRODUCTION</Label>
+        <section className="wrap section-grid x-v2-collaboration" id="collaboration">
+          <Label n="01">COLLABORATION</Label>
           <div>
+            <p className="body-copy">
+              CGは、当時の私にとって未知の技術領域でした。分からないことを曖昧にしたまま進めるのではなく、プロジェクトマネジメントに加えて自分も制作へ参加し、知らない技術でも面白がって学びながら、メンバーとの対話に必要な共通言語を獲得しました。得た知識を共有し、専門の異なるメンバー同士をつなぐことで、PMがすべてを理解して指示するのではなく、互いの分からなさや困りごとを共有し、それぞれの得意を持ち寄って目標へ進めるチームを目指しました。
+            </p>
             <div className="x-v2-production-pair">
               <Photo
                 src="/assets/blender.png"
@@ -109,15 +113,6 @@ export default function XCoutureV2() {
                 caption="人物写真と3Dドレスの合成。"
               />
             </div>
-          </div>
-        </section>
-
-        <section className="wrap section-grid x-v2-collaboration" id="collaboration">
-          <Label n="01">COLLABORATION</Label>
-          <div>
-            <p className="body-copy">
-              CGは、当時の私にとって未知の技術領域でした。分からないことを曖昧にしたまま進めるのではなく、プロジェクトマネジメントに加えて自分も制作へ参加し、知らない技術でも面白がって学びながら、メンバーとの対話に必要な共通言語を獲得しました。得た知識を共有し、専門の異なるメンバー同士をつなぐことで、PMがすべてを理解して指示するのではなく、互いの分からなさや困りごとを共有し、それぞれの得意を持ち寄って目標へ進めるチームを目指しました。
-            </p>
             <div className="x-v2-learning-pair">
               <Photo
                 src="/assets/technical-report-detail.png"
@@ -141,6 +136,12 @@ export default function XCoutureV2() {
                 CGインターン約10人のPMを一人で担当し、メンバーをグループに分け、各グループにリーダーを置く進行体制を考案しました。会議、情報共有、課題をエスカレーションする方法を設計するとともに、一人ひとりの進捗、余力、困りごとを把握し、作業量や得意分野に応じて分担を調整しました。制作体制が整っていない状態から、チームで判断しながら進められる仕組みを構築しました。
               </p>
               <Photo
+                src="/assets/team-management.png"
+                alt="情報共有と作業ルール、メンバー編成、面談・技術レビューの予定をまとめたNotionの全体画面"
+                caption="Notionに情報共有のルールと、面談・技術レビューの流れを集約。"
+                className="x-v2-management"
+              />
+              <Photo
                 src="/assets/team-management-detail.png"
                 alt="CGインターン約10人の編成と予定を整理した管理表"
                 caption="チーム編成、面談、技術レビューを一つの管理表で共有。"
@@ -156,6 +157,20 @@ export default function XCoutureV2() {
             <p className="body-copy">
               構築した制作体制によって、約3〜4カ月にわたる二つのデジタルファッション制作を進行。うち一つを、Rakuten Fashion Week TOKYO 2022 A/Wに向けたyoshiokuboとの実制作として完成させました。
             </p>
+            <figure className="x-v2-runway-film">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/PF7KoWcs-2U?start=23"
+                title="yoshiokubo 2022 A/W Collection | Rakuten Fashion Week TOKYO 2022 A/W"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+              <figcaption>
+                yoshiokubo 2022 A/W Collectionのショー映像。
+                <a href="https://www.youtube.com/watch?v=PF7KoWcs-2U&t=23s" target="_blank" rel="noreferrer">YouTubeで見る ↗</a>
+              </figcaption>
+            </figure>
             <Photo
               src="/assets/fashion-week-team.png"
               alt="Rakuten Fashion Week TOKYOでのチーム集合写真"
