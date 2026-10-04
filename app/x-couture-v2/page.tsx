@@ -19,7 +19,6 @@ const sizes: Record<string, [number, number]> = {
   '/assets/blender.png': [2260, 1222],
   '/assets/compositing.png': [2258, 1244],
   '/assets/team-management.png': [3346, 1966],
-  '/assets/team-management-detail.png': [2103, 1063],
   '/assets/technical-report-detail.png': [2140, 605],
   '/assets/knowledge.png': [1200, 1230],
   '/assets/fashion-week-team.png': [1986, 1478],
@@ -141,12 +140,6 @@ export default function XCoutureV2() {
                 caption="Notionに情報共有のルールと、面談・技術レビューの流れを集約。"
                 className="x-v2-management"
               />
-              <Photo
-                src="/assets/team-management-detail.png"
-                alt="CGインターン約10人の編成と予定を整理した管理表"
-                caption="チーム編成、面談、技術レビューを一つの管理表で共有。"
-                className="x-v2-management"
-              />
             </div>
           </div>
         </section>
@@ -158,17 +151,25 @@ export default function XCoutureV2() {
               構築した制作体制によって、約3〜4カ月にわたる二つのデジタルファッション制作を進行。うち一つを、Rakuten Fashion Week TOKYO 2022 A/Wに向けたyoshiokuboとの実制作として完成させました。
             </p>
             <figure className="x-v2-runway-film">
-              <iframe
-                src="https://www.youtube-nocookie.com/embed/PF7KoWcs-2U?start=23"
-                title="yoshiokubo 2022 A/W Collection | Rakuten Fashion Week TOKYO 2022 A/W"
-                loading="lazy"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              />
+              <a
+                className="x-v2-runway-link"
+                href="https://www.youtube.com/watch?v=PF7KoWcs-2U&t=23s"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="yoshiokubo 2022 A/W Collectionの動画をYouTubeで再生"
+              >
+                <Image
+                  unoptimized
+                  src="/assets/runway.png"
+                  alt="yoshiokubo 2022 A/W Collectionのショー映像のプレビュー"
+                  width={2226}
+                  height={1260}
+                />
+                <span className="x-v2-runway-play" aria-hidden="true">▶</span>
+                <span className="x-v2-runway-action">YouTubeでショー映像を見る ↗</span>
+              </a>
               <figcaption>
-                yoshiokubo 2022 A/W Collectionのショー映像。
-                <a href="https://www.youtube.com/watch?v=PF7KoWcs-2U&t=23s" target="_blank" rel="noreferrer">YouTubeで見る ↗</a>
+                yoshiokubo 2022 A/W Collectionのショー映像。23秒地点から再生。
               </figcaption>
             </figure>
             <Photo

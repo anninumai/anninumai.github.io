@@ -129,21 +129,65 @@
   margin-top: 50px;
 }
 
-.x-v2-runway-film iframe {
+.x-v2-runway-link {
+  position: relative;
   display: block;
   width: 100%;
   aspect-ratio: 16 / 9;
-  border: 0;
+  overflow: hidden;
   background: #171717;
+  color: white;
 }
 
-.x-v2-runway-film figcaption {
-  flex-wrap: wrap;
+.x-v2-runway-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.x-v2-runway-film figcaption a {
-  text-decoration: underline;
-  text-underline-offset: 3px;
+.x-v2-runway-link::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent 55%, #0009);
+  content: '';
+}
+
+.x-v2-runway-play {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  place-items: center;
+  width: 76px;
+  height: 76px;
+  padding-left: 5px;
+  border: 1px solid #fff9;
+  border-radius: 50%;
+  background: #1119;
+  font-size: 24px;
+  transform: translate(-50%, -50%);
+  transition: background 180ms ease, scale 180ms ease;
+}
+
+.x-v2-runway-link:hover .x-v2-runway-play,
+.x-v2-runway-link:focus-visible .x-v2-runway-play {
+  background: #111c;
+  scale: 1.08;
+}
+
+.x-v2-runway-action {
+  position: absolute;
+  z-index: 1;
+  right: 24px;
+  bottom: 20px;
+  font-size: 13px;
+  letter-spacing: .04em;
+}
+
+.x-v2-runway-link:hover,
+.x-v2-runway-link:focus-visible {
+  color: white;
 }
 
 .x-v2-scope {
