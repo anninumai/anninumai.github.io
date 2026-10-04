@@ -12,9 +12,9 @@ export const metadata: Metadata = {
 };
 
 const experience = [
-  { year: '2024', title: 'UI/UX Research & Design', detail: 'STUDIO HOLIDAY', logo: '/assets/about/studio-holiday.jpeg' },
-  { year: '2022', title: 'UX/UI Design Internship', detail: 'SEESAW', logo: '/assets/about/seesaw.jpg' },
-  { year: '2021', title: 'Communication Design Internship', detail: 'Landor Tokyo', logo: '/assets/about/landor.jpeg' },
+  { year: '2024', title: 'UI/UX Research & Design', detail: 'STUDIO HOLIDAY', logo: '/assets/about/studio-holiday.webp' },
+  { year: '2022', title: 'UX/UI Design Internship', detail: 'SEESAW', logo: '/assets/about/seesaw.webp' },
+  { year: '2021', title: 'Communication Design Internship', detail: 'Landor Tokyo', logo: '/assets/about/landor.webp' },
 ];
 
 const recognition = [

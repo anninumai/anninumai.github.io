@@ -45,7 +45,7 @@ export default function PersolCase() {
           <div className="hero-category">UX/UI Design<br/>AI Interaction<span>RESEARCH · CONCEPT DESIGN</span></div>
         </div>
         <figure className="hero-figure persol-banner">
-          <img src="/assets/persol/hero-together.png" width="1672" height="941" fetchPriority="high" alt="We're in this together — あなたと、いつも、いつまでも一緒に。AIキャラクターMikaのブランドビジュアル" />
+          <img src="/assets/persol/hero-together.webp" width="1672" height="941" fetchPriority="high" alt="We're in this together — あなたと、いつも、いつまでも一緒に。AIキャラクターMikaのブランドビジュアル" />
         </figure>
         <figure className="hero-figure project-map-figure" aria-labelledby="project-map-title">
           <div className="project-map">
@@ -122,36 +122,36 @@ export default function PersolCase() {
                 <p>カードの分け方、面の色、左側の進行ライン、完了マークを変えた案を比較しました。採用案では、矢印状のラインで工程の流れを示し、現在の工程を鮮やかなピンクで強調。完了した工程は強調を抑え、チェックマークを添えて、現在地と区別しました。</p>
                 <p>注目してほしい工程に強調を絞り、次に進むボタンと合わせて、今取り組む内容を見つけやすくする意図です。</p>
                 <div className="ui-evidence-pair">
-                  <figure><a href="/assets/persol/interview-states.png" target="_blank" rel="noreferrer"><img src="/assets/persol/interview-states.png" width="1948" height="1930" loading="lazy" alt="比較案 — カード構成、進行ライン、色の強弱を比較。"/></a><Caption no="02">比較案 — カード構成、進行ライン、色の強弱を比較。</Caption></figure>
-                  <figure><a href="/assets/persol/interview-selected.png" target="_blank" rel="noreferrer"><img src="/assets/persol/interview-selected.png" width="1546" height="1106" loading="lazy" alt="採用案 — 接続テストは完了、現在地は面接シナリオ1。"/></a><Caption no="02-B">採用案 — 接続テストは完了、現在地は面接シナリオ1。</Caption></figure>
+                  <figure><a href="/assets/persol/interview-states.webp" target="_blank" rel="noreferrer"><img src="/assets/persol/interview-states.webp" width="1948" height="1930" loading="lazy" alt="比較案 — カード構成、進行ライン、色の強弱を比較。"/></a><Caption no="02">比較案 — カード構成、進行ライン、色の強弱を比較。</Caption></figure>
+                  <figure><a href="/assets/persol/interview-selected.webp" target="_blank" rel="noreferrer"><img src="/assets/persol/interview-selected.webp" width="1546" height="1106" loading="lazy" alt="採用案 — 接続テストは完了、現在地は面接シナリオ1。"/></a><Caption no="02-B">採用案 — 接続テストは完了、現在地は面接シナリオ1。</Caption></figure>
                 </div>
               </article>
               <article className="ui-decision ui-decision-main">
                 <h4>02　接続待ちのアニメーション</h4>
                 <p>接続時に約7秒の待ち時間が発生すると共有を受け、点のアニメーション、吹き出しに絵文字を出す案、横長のラインに沿ってアバターが進む案を制作しました。</p>
                 <p>PC画面での見つけやすさと動きの伝わりやすさ、待っている間の退屈さへの配慮から、横長のラインを使う案を採用。アバターが素早く前へ進む動きと、笑顔でゆっくり歩く動きで、待機中にも変化と親しみやすさを持たせることを意図しました。</p>
-                <figure><a href="/assets/persol/loading-states.png" target="_blank" rel="noreferrer"><img src="/assets/persol/loading-states.png" width="2052" height="1750" loading="lazy" alt="待機表示の比較 — 赤枠の、横長のラインに沿ってアバターが進む案を採用。"/></a><Caption no="05">待機表示の比較 — 赤枠の、横長のラインに沿ってアバターが進む案を採用。</Caption></figure>
+                <figure><a href="/assets/persol/loading-states.webp" target="_blank" rel="noreferrer"><img src="/assets/persol/loading-states.webp" width="2052" height="1750" loading="lazy" alt="待機表示の比較 — 赤枠の、横長のラインに沿ってアバターが進む案を採用。"/></a><Caption no="05">待機表示の比較 — 赤枠の、横長のラインに沿ってアバターが進む案を採用。</Caption></figure>
               </article>
               <div className="ui-support-group">
               <article className="ui-decision ui-decision-support">
                 <h4>接続確認と発話状態の表示</h4>
                 <p>本番前のマイク・カメラ確認と、面接中の発話可能・発話中・発話不可の表示を検討しました。マイクアイコンは、関連する注意書きと一緒に確認できるよう、画面中央の注意書き付近に配置。状態と説明を近くにまとめました。</p>
                 <details className="ui-support-details"><summary>接続確認・発話状態の資料を見る</summary><div className="ui-evidence-pair">
-                  <figure><a href="/assets/persol/device-check.png" target="_blank" rel="noreferrer"><img src="/assets/persol/device-check.png" width="2940" height="876" loading="lazy" alt="接続確認 — マイクとカメラを本番前に確認する画面。"/></a><Caption no="03">接続確認 — マイクとカメラを本番前に確認する画面。</Caption></figure>
-                  <figure><a href="/assets/persol/speaking-states.png" target="_blank" rel="noreferrer"><img src="/assets/persol/speaking-states.png" width="2528" height="1304" loading="lazy" alt="発話状態 — マイクアイコンの状態と配置を検討。"/></a><Caption no="04">発話状態 — マイクアイコンの状態と配置を検討。</Caption></figure>
+                  <figure><a href="/assets/persol/device-check.webp" target="_blank" rel="noreferrer"><img src="/assets/persol/device-check.webp" width="2940" height="876" loading="lazy" alt="接続確認 — マイクとカメラを本番前に確認する画面。"/></a><Caption no="03">接続確認 — マイクとカメラを本番前に確認する画面。</Caption></figure>
+                  <figure><a href="/assets/persol/speaking-states.webp" target="_blank" rel="noreferrer"><img src="/assets/persol/speaking-states.webp" width="2528" height="1304" loading="lazy" alt="発話状態 — マイクアイコンの状態と配置を検討。"/></a><Caption no="04">発話状態 — マイクアイコンの状態と配置を検討。</Caption></figure>
                 </div></details>
               </article>
               <article className="ui-decision ui-decision-support">
                 <h4>正常・エラー時の通知</h4>
                 <p>接続完了、アップロード完了、接続中断など、正常時・エラー時の通知UIを提案しました。状態を簡潔に伝える構成とし、文言はPERSOL Careerに確認いただきながら調整しました。</p>
-                <details className="ui-support-details"><summary>通知の資料を見る</summary><figure><a href="/assets/persol/notifications.png" target="_blank" rel="noreferrer"><img src="/assets/persol/notifications.png" width="1946" height="1408" loading="lazy" alt="通知の提案 — 正常・エラー時の表示と文言を整理。"/></a><Caption no="06">通知の提案 — 正常・エラー時の表示と文言を整理。</Caption></figure></details>
+                <details className="ui-support-details"><summary>通知の資料を見る</summary><figure><a href="/assets/persol/notifications.webp" target="_blank" rel="noreferrer"><img src="/assets/persol/notifications.webp" width="1946" height="1408" loading="lazy" alt="通知の提案 — 正常・エラー時の表示と文言を整理。"/></a><Caption no="06">通知の提案 — 正常・エラー時の表示と文言を整理。</Caption></figure></details>
               </article>
               </div>
               <article className="ui-decision ui-decision-foundations">
                 <h4>共通の前提：カラートーンとデザインルール</h4>
                 <p>情報の識別しやすさと、緊張や圧迫感を与えにくい見せ方を意図して、配色と強調の強さを比較しました。親サービスとの統一感も踏まえ、ディレクター監修下でカラー・タイポグラフィ・UIの提案と制作を行いました。</p>
-                <details className="ui-support-details"><summary>配色の比較と共通ルールを見る</summary><figure><a href="/assets/persol/color-rationale.png" target="_blank" rel="noreferrer"><img src="/assets/persol/color-rationale.png" width="1772" height="1378" loading="lazy" alt="カラートーン比較 — 情報の見やすさと画面の印象を検討。"/></a><Caption no="07">カラートーン比較 — 情報の見やすさと画面の印象を検討。</Caption></figure>
-                <figure><a href="/assets/persol/brand-system.png" target="_blank" rel="noreferrer"><img src="/assets/persol/brand-system.png" width="3140" height="1006" loading="lazy" alt="共通ルール — ネーミング、ロゴ、Mikaの造形は別担当。"/></a><Caption no="07-B">共通ルール — ネーミング、ロゴ、Mikaの造形は別担当。</Caption></figure>
+                <details className="ui-support-details"><summary>配色の比較と共通ルールを見る</summary><figure><a href="/assets/persol/color-rationale.webp" target="_blank" rel="noreferrer"><img src="/assets/persol/color-rationale.webp" width="1772" height="1378" loading="lazy" alt="カラートーン比較 — 情報の見やすさと画面の印象を検討。"/></a><Caption no="07">カラートーン比較 — 情報の見やすさと画面の印象を検討。</Caption></figure>
+                <figure><a href="/assets/persol/brand-system.webp" target="_blank" rel="noreferrer"><img src="/assets/persol/brand-system.webp" width="3140" height="1006" loading="lazy" alt="共通ルール — ネーミング、ロゴ、Mikaの造形は別担当。"/></a><Caption no="07-B">共通ルール — ネーミング、ロゴ、Mikaの造形は別担当。</Caption></figure>
                 </details>
               </article>
             </section>
@@ -165,11 +165,11 @@ export default function PersolCase() {
           <div>
             <h2>親サービスの体験設計支援</h2>
             <p className="body-copy">リードデザイナーが主導する親サービスの体験設計を支援。オンボーディングから選考、内定までを「任せられる」「痛みを減らす」「ワクワクを増やす」の感情軸で確認し、体験が弱くなる接点と改善案を整理しました。</p>
-            <figure className="wide-evidence journey-evidence"><a href="/assets/persol/journey-map.png" target="_blank" rel="noreferrer"><img src="/assets/persol/journey-map.png" width="2410" height="1800" loading="lazy" alt="親サービスの感情マップと画面提案"/></a><Caption no="08">JOURNEY ANALYSIS — 感情軸から体験の上下と改善機会を整理。</Caption></figure>
+            <figure className="wide-evidence journey-evidence"><a href="/assets/persol/journey-map.webp" target="_blank" rel="noreferrer"><img src="/assets/persol/journey-map.webp" width="2410" height="1800" loading="lazy" alt="親サービスの感情マップと画面提案"/></a><Caption no="08">JOURNEY ANALYSIS — 感情軸から体験の上下と改善機会を整理。</Caption></figure>
             <p className="body-copy">また、サービス内のAIキャラクターについて、登場場面、役割、発話・傾聴状態、UI上の位置やサイズを調査。キャラクターを装飾ではなく、案内、対話、状態伝達を担うプロダクト機能として提案しました。</p>
             <div className="paired-evidence">
-              <figure><a href="/assets/persol/agent-directions.png" target="_blank" rel="noreferrer"><img src="/assets/persol/agent-directions.png" width="3044" height="1706" loading="lazy" alt="AIキャラクターの複数の表現方向を比較した資料"/></a><Caption no="09">DIRECTIONS — AIとユーザーの関係性を複数方向で探索。</Caption></figure>
-              <figure><a href="/assets/persol/agent-ui.png" target="_blank" rel="noreferrer"><img src="/assets/persol/agent-ui.png" width="2822" height="1780" loading="lazy" alt="AIキャラクターをUIに展開した検討資料"/></a><Caption no="10">INTERACTION — キャラクターを具体的なUI状態へ展開。</Caption></figure>
+              <figure><a href="/assets/persol/agent-directions.webp" target="_blank" rel="noreferrer"><img src="/assets/persol/agent-directions.webp" width="3044" height="1706" loading="lazy" alt="AIキャラクターの複数の表現方向を比較した資料"/></a><Caption no="09">DIRECTIONS — AIとユーザーの関係性を複数方向で探索。</Caption></figure>
+              <figure><a href="/assets/persol/agent-ui.webp" target="_blank" rel="noreferrer"><img src="/assets/persol/agent-ui.webp" width="2822" height="1780" loading="lazy" alt="AIキャラクターをUIに展開した検討資料"/></a><Caption no="10">INTERACTION — キャラクターを具体的なUI状態へ展開。</Caption></figure>
             </div>
             <p className="credit-inline">親サービス全体の体験設計はリードデザイナーが主導。私はジャーニー分析、改善案、キャラクターとUIのインタラクション提案を担当しました。</p>
             <div className="capabilities"><span>JOURNEY ANALYSIS</span><span>AI INTERACTION</span><span>DESIGN SUPPORT</span></div>
@@ -183,8 +183,8 @@ export default function PersolCase() {
             <p className="ownership-statement">将来のサービス像とブランド体験のコンセプトを提案。</p>
             <p className="body-copy">現在のサービスを完成形ではなく中間地点として捉え、AIが転職活動を補助する存在から、自律的な代理人へ発展したときのサービスとブランド体験を構想しました。</p>
             <div className="future-grid">
-              <figure><a href="/assets/persol/future-network.png" target="_blank" rel="noreferrer"><img src="/assets/persol/future-network.png" width="1630" height="1430" loading="lazy" alt="自律型タレントディスカバリーネットワークの企画案"/></a><Caption no="11">自律型タレント・ディスカバリー・ネットワーク。</Caption></figure>
-              <figure><a href="/assets/persol/future-career-park.png" target="_blank" rel="noreferrer"><img src="/assets/persol/future-career-park.png" width="1302" height="1430" loading="lazy" alt="AIエージェントによる転職フェアの企画案"/></a><Caption no="12">doda A2A CAREER PARK 2027。</Caption></figure>
+              <figure><a href="/assets/persol/future-network.webp" target="_blank" rel="noreferrer"><img src="/assets/persol/future-network.webp" width="1630" height="1430" loading="lazy" alt="自律型タレントディスカバリーネットワークの企画案"/></a><Caption no="11">自律型タレント・ディスカバリー・ネットワーク。</Caption></figure>
+              <figure><a href="/assets/persol/future-career-park.webp" target="_blank" rel="noreferrer"><img src="/assets/persol/future-career-park.webp" width="1302" height="1430" loading="lazy" alt="AIエージェントによる転職フェアの企画案"/></a><Caption no="12">doda A2A CAREER PARK 2027。</Caption></figure>
             </div>
             <div className="collaboration-map">
               <span className="eyebrow">THREE-PARTY COLLABORATION</span>
@@ -209,9 +209,9 @@ export default function PersolCase() {
               <div><span>02</span><h3>Robot / Agent</h3><strong>公平性と機能性</strong><p>期待：AIとしての透明性<br/>懸念：幼さ、面接の厳格さの低下</p></div>
               <div><span>03</span><h3>Abstract</h3><strong>属性バイアスの抑制</strong><p>期待：公平でフラットな体験<br/>懸念：傾聴されている感覚の不足</p></div>
             </div>
-            <figure className="research-figure"><a href="/assets/persol/interviewer-hypotheses.png" target="_blank" rel="noreferrer"><img src="/assets/persol/interviewer-hypotheses.png" width="1920" height="1080" loading="lazy" alt="人間型、ロボット型、抽象型のAI面接官を比較した仮説資料"/></a><Caption no="13">RESEARCH — 3つの表現方向について、期待する効果と懸念を仮説として整理。</Caption></figure>
+            <figure className="research-figure"><a href="/assets/persol/interviewer-hypotheses.webp" target="_blank" rel="noreferrer"><img src="/assets/persol/interviewer-hypotheses.webp" width="1920" height="1080" loading="lazy" alt="人間型、ロボット型、抽象型のAI面接官を比較した仮説資料"/></a><Caption no="13">RESEARCH — 3つの表現方向について、期待する効果と懸念を仮説として整理。</Caption></figure>
             <div className="character-proposal-heading"><span className="research-kicker">CHARACTER DESIGN PROPOSAL</span><h3>調査をもとに、外見と表現の案をつくる。</h3><p className="body-copy">人間に近い3D、デフォルメしたキャラクター、ロボット、抽象的なドットや波形など、複数のデザイン案を制作・提案しました。外見だけでなく、表情や振る舞い、企業ごとの展開、面接画面での見え方も資料にまとめ、方向性を比較できる形にしました。</p></div>
-            <figure className="research-figure character-proposal-figure"><a href="/assets/persol/interviewer-design-proposals.png" target="_blank" rel="noreferrer"><img src="/assets/persol/interviewer-design-proposals.png" width="2260" height="2034" loading="lazy" alt="AI面接官のデザイン提案一覧。人間型3D、デフォルメ、ロボット、ドット、波形の案と展開イメージ"/></a><Caption no="14">DESIGN PROPOSALS — リサーチをもとに制作したAI面接官のキャラクターデザイン案と展開イメージ。クリックで資料全体を拡大。</Caption></figure>
+            <figure className="research-figure character-proposal-figure"><a href="/assets/persol/interviewer-design-proposals.webp" target="_blank" rel="noreferrer"><img src="/assets/persol/interviewer-design-proposals.webp" width="2260" height="2034" loading="lazy" alt="AI面接官のデザイン提案一覧。人間型3D、デフォルメ、ロボット、ドット、波形の案と展開イメージ"/></a><Caption no="14">DESIGN PROPOSALS — リサーチをもとに制作したAI面接官のキャラクターデザイン案と展開イメージ。クリックで資料全体を拡大。</Caption></figure>
             <div className="research-deliverables" aria-label="AI面接官研究の担当範囲"><span>調査計画</span><span>論文・事例調査</span><span>仮説整理</span><span>キャラクター方向性</span><span>提案資料</span></div>
             <p className="body-copy research-conclusion">提案の軸は、外見に加えて、適切な間・傾聴・反応が話しやすさにどう関わるか。安心感と面接官としての信頼感のバランスを、検討すべき仮説として整理しました。</p>
             <div className="capabilities"><span>RESEARCH PLANNING</span><span>DESK RESEARCH</span><span>CHARACTER PROPOSAL</span><span>DOCUMENTATION</span></div>

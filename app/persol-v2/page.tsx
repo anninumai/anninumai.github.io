@@ -17,20 +17,20 @@ export const metadata: Metadata = {
 const base = '/assets/persol/';
 
 const sizes: Record<string, [number, number]> = {
-  'hero-together.png': [1672, 941],
-  'agent-directions.png': [3044, 1706],
-  'agent-ui.png': [2822, 1780],
-  'interview-selected.png': [1546, 1106],
-  'device-check.png': [2940, 876],
-  'notifications.png': [1946, 1408],
-  'loading-states.png': [2052, 1750],
-  'interview-states.png': [1948, 1930],
-  'brand-system.png': [3140, 1006],
-  'color-rationale.png': [1772, 1362],
-  'future-network.png': [1168, 1388],
-  'future-career-park.png': [1108, 1394],
-  'interviewer-hypotheses.png': [1918, 1008],
-  'interviewer-design-proposals.png': [2260, 2034],
+  'hero-together.webp': [1672, 941],
+  'agent-directions.webp': [3044, 1706],
+  'agent-ui.webp': [2822, 1780],
+  'interview-selected.webp': [1546, 1106],
+  'device-check.webp': [2940, 876],
+  'notifications.webp': [1946, 1408],
+  'loading-states.webp': [2052, 1750],
+  'interview-states.webp': [1948, 1930],
+  'brand-system.webp': [3140, 1006],
+  'color-rationale.webp': [1772, 1362],
+  'future-network.webp': [1168, 1388],
+  'future-career-park.webp': [1108, 1394],
+  'interviewer-hypotheses.webp': [1918, 1008],
+  'interviewer-design-proposals.webp': [2260, 2034],
 };
 
 function Label({ children }: { n: string; children: ReactNode }) {
@@ -84,7 +84,7 @@ export default function PersolV2() {
           <figure className="persol-v2-hero-visual">
             <Image
               unoptimized
-              src={`${base}hero-together.png`}
+              src={`${base}hero-together.webp`}
               alt="AIキャラクターMikaと、We're in this togetherのメッセージ"
               width={1672}
               height={941}
@@ -105,12 +105,12 @@ export default function PersolV2() {
             </p>
             <div className="persol-v2-pair">
               <Photo
-                name="agent-directions.png"
+                name="agent-directions.webp"
                 alt="AIキャラクターと候補者の関係性を比較した資料"
                 caption="候補者とAIの関係性を複数の方向から検討。"
               />
               <Photo
-                name="agent-ui.png"
+                name="agent-ui.webp"
                 alt="AIキャラクターの振る舞いをUIへ展開した資料"
                 caption="キャラクターの役割と振る舞いを具体的なUIへ展開。"
               />
@@ -121,7 +121,7 @@ export default function PersolV2() {
                 controls
                 playsInline
                 preload="metadata"
-                poster={`${base}hero-together.png`}
+                poster={`${base}hero-together.webp`}
                 aria-label="WITTOのコンセプトムービー"
               >
                 <source src={`${base}character-interaction.mp4`} type="video/mp4" />
@@ -141,40 +141,40 @@ export default function PersolV2() {
               </p>
               <div className="persol-v2-ui-grid">
                 <Photo
-                  name="interview-selected.png"
+                  name="interview-selected.webp"
                   alt="現在地と完了状態を示すAI面接画面"
                   caption="現在地と、完了した工程の情報の強弱を整理。"
                 />
                 <Photo
-                  name="device-check.png"
+                  name="device-check.webp"
                   alt="マイクとカメラの接続確認画面"
                   caption="面接前にマイク・カメラの状態を確認。"
                 />
                 <Photo
-                  name="loading-states.png"
+                  name="loading-states.webp"
                   alt="接続待ち時間の複数のUI案"
                   caption="待ち時間にも状態と変化が伝わる表示を比較。"
                 />
                 <Photo
-                  name="notifications.png"
+                  name="notifications.webp"
                   alt="正常時とエラー時の通知UI案"
                   caption="正常・エラー状態を簡潔に伝える通知を検討。"
                 />
               </div>
               <Photo
-                name="brand-system.png"
+                name="brand-system.webp"
                 alt="WITTOのネーミング、カラー、書体、ロゴ、UI、AIキャラクターを整理したFigmaのデザインルール"
                 caption="Figmaで整理したネーミング、カラー、書体、ロゴ、UIとキャラクターのデザインルール。"
                 className="persol-v2-design-reference"
               />
               <Photo
-                name="color-rationale.png"
+                name="color-rationale.webp"
                 alt="複数の配色案と選定理由を比較したトンマナ検討資料"
                 caption="配色の候補を比較し、目指すトンマナと選定理由を整理。"
                 className="persol-v2-design-reference"
               />
               <Photo
-                name="interview-states.png"
+                name="interview-states.webp"
                 alt="複数のAI面接UI案を比較した資料"
                 caption="各状態に対する選択肢と判断理由を資料化し、レビューで提案。"
                 className="persol-v2-review"
@@ -191,24 +191,24 @@ export default function PersolV2() {
             </p>
             <div className="persol-v2-proposal-pair">
               <Photo
-                name="future-network.png"
+                name="future-network.webp"
                 alt="自律型タレント・ディスカバリー・ネットワークのコンセプト資料"
                 caption="将来の体験案：自律型タレント・ディスカバリー・ネットワーク。"
               />
               <Photo
-                name="future-career-park.png"
+                name="future-career-park.webp"
                 alt="AIエージェントによる転職フェアのコンセプト資料"
                 caption="将来の体験案：AIエージェントによる転職フェア。"
               />
             </div>
             <Photo
-              name="interviewer-hypotheses.png"
+              name="interviewer-hypotheses.webp"
               alt="人間型、ロボット型、抽象型のAI面接官を比較した仮説資料"
               caption="別のAI面接サービスで、アバター表現の3つの方向性を比較。"
               className="persol-v2-research-evidence"
             />
             <Photo
-              name="interviewer-design-proposals.png"
+              name="interviewer-design-proposals.webp"
               alt="人間型3D、デフォルメ、ロボット、ドット、波形など、AI面接官のビジュアル提案一覧"
               caption="リサーチをもとに制作したAI面接官のビジュアル案と展開イメージ。"
               className="persol-v2-research-evidence"

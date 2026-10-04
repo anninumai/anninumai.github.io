@@ -23,7 +23,7 @@ export default function SummerV2() {
       { label: '実装', value: 'Shuhey Koyama' },
     ]}
     hero={{
-      src: '/assets/summer/screen.png',
+      src: '/assets/summer/screen.webp',
       alt: '青空と雲を背景に音の操作画面を表示したタブレット',
       caption: '夏の存在証明 — タブレットでの展示。',
     }}
@@ -32,7 +32,7 @@ export default function SummerV2() {
         label: '着眼点・体験',
         paragraphs: ['夏には決まった形がありません。それでも音を聴くと、光、温度、場所、過去の記憶まで思い浮かぶことがあります。音を選ぶ、重ねる、組み合わせて聴くという操作によって、鑑賞者自身の記憶から夏が立ち上がるインタラクションを構想しました。'],
         figure: {
-          src: '/assets/summer/screen.png',
+          src: '/assets/summer/screen.webp',
           alt: 'タブレット上で夏を想起させる音を組み合わせる操作画面',
           caption: '画面を操作し、複数の音を組み合わせて聴く。',
         },

@@ -4,7 +4,7 @@
 .about-v2-records{--about-portrait-height:clamp(2400px,220vw,3500px);position:relative;z-index:1;isolation:isolate;min-height:calc(var(--about-portrait-height)*.94);padding-top:calc(var(--about-portrait-height)*.34);padding-bottom:140px;background:#dceaf9}
 .about-v2-records:focus-visible{outline:2px solid var(--about-blue);outline-offset:-5px}
 .about-v2-records::before,.about-v2-records::after{content:'';position:absolute;z-index:-1;top:0;bottom:0;left:50%;width:100vw;transform:translateX(-50%);pointer-events:none}
-.about-v2-records::before{background:url('/assets/about-v2/background.jpg') center top / auto var(--about-portrait-height) no-repeat;filter:blur(2px)}
+.about-v2-records::before{background:url('/assets/about-v2/background.webp') center top / auto var(--about-portrait-height) no-repeat;filter:blur(2px)}
 .about-v2-records::after{z-index:1;background:linear-gradient(180deg,rgba(229,239,252,.24),rgba(242,247,254,.16) 58%,rgba(235,243,253,.32))}
 .about-v2-gesture{position:absolute;z-index:0;top:0;left:50%;height:calc(var(--about-portrait-height)*.78);transform:translateX(-50%);pointer-events:none;mask-image:linear-gradient(to bottom,transparent 0%,#000 8%,#000 68%,transparent 92%);-webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 8%,#000 68%,transparent 92%)}
 .about-v2-gesture img{display:block;width:auto;height:100%;max-width:none}

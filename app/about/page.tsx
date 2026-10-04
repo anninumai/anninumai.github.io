@@ -10,9 +10,9 @@ export const metadata: Metadata = {
 };
 
 const experience = [
-  { year: '2024', title: 'UI/UX Research & Design', place: 'STUDIO HOLIDAY', logo: '/assets/about/studio-holiday.jpeg' },
-  { year: '2022', title: 'UX/UI Design Internship', place: 'SEESAW', logo: '/assets/about/seesaw.jpg' },
-  { year: '2021', title: 'Communication Design Internship', place: 'Landor Tokyo', logo: '/assets/about/landor.jpeg' },
+  { year: '2024', title: 'UI/UX Research & Design', place: 'STUDIO HOLIDAY', logo: '/assets/about/studio-holiday.webp' },
+  { year: '2022', title: 'UX/UI Design Internship', place: 'SEESAW', logo: '/assets/about/seesaw.webp' },
+  { year: '2021', title: 'Communication Design Internship', place: 'Landor Tokyo', logo: '/assets/about/landor.webp' },
 ];
 
 const recognition = [
@@ -59,7 +59,7 @@ export default function AboutPage() {
         </div>
         <div className="about-profile-grid">
           <figure className="about-profile-visual">
-            <div className="about-profile-image"><img src="/assets/knitted/material.jpg" width="2000" height="1333" alt="毛羽立った白いニットの袖から現れる手と編み針" /></div>
+            <div className="about-profile-image"><img src="/assets/knitted/material.webp" width="2000" height="1333" alt="毛羽立った白いニットの袖から現れる手と編み針" /></div>
             <figcaption><span className="figure-no">MATERIAL / COMPUTATION</span><span>身体と素材から、デジタルの体験を考える。</span></figcaption>
           </figure>
           <div className="about-profile-copy">

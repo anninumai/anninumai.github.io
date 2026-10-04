@@ -81,7 +81,7 @@ export function V2RouteReset() {
     inset: 0,
     display: 'grid',
     placeItems: 'center',
-    background: "#f7f6f1 url('/assets/knit/white-stockinette-canvas.jpg') 0 0 / 36vw auto repeat",
+    background: "#f7f6f1 url('/assets/knit/white-stockinette-canvas.webp') 0 0 / 36vw auto repeat",
     opacity: loading ? 1 : 0,
     visibility: loading ? 'visible' : 'hidden',
     pointerEvents: loading ? 'auto' : 'none',

@@ -11,7 +11,7 @@ const paragraphs = [
 ];
 
 const frames = Array.from({ length: 14 }, (_, index) =>
-  `/assets/about-v2/frame-${String(index + 1).padStart(2, '0')}.jpg`,
+  `/assets/about-v2/frame-${String(index + 1).padStart(2, '0')}.webp`,
 );
 
 export function HandSequence() {
@@ -62,7 +62,7 @@ export function HandSequence() {
         onPointerLeave={reset}
         aria-label="手の動きとともに言葉の形が変わるポートレート"
       >
-        <Image className="about-v2-whole-body" src="/assets/about-v2/background.jpg" width={1024} height={1536} alt="白いニットをまとった岸本あいのの全身" draggable={false} unoptimized priority />
+        <Image className="about-v2-whole-body" src="/assets/about-v2/background.webp" width={1024} height={1536} alt="白いニットをまとった岸本あいのの全身" draggable={false} unoptimized priority />
         <Image className="about-v2-hand-frame" src={frames[frame]} width={1122} height={1402} alt="" aria-hidden="true" draggable={false} unoptimized priority />
         <div ref={textRef} className="about-v2-formed-text">
           <span className="about-v2-text-index">0{paragraph + 1} / 03</span>

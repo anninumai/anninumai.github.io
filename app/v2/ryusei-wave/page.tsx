@@ -19,7 +19,7 @@ export default function RyuseiWaveV2() {
     tools={['p5.js', 'ChatGPT', 'Visual Studio Code']}
     team="個人制作"
     hero={{
-      src: '/assets/ryusei-wave/exhibition-original.png',
+      src: '/assets/ryusei-wave/exhibition-original.webp',
       alt: '夜の二子玉川ライズに設置された3連LEDキューブの映像展示',
       caption: 'Ryusei Wave — 二子玉川ライズでの展示風景。',
     }}
@@ -28,7 +28,7 @@ export default function RyuseiWaveV2() {
         label: '着眼点・表現',
         paragraphs: ['点の配置と動きに曖昧さを残し、星空と魚群のどちらにも見える状態をつくりました。見る人の経験や注意によって像が変化する、視覚的な補完そのものを表現として扱っています。'],
         figure: {
-          src: '/assets/ryusei-wave/work.png',
+          src: '/assets/ryusei-wave/work.webp',
           alt: '昼夜の3連LEDキューブと映像の展示記録',
           caption: 'p5.jsで映像を実装し、3連LEDキューブへ展開。',
         },

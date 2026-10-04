@@ -14,7 +14,7 @@ function Label({ n, children }: { n: string; children: React.ReactNode }) {
 }
 
 function Record({ id, alt, children }: { id: string; alt: string; children: React.ReactNode }) {
-  return <figure className="lens-record"><a href={`/assets/lens/${id}.png`} target="_blank" rel="noreferrer" aria-label={`${alt}を拡大`}><img src={`/assets/lens/${id}.png`} alt={alt} loading="lazy" /></a><figcaption>{children}</figcaption></figure>;
+  return <figure className="lens-record"><a href={`/assets/lens/${id}.webp`} target="_blank" rel="noreferrer" aria-label={`${alt}を拡大`}><img src={`/assets/lens/${id}.webp`} alt={alt} loading="lazy" /></a><figcaption>{children}</figcaption></figure>;
 }
 
 const roles = ['リサーチ・問いの設定', 'コンセプト立案', '体験設計', '写真アルバムのメンタルモデルを用いたUI構造の設計', '写真日記が届くまでの時間設計', 'Prototype 1・2の企画と検証', 'UI・UXデザイン', 'CI・VIデザイン'];
@@ -31,7 +31,7 @@ export default function Lens() {
       <section className="hero wrap" aria-labelledby="project-title">
         <div className="eyebrow hero-eyebrow"><span>AI × POSSIBLE SELVES</span><span>QWS CHALLENGE / SELECTED PROJECT</span></div>
         <div className="title-row"><h1 id="project-title">Lens</h1><p className="lens-tagline">未来の写真日記から、<br />まだ知らない選択肢に出会う。</p></div>
-        <figure className="lens-hero"><img src="/assets/lens/2.png" width={7680} height={4320} alt="Lensの提案資料。未来の情景と、それに近づく行動を表示する画面" fetchPriority="high" /><figcaption>未来の体験画像と、そこへ近づく行動を同じ画面で提示する提案資料。</figcaption></figure>
+        <figure className="lens-hero"><img src="/assets/lens/2.webp" width={7680} height={4320} alt="Lensの提案資料。未来の情景と、それに近づく行動を表示する画面" fetchPriority="high" /><figcaption>未来の体験画像と、そこへ近づく行動を同じ画面で提示する提案資料。</figcaption></figure>
       </section>
 
       <section className="overview wrap section-grid" id="overview" aria-label="プロジェクト概要">

@@ -4,11 +4,11 @@ import Image from 'next/image';
 import { useEffect, useRef, useState, type CSSProperties } from 'react';
 
 const frames = [
-  '/assets/about-v2/gesture-01.jpg',
-  '/assets/about-v2/gesture-02.jpg',
-  '/assets/about-v2/gesture-03.jpg',
-  '/assets/about-v2/gesture-04.jpg',
-  '/assets/about-v2/gesture-05.jpg',
+  '/assets/about-v2/gesture-01.webp',
+  '/assets/about-v2/gesture-02.webp',
+  '/assets/about-v2/gesture-03.webp',
+  '/assets/about-v2/gesture-04.webp',
+  '/assets/about-v2/gesture-05.webp',
 ];
 
 export function AboutGesture() {

@@ -13,15 +13,15 @@ export const metadata: Metadata = {
 };
 
 const projects = [
-  { title: 'PERSOL AI Interview', image: '/assets/v2-thumbs/persol.jpg', href: '/v2/persol' },
-  { title: 'Focus on', image: '/assets/v2-thumbs/focus-on.jpg', href: '/v2/focus-on' },
-  { title: 'X couture', image: '/assets/v2-thumbs/x-couture.jpg', href: '/v2/x-couture' },
-  { title: 'Knitted VJ System', image: '/assets/v2-thumbs/knitted-vj.jpg', href: '/v2/knitted-vj-system' },
-  { title: 'Lens — Memory Maker', image: '/assets/v2-thumbs/lens.jpg', href: '/v2/lens' },
-  { title: '編みスクリーン', image: '/assets/v2-thumbs/knitted-display.jpg', href: '/v2/knitted-display' },
-  { title: 'Ryusei Wave', image: '/assets/v2-thumbs/ryusei-wave.jpg', href: '/v2/ryusei-wave' },
-  { title: '雨粒時計', image: '/assets/v2-thumbs/rain-clock.jpg', href: '/v2/rain-clock' },
-  { title: '夏の存在証明', image: '/assets/v2-thumbs/summer.jpg', href: '/v2/summer' },
+  { title: 'PERSOL AI Interview', image: '/assets/v2-thumbs/persol.webp', href: '/v2/persol' },
+  { title: 'Focus on', image: '/assets/v2-thumbs/focus-on.webp', href: '/v2/focus-on' },
+  { title: 'X couture', image: '/assets/v2-thumbs/x-couture.webp', href: '/v2/x-couture' },
+  { title: 'Knitted VJ System', image: '/assets/v2-thumbs/knitted-vj.webp', href: '/v2/knitted-vj-system' },
+  { title: 'Lens — Memory Maker', image: '/assets/v2-thumbs/lens.webp', href: '/v2/lens' },
+  { title: '編みスクリーン', image: '/assets/v2-thumbs/knitted-display.webp', href: '/v2/knitted-display' },
+  { title: 'Ryusei Wave', image: '/assets/v2-thumbs/ryusei-wave.webp', href: '/v2/ryusei-wave' },
+  { title: '雨粒時計', image: '/assets/v2-thumbs/rain-clock.webp', href: '/v2/rain-clock' },
+  { title: '夏の存在証明', image: '/assets/v2-thumbs/summer.webp', href: '/v2/summer' },
 ];
 
 export default function PortfolioV2Home() {

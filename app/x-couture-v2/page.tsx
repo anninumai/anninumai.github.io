@@ -15,13 +15,13 @@ export const metadata: Metadata = {
 };
 
 const sizes: Record<string, [number, number]> = {
-  '/assets/runway.png': [2226, 1260],
-  '/assets/blender.png': [2260, 1222],
-  '/assets/compositing.png': [2258, 1244],
-  '/assets/team-management.png': [3346, 1966],
-  '/assets/technical-report-detail.png': [2140, 605],
-  '/assets/knowledge.png': [1200, 1230],
-  '/assets/fashion-week-team.png': [1986, 1478],
+  '/assets/runway.webp': [2226, 1260],
+  '/assets/blender.webp': [2260, 1222],
+  '/assets/compositing.webp': [2258, 1244],
+  '/assets/team-management.webp': [3346, 1966],
+  '/assets/technical-report-detail.webp': [2140, 605],
+  '/assets/knowledge.webp': [1200, 1230],
+  '/assets/fashion-week-team.webp': [1986, 1478],
 };
 
 function Label({ children }: { n: string; children: ReactNode }) {
@@ -73,7 +73,7 @@ export default function XCoutureV2() {
       <main>
         <section className="hero wrap x-v2-hero" aria-labelledby="project-title">
           <Photo
-            src="/assets/runway.png"
+            src="/assets/runway.webp"
             alt="赤い照明と映像のなかをモデルが歩くyoshiokuboのショー"
             priority
             className="x-v2-hero-photo"
@@ -102,24 +102,24 @@ export default function XCoutureV2() {
             </p>
             <div className="x-v2-production-pair">
               <Photo
-                src="/assets/blender.png"
+                src="/assets/blender.webp"
                 alt="Blenderで写真に合わせてデジタルドレスを調整する制作工程"
                 caption="3DCGによるドレスの調整。"
               />
               <Photo
-                src="/assets/compositing.png"
+                src="/assets/compositing.webp"
                 alt="Photoshopで人物写真とデジタルドレスを合成する制作工程"
                 caption="人物写真と3Dドレスの合成。"
               />
             </div>
             <div className="x-v2-learning-pair">
               <Photo
-                src="/assets/technical-report-detail.png"
+                src="/assets/technical-report-detail.webp"
                 alt="3DCGと画像合成の作業内容と課題を記録した活動報告"
                 caption="自分も制作へ参加し、作業内容と課題を共有。"
               />
               <Photo
-                src="/assets/knowledge.png"
+                src="/assets/knowledge.webp"
                 alt="CG基礎や衣服モデリングの学習資料を集約した技術ラボ"
                 caption="制作で得た知識を、チームで再利用できる形へ。"
               />
@@ -135,7 +135,7 @@ export default function XCoutureV2() {
                 CGインターン約10人のPMを一人で担当し、メンバーをグループに分け、各グループにリーダーを置く進行体制を考案しました。会議、情報共有、課題をエスカレーションする方法を設計するとともに、一人ひとりの進捗、余力、困りごとを把握し、作業量や得意分野に応じて分担を調整しました。制作体制が整っていない状態から、チームで判断しながら進められる仕組みを構築しました。
               </p>
               <Photo
-                src="/assets/team-management.png"
+                src="/assets/team-management.webp"
                 alt="情報共有と作業ルール、メンバー編成、面談・技術レビューの予定をまとめたNotionの全体画面"
                 caption="Notionに情報共有のルールと、面談・技術レビューの流れを集約。"
                 className="x-v2-management"
@@ -160,7 +160,7 @@ export default function XCoutureV2() {
               >
                 <Image
                   unoptimized
-                  src="https://i.ytimg.com/vi/PF7KoWcs-2U/maxresdefault.jpg"
+                  src="https://i.ytimg.com/vi_webp/PF7KoWcs-2U/maxresdefault.webp"
                   alt="yoshiokubo 2022 A/W Collectionの動画サムネイル"
                   width={1280}
                   height={720}
@@ -169,7 +169,7 @@ export default function XCoutureV2() {
               </a>
             </figure>
             <Photo
-              src="/assets/fashion-week-team.png"
+              src="/assets/fashion-week-team.webp"
               alt="Rakuten Fashion Week TOKYOでのチーム集合写真"
               caption="Rakuten Fashion Week TOKYO 2022 A/Wでのチーム。"
               className="x-v2-team-photo"

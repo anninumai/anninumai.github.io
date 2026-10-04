@@ -19,7 +19,7 @@ export default function RainClockV2() {
     tools={['STUDIO']}
     team="個人制作"
     hero={{
-      src: '/assets/rain-clock/hero-leaf.png',
+      src: '/assets/rain-clock/hero-leaf.webp',
       alt: '葉の上の水滴に白い円と水平線を重ねた雨粒時計のビジュアル',
       caption: '雨粒時計のために制作したビジュアル。',
     }}
@@ -28,7 +28,7 @@ export default function RainClockV2() {
         label: '着眼点・体験',
         paragraphs: ['雨粒が落ちる時間へ変換することで、普段は意識しない空との距離を、身体に関係するスケールとして捉え直しました。情報を読むのではなく、時間の経過を眺めながら距離を感じる体験を目指しています。'],
         figure: {
-          src: '/assets/rain-clock/02.png',
+          src: '/assets/rain-clock/02.webp',
           alt: '条件の説明を開いた雨粒時計の画面',
           caption: '制作時に設定した高さや表示条件を確認できる画面。',
         },

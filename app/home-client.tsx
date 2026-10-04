@@ -6,16 +6,16 @@ type Category = 'client' | 'practice' | 'experiments';
 type Project = { category: Category; title: string; meta: string; image?: string; href?: string };
 
 const projects: Project[] = [
-  { category: 'client', title: 'PERSOL AI Career', meta: 'UX/UI · AI Interaction', image: '/assets/persol/hero-together.png', href: '/persol' },
+  { category: 'client', title: 'PERSOL AI Career', meta: 'UX/UI · AI Interaction', image: '/assets/persol/hero-together.webp', href: '/persol' },
   { category: 'client', title: '東大制作展 Web', meta: 'Design Lead · In progress' },
-  { category: 'client', title: 'Focus on', meta: 'Research · UX/UI', image: '/assets/focus-on/hero-onomatopoeia.png', href: '/focus-on' },
-  { category: 'client', title: 'X couture', meta: 'Project Management · CG', image: '/assets/runway.png', href: '/x-couture' },
-  { category: 'practice', title: 'Knitted VJ System', meta: 'Interaction · TouchDesigner', image: '/assets/knitted/live-original.jpg', href: '/knitted-vj-system' },
-  { category: 'practice', title: '編みスクリーン', meta: 'Material · Installation', image: '/assets/nnamuimonyo/display-visitors.jpg', href: '/nnamuimonyo' },
-  { category: 'practice', title: 'Lens', meta: 'Research · Service Design', image: '/assets/lens/1.png', href: '/lens' },
-  { category: 'experiments', title: '夏の存在証明', meta: 'Sound · Interaction', image: '/assets/summer/screen.png', href: '/summer' },
-  { category: 'experiments', title: 'Ryusei Wave', meta: 'Creative Coding · Installation', image: '/assets/ryusei-wave/exhibition-original.png', href: '/ryusei-wave' },
-  { category: 'experiments', title: '雨粒時計', meta: 'Creative Coding · Clock', image: '/assets/rain-clock/hero-leaf-4x.png', href: '/rain-clock' },
+  { category: 'client', title: 'Focus on', meta: 'Research · UX/UI', image: '/assets/focus-on/hero-onomatopoeia.webp', href: '/focus-on' },
+  { category: 'client', title: 'X couture', meta: 'Project Management · CG', image: '/assets/runway.webp', href: '/x-couture' },
+  { category: 'practice', title: 'Knitted VJ System', meta: 'Interaction · TouchDesigner', image: '/assets/knitted/live-original.webp', href: '/knitted-vj-system' },
+  { category: 'practice', title: '編みスクリーン', meta: 'Material · Installation', image: '/assets/nnamuimonyo/display-visitors.webp', href: '/nnamuimonyo' },
+  { category: 'practice', title: 'Lens', meta: 'Research · Service Design', image: '/assets/lens/1.webp', href: '/lens' },
+  { category: 'experiments', title: '夏の存在証明', meta: 'Sound · Interaction', image: '/assets/summer/screen.webp', href: '/summer' },
+  { category: 'experiments', title: 'Ryusei Wave', meta: 'Creative Coding · Installation', image: '/assets/ryusei-wave/exhibition-original.webp', href: '/ryusei-wave' },
+  { category: 'experiments', title: '雨粒時計', meta: 'Creative Coding · Clock', image: '/assets/rain-clock/hero-leaf-4x.webp', href: '/rain-clock' },
 ];
 
 const categories: Array<{ id: Category; label: string }> = [
@@ -24,7 +24,7 @@ const categories: Array<{ id: Category; label: string }> = [
   { id: 'experiments', label: 'EXPERIMENTS' },
 ];
 
-const frame = (set: string, index: number) => `/assets/hands/${set}/frame-${String(index).padStart(3, '0')}.png`;
+const frame = (set: string, index: number) => `/assets/hands/${set}/frame-${String(index).padStart(3, '0')}.webp`;
 
 export function PortfolioHome() {
   const [category, setCategory] = useState<Category>('client');

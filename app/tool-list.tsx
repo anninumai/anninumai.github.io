@@ -1,16 +1,16 @@
 const toolLogos: Record<string, string> = {
-  Figma: '/tool-logos/figma.svg',
-  Notion: '/tool-logos/notion.svg',
-  Blender: '/tool-logos/blender.svg',
-  Photoshop: '/tool-logos/photoshop.svg',
-  Illustrator: '/tool-logos/illustrator.svg',
-  Miro: '/tool-logos/miro.svg',
-  'Claude Code': '/tool-logos/claude-code.svg',
-  TouchDesigner: '/tool-logos/touchdesigner.jpeg',
-  'p5.js': '/tool-logos/p5js.png',
-  ChatGPT: '/tool-logos/chatgpt.svg',
-  'Visual Studio Code': '/tool-logos/vscode.svg',
-  STUDIO: '/tool-logos/studio.jpeg',
+  Figma: '/tool-logos/figma.webp',
+  Notion: '/tool-logos/notion.webp',
+  Blender: '/tool-logos/blender.webp',
+  Photoshop: '/tool-logos/photoshop.webp',
+  Illustrator: '/tool-logos/illustrator.webp',
+  Miro: '/tool-logos/miro.webp',
+  'Claude Code': '/tool-logos/claude-code.webp',
+  TouchDesigner: '/tool-logos/touchdesigner.webp',
+  'p5.js': '/tool-logos/p5js.webp',
+  ChatGPT: '/tool-logos/chatgpt.webp',
+  'Visual Studio Code': '/tool-logos/vscode.webp',
+  STUDIO: '/tool-logos/studio.webp',
 };
 
 export function ToolList({ tools }: { tools: string[] }) {

@@ -43,13 +43,13 @@ function LensImage({
   return (
     <figure className="lens-v2-image">
       <a
-        href={`/assets/lens/${id}.png`}
+        href={`/assets/lens/${id}.webp`}
         target="_blank"
         rel="noreferrer"
         aria-label={`${alt}を拡大`}
       >
         <Image
-          src={`/assets/lens/${id}.png`}
+          src={`/assets/lens/${id}.webp`}
           alt={alt}
           width={width}
           height={height}

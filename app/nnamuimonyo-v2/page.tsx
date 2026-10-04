@@ -17,12 +17,12 @@ export const metadata: Metadata = {
 const base = '/assets/nnamuimonyo/';
 
 const sizes: Record<string, [number, number]> = {
-  'display-texture.jpg': [1206, 1650],
-  'display-touch.jpg': [2364, 1773],
-  'display-hanging.jpg': [1204, 1606],
-  'display-visitors.jpg': [2364, 1773],
-  'exhibition-wide.jpg': [2364, 1773],
-  'requirements.png': [1690, 1714],
+  'display-texture.webp': [1206, 1650],
+  'display-touch.webp': [2364, 1773],
+  'display-hanging.webp': [1204, 1606],
+  'display-visitors.webp': [2364, 1773],
+  'exhibition-wide.webp': [2364, 1773],
+  'requirements.webp': [1690, 1714],
 };
 
 function Label({ children }: { n: string; children: ReactNode }) {
@@ -76,7 +76,7 @@ export default function KnittedDisplayV2() {
           <figure className="display-v2-hero-photo">
             <Image
               unoptimized
-              src={`${base}display-texture.jpg`}
+              src={`${base}display-texture.webp`}
               alt="青と水色の糸による立体的な編み地"
               width={1206}
               height={1650}
@@ -114,12 +114,12 @@ export default function KnittedDisplayV2() {
             </p>
             <div className="display-v2-pair display-v2-pair--touch">
               <Photo
-                name="display-touch.jpg"
+                name="display-touch.webp"
                 alt="展示された編みスクリーンに触れる来場者"
                 caption="見る画面から、素材へ働きかける画面へ。"
               />
               <Photo
-                name="display-hanging.jpg"
+                name="display-hanging.webp"
                 alt="壁から垂れる青と白の編みスクリーン"
                 caption="生活空間に溶け込む、柔らかな表示面。"
               />
@@ -135,7 +135,7 @@ export default function KnittedDisplayV2() {
                 フィッシャーマンズリブの、畝と谷が連なる立体構造を利用しました。編み地を動かすことで畝の間が開き、谷側の色が現れる構造を考案。光で像を表示するのではなく、糸、編み目、陰影、変形によって、色や模様が立ち上がる画面を構想しました。
               </p>
               <Photo
-                name="requirements.png"
+                name="requirements.webp"
                 alt="編みスクリーンの成立条件と構造を整理した資料"
                 caption="見え方の仮説と、試作に必要な成立条件を整理。"
                 className="display-v2-requirements"
@@ -157,7 +157,7 @@ export default function KnittedDisplayV2() {
               一方で、素材から生まれた予想外の動きや反応に、新しい表現の可能性を発見しました。意図との差を失敗として終わらせず、展示表現と次の検証課題へ展開しました。
             </p>
             <Photo
-              name="exhibition-wide.jpg"
+              name="exhibition-wide.webp"
               alt="編みスクリーンと編み花を組み合わせた展示空間"
               caption="素材から生まれた反応を、4人による展示と次の問いへ展開。"
               className="display-v2-exhibition"

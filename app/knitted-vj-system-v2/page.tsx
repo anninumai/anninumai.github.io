@@ -17,14 +17,14 @@ export const metadata: Metadata = {
 const base = '/assets/knitted/';
 
 const sizes: Record<string, [number, number]> = {
-  'live-original.jpg': [4000, 6000],
-  'material.jpg': [2000, 1333],
-  'skin.jpg': [844, 562],
-  'hands.jpg': [1333, 2000],
-  'interface.jpg': [2000, 1824],
-  'system.jpg': [2000, 1333],
-  'touchdesigner.jpg': [2000, 1187],
-  'exhibition.jpg': [1500, 2000],
+  'live-original.webp': [4000, 6000],
+  'material.webp': [2000, 1333],
+  'skin.webp': [844, 562],
+  'hands.webp': [1333, 2000],
+  'interface.webp': [2000, 1824],
+  'system.webp': [2000, 1333],
+  'touchdesigner.webp': [2000, 1187],
+  'exhibition.webp': [1500, 2000],
 };
 
 function Label({ children }: { n: string; children: ReactNode }) {
@@ -80,7 +80,7 @@ export default function KnittedVJSystemV2() {
           <figure className="knitted-v2-hero-photo">
             <Image
               unoptimized
-              src={`${base}live-original.jpg`}
+              src={`${base}live-original.webp`}
               alt="白いニットをまとい、糸を張った装置を操作する演者と生成映像"
               width={4000}
               height={6000}
@@ -121,7 +121,7 @@ export default function KnittedVJSystemV2() {
                 controls
                 playsInline
                 preload="metadata"
-                poster={`${base}video-poster.jpg`}
+                poster={`${base}video-poster.webp`}
                 aria-label="Knitted VJ Systemのライブパフォーマンス映像"
               >
                 <source src={`${base}live.mp4`} type="video/mp4" />
@@ -137,12 +137,12 @@ export default function KnittedVJSystemV2() {
             </figure>
             <div className="knitted-v2-sensory-pair">
               <Photo
-                name="hands.jpg"
+                name="hands.webp"
                 alt="糸の張力を感じながら編む演者の手"
                 caption="糸の抵抗を感じ、手の力と動きを調整する。"
               />
               <Photo
-                name="interface.jpg"
+                name="interface.webp"
                 alt="衣装、演者の手、糸、センサーがつながる装置"
                 caption="身体と素材、計算機が接する場所。"
               />
@@ -166,12 +166,12 @@ export default function KnittedVJSystemV2() {
               </p>
               <div className="knitted-v2-tech-pair">
                 <Photo
-                  name="touchdesigner.jpg"
+                  name="touchdesigner.webp"
                   alt="映像生成を実装したTouchDesignerの制作画面"
                   caption="映像の生成・連なり・変形・消失をTouchDesignerで実装。"
                 />
                 <Photo
-                  name="system.jpg"
+                  name="system.webp"
                   alt="糸とセンサーを取り付けたライブ用の操作機材"
                   caption="約1週間で試作し、本番運用したライブシステム。"
                 />
