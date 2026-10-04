@@ -10,8 +10,10 @@
   All nine works are present in the static HTML, with native anchor navigation
   and native document scrolling. No Canvas renderer is downloaded for TOP.
 - The original photograph is revealed through the baked silhouette on hover.
-  A small pointer-driven polygon updates only for the active card; it has no
-  idle animation loop. Keyboard focus also reveals the photograph.
+  A pointer-driven contour follows complete V-shaped cells on the same lattice
+  as the baked image. It traces exposed row boundaries, not image pixels, and
+  updates only on the active card when the pointer enters a new cell. No idle
+  animation loop or clip-path interpolation. Keyboard focus also reveals the photo.
 - The fabric and moving pastel field are baked together by
   `npm run assets:knit-video` (requires local FFmpeg, not a browser dependency).
   The committed H.264 MP4 is 1280 × 1632, 12fps, 12 seconds, silent, and
@@ -28,6 +30,10 @@
 - Loading no longer waits for a yarn-rendering event. Its normal minimum is
   900ms and its asset wait limit is 2500ms. It never intercepts pointer input;
   a CSS 3-second failsafe and the no-script style prevent a persistent cover.
+- Links are native anchors with no outgoing interception, navigation timeout,
+  or departing-state lock. The destination HTML supplies the loader, including
+  direct navigation; back/forward-cache restores restart its short loading state.
+  ABOUT has an enlarged hit area without moving or resizing its visible text.
 
 ## Responsive sizing
 
@@ -75,3 +81,15 @@ Intel hardware and older Safari versions have not been tested directly.
 - [Video element behaviour](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/video)
   and [video loading guidance](https://web.dev/articles/lazy-loading-video)
   inform muted inline playback, posters and deferred loading.
+
+## Navigation and hover follow-up (2026-10-05)
+
+- TOP → ABOUT, browser Back → TOP → ABOUT and incoming loading verified on
+  the static export, including a CPU-throttled 6× navigation.
+- `node scripts/test-woven-reveal.mjs` checks 150 contours: each segment follows
+  a V-cell edge, and each stitch centre is inside exactly when selected. A Node
+  sample of 1,000 contour updates took 277ms (not a browser or Intel benchmark).
+- Browser hover confirms the complete-cell boundary, with zero Canvas elements.
+  A 6×-throttled 24-position hover sample recorded 192ms of script work and no
+  layout passes over 7.35 seconds; this is diagnostic, not a frame-rate guarantee.
+- TypeScript and production export pass; image audit reports no missing assets.

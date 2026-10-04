@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, type CSSProperties } from 'react';
+import { COLUMN_GAP, ROW_GAP, WOVEN_HEIGHT, WOVEN_WIDTH, wovenRevealClip } from './woven-reveal';
 
 type WovenProjectImageProps = { src: string; eager?: boolean };
 
@@ -20,22 +21,21 @@ export function WovenProjectImage({ src, eager = false }: WovenProjectImageProps
     const paint = () => {
       pending = 0;
       const bounds = frame.getBoundingClientRect();
-      const x = (pointerX - bounds.left) / bounds.width * 100;
-      const y = (pointerY - bounds.top) / bounds.height * 100;
-      const cell = `${Math.round(x)}:${Math.round(y)}`;
+      if (!bounds.width || !bounds.height) return;
+      const column = Math.round((pointerX - bounds.left) / bounds.width * WOVEN_WIDTH / COLUMN_GAP);
+      const row = Math.round((pointerY - bounds.top) / bounds.height * WOVEN_HEIGHT / ROW_GAP);
+      const cell = `${column}:${row}`;
       if (cell === previousCell) return;
       previousCell = cell;
+      const x = column * COLUMN_GAP / WOVEN_WIDTH * 100;
+      const y = row * ROW_GAP / WOVEN_HEIGHT * 100;
       const center = 1 - Math.min(1, Math.max(Math.abs(x - 50), Math.abs(y - 50)) / 50);
       const full = Math.max(0, Math.min(1, (center - .62) / .25));
       const eased = full * full * (3 - 2 * full);
       const radius = 8 + center * 20 + eased * 120;
-      // A small stepped polygon reveals the photo through whole yarn cells.
-      // Only the hovered card updates, once per pointer frame. Idle work is zero.
-      const points = Array.from({ length: 40 }, (_, i) => {
-        const angle = i / 40 * Math.PI * 2;
-        return `${Math.round((x + Math.cos(angle) * radius) / .86) * .86}% ${Math.round((y + Math.sin(angle) * radius * 1.5) / 1.8) * 1.8}%`;
-      });
-      frame.style.setProperty('--woven-reveal', `polygon(${points.join(',')})`);
+      // Reveal whole V-shaped stitches, never an interpolated edge through yarn.
+      // Only the hovered card updates once per frame, and only on a new cell.
+      frame.style.setProperty('--woven-reveal', wovenRevealClip(column * COLUMN_GAP, row * ROW_GAP, radius / 100 * WOVEN_WIDTH));
     };
     const move = (event: PointerEvent) => {
       if (event.pointerType === 'touch') return;
