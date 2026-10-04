@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { V2Header } from '../v2-header';
+import { AboutGesture } from './about-gesture';
 import './about-v2.css';
 
 export const dynamic = 'force-static';
@@ -52,7 +53,8 @@ export default function AboutV2Page() {
     <a className="skip" href="#about-v2-main">本文へ移動</a>
     <V2Header />
     <main id="about-v2-main">
-      <section className="about-v2-records wrap" aria-label="経歴と活動">
+      <section className="about-v2-records wrap" aria-label="経歴と活動" tabIndex={0}>
+        <AboutGesture />
         <div className="about-v2-record-grid">
           <section>
             <h2><span>03</span>Experience</h2>
