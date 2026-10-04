@@ -117,13 +117,7 @@ export default function PersolV2() {
             <Label n="02">UI / ACCESSIBILITY</Label>
             <div>
               <p className="body-copy">
-                AI面接では、接続や録画の失敗が選考結果への不安に直結します。
-              </p>
-              <p className="body-copy">
-                そこで、現在地、マイク・カメラの状態、待ち時間、正常・エラー通知を整理。配色、可読性、情報の強弱など、アクセシビリティの観点を含めてUIを検討しました。
-              </p>
-              <p className="persol-v2-statement">
-                候補者が「いま何が起きているか」「次に何をすればよいか」を判断できる状態設計を目指しました。
+                AI面接では、接続や録画の失敗が選考結果への不安に直結します。そこで、現在地、マイク・カメラの状態、待ち時間、正常・エラー通知を整理し、配色、可読性、情報の強弱など、アクセシビリティの観点を含めてUIを検討しました。候補者が「いま何が起きているか」「次に何をすればよいか」を判断できる状態設計を目指しました。
               </p>
               <div className="persol-v2-ui-grid">
                 <Photo
@@ -154,14 +148,8 @@ export default function PersolV2() {
         <section className="wrap section-grid persol-v2-role" id="role">
           <Label n="03">MY ROLE / COLLABORATION</Label>
           <div>
-            <p className="persol-v2-role-lead">
-              大規模AI転職サービスの開発に、社外のPM・デザイナーと約8カ月間参加。
-            </p>
             <p className="body-copy">
-              各状態に対して複数のUI案を制作し、それぞれの違いと判断理由を資料化しました。デザイナーとしてレビューの場で提案・説明し、フィードバックを受けながら具体化しました。
-            </p>
-            <p className="body-copy">
-              仕様が変化するなかで継続的にレビューを重ね、それぞれの専門性を持ち寄りながら、チームで体験を設計しました。
+              大規模AI転職サービスの開発に、社外のPM・デザイナーと約8カ月間参加しました。各状態に対して複数のUI案を制作し、それぞれの違いと判断理由を資料化したうえで、デザイナーとしてレビューの場で提案・説明しました。仕様が変化するなかでも継続的にレビューを重ね、フィードバックを受けて案を具体化しながら、それぞれの専門性を持ち寄り、チームで体験を設計しました。
             </p>
             <Photo
               name="interview-states.png"

@@ -116,10 +116,7 @@ export default function XCoutureV2() {
           <Label n="01">COLLABORATION</Label>
           <div>
             <p className="body-copy">
-              CGは、当時の私にとって未知の技術領域でした。分からないことを曖昧にしたまま進めるのではなく、自分も制作へ参加し、技術を学びながら、メンバーとの対話に必要な共通言語を獲得しました。
-            </p>
-            <p className="body-copy">
-              PMがすべてを理解して指示するのではなく、互いの分からなさや困りごとを共有し、それぞれの得意を持ち寄って目標へ進めるチームを目指しました。
+              CGは、当時の私にとって未知の技術領域でした。分からないことを曖昧にしたまま進めるのではなく、プロジェクトマネジメントに加えて自分も制作へ参加し、知らない技術でも面白がって学びながら、メンバーとの対話に必要な共通言語を獲得しました。得た知識を共有し、専門の異なるメンバー同士をつなぐことで、PMがすべてを理解して指示するのではなく、互いの分からなさや困りごとを共有し、それぞれの得意を持ち寄って目標へ進めるチームを目指しました。
             </p>
             <div className="x-v2-learning-pair">
               <Photo
@@ -140,12 +137,8 @@ export default function XCoutureV2() {
           <div className="wrap section-grid">
             <Label n="02">TEAM SYSTEM / OWNERSHIP</Label>
             <div>
-              <p className="x-v2-lead">CGインターン約10人のPMを一人で担当しました。</p>
               <p className="body-copy">
-                メンバーをグループに分け、各グループにリーダーを置く進行体制を考案。会議、情報共有、課題をエスカレーションする方法を設計しました。
-              </p>
-              <p className="body-copy">
-                一人ひとりの進捗、余力、困りごとを把握し、作業量や得意分野に応じて分担を調整。制作体制が整っていない状態から、チームで判断しながら進められる仕組みを構築しました。
+                CGインターン約10人のPMを一人で担当し、メンバーをグループに分け、各グループにリーダーを置く進行体制を考案しました。会議、情報共有、課題をエスカレーションする方法を設計するとともに、一人ひとりの進捗、余力、困りごとを把握し、作業量や得意分野に応じて分担を調整しました。制作体制が整っていない状態から、チームで判断しながら進められる仕組みを構築しました。
               </p>
               <Photo
                 src="/assets/team-management-detail.png"
@@ -160,9 +153,6 @@ export default function XCoutureV2() {
         <section className="wrap section-grid x-v2-outcome" id="outcome">
           <Label n="03">MY ROLE / OUTCOME</Label>
           <div>
-            <p className="body-copy">
-              プロジェクトマネジメントに加え、自分も制作へ参加。知らない技術でも面白がって学び、得た知識を共有しながら、専門の異なるメンバー同士をつなぎました。
-            </p>
             <p className="body-copy">
               構築した制作体制によって、約3〜4カ月にわたる二つのデジタルファッション制作を進行。うち一つを、Rakuten Fashion Week TOKYO 2022 A/Wに向けたyoshiokuboとの実制作として完成させました。
             </p>
