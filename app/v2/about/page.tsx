@@ -76,8 +76,5 @@ export default function AboutV2Page() {
         </div>
       </section>
     </main>
-    <footer className="about-v2-footer wrap">
-      <a href="#top">BACK TO TOP ↑</a>
-    </footer>
   </div>;
 }
