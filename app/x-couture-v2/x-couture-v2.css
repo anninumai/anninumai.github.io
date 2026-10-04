@@ -176,15 +176,6 @@
   scale: 1.08;
 }
 
-.x-v2-runway-action {
-  position: absolute;
-  z-index: 1;
-  right: 24px;
-  bottom: 20px;
-  font-size: 13px;
-  letter-spacing: .04em;
-}
-
 .x-v2-runway-link:hover,
 .x-v2-runway-link:focus-visible {
   color: white;

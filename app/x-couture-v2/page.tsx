@@ -153,24 +153,20 @@ export default function XCoutureV2() {
             <figure className="x-v2-runway-film">
               <a
                 className="x-v2-runway-link"
-                href="https://www.youtube.com/watch?v=PF7KoWcs-2U&t=23s"
+                href="https://www.youtube.com/watch?v=PF7KoWcs-2U"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="yoshiokubo 2022 A/W Collectionの動画をYouTubeで再生"
               >
                 <Image
                   unoptimized
-                  src="/assets/runway.png"
-                  alt="yoshiokubo 2022 A/W Collectionのショー映像のプレビュー"
-                  width={2226}
-                  height={1260}
+                  src="https://i.ytimg.com/vi/PF7KoWcs-2U/maxresdefault.jpg"
+                  alt="yoshiokubo 2022 A/W Collectionの動画サムネイル"
+                  width={1280}
+                  height={720}
                 />
                 <span className="x-v2-runway-play" aria-hidden="true">▶</span>
-                <span className="x-v2-runway-action">YouTubeでショー映像を見る ↗</span>
               </a>
-              <figcaption>
-                yoshiokubo 2022 A/W Collectionのショー映像。23秒地点から再生。
-              </figcaption>
             </figure>
             <Photo
               src="/assets/fashion-week-team.png"
