@@ -1,10 +1,9 @@
 .work-index.v2-index{position:relative;min-height:100vh;overflow:visible;background:#faf9f5}
-.v2-index>.v2-knit-background{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;background:#f7f6f1;contain:strict}
-.v2-knit-photo{position:absolute;inset:0;background:url('/assets/knit/white-stockinette-canvas.webp') center top / calc(var(--v2-page-width)*.36) auto repeat}
-.v2-knit-field,.v2-knit-field::after{position:absolute;inset:0;background:url('/assets/v2-knit/field-1.webp') center top / var(--v2-page-width) auto repeat;opacity:.7}
-.v2-knit-field::after{content:'';background-image:url('/assets/v2-knit/field-2.webp');opacity:0;animation:v2-yarn-breathe 24s ease-in-out infinite alternate}
-@keyframes v2-yarn-breathe{to{opacity:.65}}
-.v2-index> :not(.v2-knit-background):not(.v2-shared-header){position:relative;z-index:1}
+.v2-index>.v2-knit-background{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none;background:#f7f6f1 url('/assets/knit/background-loop-poster.webp') center top / auto var(--knit-tile-height) repeat;contain:strict}
+.v2-knit-video{position:absolute;left:0;display:block;width:100%;height:var(--knit-tile-height);object-fit:cover;opacity:0}
+.v2-knit-video.is-playing{opacity:1}
+.v2-index> :not(.v2-knit-background):not(.v2-shared-header):not(.v2-background-motion){position:relative;z-index:1}
+.v2-index>.v2-background-motion{position:fixed;z-index:21;right:max(3vw,calc((100vw - var(--v2-page-width))/2 + var(--v2-page-width)*.03));bottom:16px;padding:7px 10px;border:1px solid #006fc733;background:#faf9f5dc;color:#006fc7;font:500 10px var(--sans);letter-spacing:.08em;cursor:pointer}
 .v2-index>.v2-shared-header>.v2-about-link{margin-left:auto;font-family:var(--sans);font-size:calc(13 * var(--v2-px));font-weight:600;letter-spacing:.14em}
 .v2-index ::selection{background:#ffe500;color:#006fc7}
 .v2-index>.v2-shared-header{position:fixed;z-index:20;inset:0 0 auto;background:transparent;border-bottom:0}
@@ -34,4 +33,4 @@
   .v2-archive-card.is-left{left:9%}.v2-archive-card.is-right{right:9%}
   .v2-archive-copy{display:block}
 }
-@media(prefers-reduced-motion:reduce){.v2-knit-field::after{animation:none}.v2-woven-digital{transition:none}}
+@media(prefers-reduced-motion:reduce){.v2-woven-digital{transition:none}}

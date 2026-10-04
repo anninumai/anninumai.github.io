@@ -12,9 +12,19 @@
 - The original photograph is revealed through the baked silhouette on hover.
   A small pointer-driven polygon updates only for the active card; it has no
   idle animation loop. Keyboard focus also reveals the photograph.
-- The pastel background uses two pre-rendered fields with a slow CSS opacity
-  change, disabled by `prefers-reduced-motion`. Full-page case-study blur and
-  individual wordmark-stitch filters are removed in V2.
+- The fabric and moving pastel field are baked together by
+  `npm run assets:knit-video` (requires local FFmpeg, not a browser dependency).
+  The committed H.264 MP4 is 1280 × 1632, 12fps, 12 seconds, silent, and
+  961,703 bytes. Integer phase cycles join the temporal and vertical repeats.
+- The background is document-positioned, so its scroll displacement exactly
+  matches the work cards. Nearby video tiles play; offscreen tiles pause via
+  IntersectionObserver. Re-entering tiles synchronise once, not on every scroll
+  frame. Hidden tabs pause all videos. There is no JS drawing loop.
+- A WebP poster remains underneath if video is unavailable or autoplay is
+  denied. Reduced-motion / Save-Data preferences avoid loading the MP4, and
+  a small pause control is available. The video never blocks page loading.
+- Full-page case-study blur and individual wordmark-stitch filters are removed
+  in V2. Work hover and ABOUT hand interaction are unchanged by the video update.
 - Loading no longer waits for a yarn-rendering event. Its normal minimum is
   900ms and its asset wait limit is 2500ms. It never intercepts pointer input;
   a CSS 3-second failsafe and the no-script style prevent a persistent cover.
@@ -48,3 +58,20 @@ centred after the cap; its columns no longer drift toward opposite edges.
   reached the final card (visible within a 900px viewport); loader was hidden.
 
 Intel hardware and older Safari versions have not been tested directly.
+
+## Video-background follow-up (2026-10-05)
+
+- FFprobe confirms one H.264 High Level 4.0, yuv420p stream with no audio.
+- At 1280px, scrolling 720px moves both the fabric and the first card by -720px.
+  The next video tile remains unloaded until it approaches the viewport.
+- Pause/resume control stops and restarts playback without stopping scrolling.
+- At 390px, the final card remains reachable with no horizontal overflow;
+  the top tile pauses after leaving view and only the two nearby tiles play.
+- Reduced-motion emulation leaves all video sources unset. Blocking the MP4
+  leaves the poster and all nine works visible with the loader dismissed.
+- At 1920px with CPU throttled 6×, video reaches readyState 4, plays, and the
+  loading overlay clears. This is not a direct Intel-hardware benchmark.
+- TypeScript, static export (29 routes) and the image audit (191 assets) pass.
+- [Video element behaviour](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/video)
+  and [video loading guidance](https://web.dev/articles/lazy-loading-video)
+  inform muted inline playback, posters and deferred loading.
