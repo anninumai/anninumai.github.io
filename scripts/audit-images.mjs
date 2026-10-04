@@ -24,6 +24,7 @@ for (const file of files.filter(f => /\.(html|css)$/.test(f))) {
     if (ref.startsWith('data:')) continue;
     if (/localhost|127\.0\.0\.1|file:|\/Users\/|\/_next\/image/.test(ref)) failures.push({file,ref,error:'Non-static image URL'});
     const url = new URL(ref, `${origin}/${path.relative(root,file)}`);
+    if (/\.(mp4|webm|mov)$/i.test(url.pathname)) continue;
     images.set(url.href, file);
     if (url.origin === origin) {
       try { await access(path.join(root, decodeURIComponent(url.pathname))); }
