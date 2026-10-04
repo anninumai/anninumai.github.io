@@ -345,6 +345,11 @@
   padding-block: calc(110 * var(--v2-px, 1px));
 }
 
+.persol-v2-additional .body-copy a {
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+
 .persol-v2-proposal-pair {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

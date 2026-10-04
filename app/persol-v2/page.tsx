@@ -187,7 +187,13 @@ export default function PersolV2() {
           <Label n="03">FUTURE VISION / AVATAR RESEARCH</Label>
           <div>
             <p className="body-copy">
-              面接画面のUI設計に加え、将来のサービス体験とAI面接官の表現についても、別軸で提案しました。将来の体験設計では、AIが転職活動を補助する存在から自律的な代理人へ発展した場合を想定し、タレント・ディスカバリー・ネットワークやAIエージェントによる転職フェアのコンセプトを構想。関係者とのレビューを経て、外部UXパートナーが具体的な体験とUX/UIへ展開しました。また、別のAI面接サービスでは、面接官アバターの外見と振る舞いについて論文や事例を調査し、人間型・ロボット型・抽象型が与える安心感や信頼感、属性バイアスに関する仮説を整理。複数のビジュアル案と、面接画面での見え方や展開イメージを提案しました。
+              将来の体験設計として、AIが自律的な代理人として発展した場合を想定し、タレント・ディスカバリー・ネットワークやAIエージェントによる転職フェアのコンセプトを構想。
+            </p>
+            <p className="body-copy">
+              AIアバターの外見と振る舞いについて論文や事例調査も行いました。
+            </p>
+            <p className="body-copy">
+              こうした検討は、現在の<a href="https://openai.com/index/introducing-dots/" target="_blank" rel="noopener noreferrer">OpenAIのdots</a>や<a href="https://x.ai/bot" target="_blank" rel="noopener noreferrer">xAIのGrok Bot</a>に見られる、文脈を理解し、自律的に動くAIの方向性とも重なると考えています。人がAIとどんな距離感で関わり、何を任せられるのか。目の前の使いやすさだけでなく、その先の関係性まで視野に入れた取り組みとなりました。
             </p>
             <div className="persol-v2-proposal-pair">
               <Photo
