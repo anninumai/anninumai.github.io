@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import Link from 'next/link';
 import { V2Header } from '../v2-header';
 import { AboutGesture } from './about-gesture';
 import './about-v2.css';
@@ -43,7 +42,7 @@ function RecordList({ items }: { items: Entry[] }) {
       <span className="about-v2-record-arrow" aria-hidden="true">{item.href ? '↗' : ''}</span>
     </>;
     return item.href
-      ? <Link key={`${item.year}-${item.title}`} href={item.href}>{content}</Link>
+      ? <a key={`${item.year}-${item.title}`} href={`${item.href}/`}>{content}</a>
       : <div key={`${item.year}-${item.title}`}>{content}</div>;
   })}</div>;
 }

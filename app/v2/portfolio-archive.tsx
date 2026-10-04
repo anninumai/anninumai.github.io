@@ -2,7 +2,6 @@
 
 import type { CSSProperties } from 'react';
 import { useEffect, useRef } from 'react';
-import Link from 'next/link';
 import { WovenProjectImage } from './woven-project-image';
 import { EmbroideredTitle } from './embroidered-title';
 
@@ -100,12 +99,12 @@ export function PortfolioArchive({ projects }: { projects: ArchiveProject[] }) {
                 '--archive-card-mobile-top': `calc(var(--archive-start) + var(--archive-row-step) * ${index})`,
               } as CSSProperties}
             >
-              <Link href={project.href} onFocus={() => focusProject(index)}>
+              <a href={`${project.href}/`} onFocus={() => focusProject(index)}>
                 <WovenProjectImage src={project.image} eager={index < 2} />
                 <div className="v2-archive-copy">
                   <EmbroideredTitle>{project.title}</EmbroideredTitle>
                 </div>
-              </Link>
+              </a>
             </article>
           ))}
           <p

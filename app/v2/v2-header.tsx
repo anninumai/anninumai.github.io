@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 const PIXEL_LETTERS: Record<string, string[]> = {
   a: ['00000', '00000', '01110', '00001', '01111', '10001', '01111'],
   n: ['00000', '00000', '11110', '10001', '10001', '10001', '10001'],
@@ -38,10 +36,10 @@ export function V2Header({ reserveSpace = false }: { reserveSpace?: boolean }) {
   return (
     <>
       <header className="v2-shared-header" id="top">
-        <Link href="/v2" aria-label="annin | Aino Kishimoto">
+        <a href="/v2/" aria-label="annin | Aino Kishimoto">
           <KnitPixelWordmark />
-        </Link>
-        <Link className="v2-about-link" href="/v2/about">ABOUT</Link>
+        </a>
+        <a className="v2-about-link" href="/v2/about/">ABOUT</a>
       </header>
       {reserveSpace ? <div className="v2-shared-header-space" aria-hidden="true" /> : null}
     </>
