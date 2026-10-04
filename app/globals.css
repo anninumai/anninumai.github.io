@@ -86,6 +86,7 @@ figcaption{font-size:11px;line-height:1.7;letter-spacing:.01em}
 .v2-shared-header a:hover{color:inherit}
 .v2-shared-header>a{display:inline-flex;align-items:center}
 .v2-knit-wordmark{display:inline-flex;align-items:flex-start;gap:2px}
+.v2-knit-space{width:6px;flex:none}
 .v2-knit-letter{display:grid;grid-template-columns:repeat(5,2px);grid-template-rows:repeat(7,3px);gap:.75px}
 .v2-knit-letter i{display:block;width:2px;height:3px;opacity:0}
 .v2-knit-letter i.is-knit{opacity:1;background:#006fc7;clip-path:polygon(0 0,50% 30%,100% 0,100% 58%,50% 100%,0 58%);filter:drop-shadow(0 .35px .2px rgb(20 65 96 / .28))}
@@ -100,6 +101,8 @@ figcaption{font-size:11px;line-height:1.7;letter-spacing:.01em}
   body{font-size:15px;line-height:1.8}
   .site-header{height:72px}
   .v2-shared-header{height:68px;padding-inline:20px}
+  .v2-knit-letter{grid-template-columns:repeat(5,1.75px);grid-template-rows:repeat(7,2.75px);gap:.5px}
+  .v2-knit-letter i{width:1.75px;height:2.75px}
   .v2-shared-header-space{height:68px}
   .title-row{padding-block:26px 30px}
   h1{line-height:.98;letter-spacing:-.025em}

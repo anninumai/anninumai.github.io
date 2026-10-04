@@ -73,17 +73,17 @@ export function PortfolioArchive({ projects }: { projects: ArchiveProject[] }) {
     const track = trackRef.current;
     if (!track) return;
     const trackTop = track.getBoundingClientRect().top + window.scrollY;
-    const isMobile = window.matchMedia('(max-width: 700px)').matches;
-    const worldPosition = isMobile ? index * 0.78 : Math.floor(index / 2) * 0.6;
-    const position = worldPosition / ARCHIVE_SCROLL_SPEED;
-    const destination = trackTop + window.innerHeight * (position + 0.08);
+    const card = cardRefs.current[index];
+    if (!card) return;
+    const destination = trackTop + Math.max(0, card.offsetTop - window.innerHeight * 0.1) / ARCHIVE_SCROLL_SPEED;
     window.scrollTo({ top: destination, behavior: 'smooth' });
   };
 
   const rows = Math.ceil(projects.length / 2);
   const trackStyle = {
-    '--archive-desktop-height': `${rows * 51 + 80}svh`,
-    '--archive-mobile-height': `${projects.length * 66 + 90}svh`,
+    '--archive-rows': rows,
+    '--archive-count': projects.length,
+    '--archive-scroll-speed': ARCHIVE_SCROLL_SPEED,
   } as CSSProperties;
 
   return (
@@ -96,8 +96,8 @@ export function PortfolioArchive({ projects }: { projects: ArchiveProject[] }) {
               key={project.href}
               ref={(node) => { cardRefs.current[index] = node; }}
               style={{
-                '--archive-card-desktop-top': `${14 + Math.floor(index / 2) * 60 + (index % 2 === 0 ? 0 : 6)}svh`,
-                '--archive-card-mobile-top': `${18 + index * 78}svh`,
+                '--archive-card-desktop-top': `calc(var(--archive-start) + var(--archive-row-step) * ${Math.floor(index / 2)} + ${index % 2 === 0 ? '0px' : '6svh'})`,
+                '--archive-card-mobile-top': `calc(var(--archive-start) + var(--archive-row-step) * ${index})`,
               } as CSSProperties}
             >
               <Link href={project.href} onFocus={() => focusProject(index)}>
@@ -110,10 +110,6 @@ export function PortfolioArchive({ projects }: { projects: ArchiveProject[] }) {
           ))}
           <p
             className="v2-archive-end"
-            style={{
-              '--archive-end-desktop-top': `${rows * 60 + 18}svh`,
-              '--archive-end-mobile-top': `${projects.length * 78 + 18}svh`,
-            } as CSSProperties}
           >
             END OF ARCHIVE
           </p>
