@@ -3,8 +3,8 @@
 import { useEffect, useLayoutEffect, useRef, useState, type CSSProperties } from 'react';
 import { usePathname } from 'next/navigation';
 
-const MINIMUM_LOADING_MS = 2000;
-const MAXIMUM_LOADING_MS = 6000;
+const MINIMUM_LOADING_MS = 900;
+const MAXIMUM_LOADING_MS = 2500;
 
 export function V2RouteReset() {
   const pathname = usePathname();
@@ -75,18 +75,15 @@ export function V2RouteReset() {
     };
     // A failed image or renderer must never leave navigation blocked.
     const maxTimer = window.setTimeout(finish, MAXIMUM_LOADING_MS);
-    const isArchive = pathname.replace(/\/$/, '') === '/v2';
     let assetsReady = false;
     const checkReady = () => {
       if (disposed || hideTimer || !assetsReady) return;
-      if (isArchive && document.querySelectorAll('.is-woven-ready').length < 2) return;
       const remaining = Math.max(0, MINIMUM_LOADING_MS - (Date.now() - startedAt));
       hideTimer = window.setTimeout(() => {
         window.clearTimeout(maxTimer);
         finish();
       }, remaining);
     };
-    window.addEventListener('v2-knit-ready', checkReady);
 
     const firstImages = [...document.images].filter((image) => {
       const bounds = image.getBoundingClientRect();
@@ -104,7 +101,6 @@ export function V2RouteReset() {
       disposed = true;
       window.clearTimeout(hideTimer);
       window.clearTimeout(maxTimer);
-      window.removeEventListener('v2-knit-ready', checkReady);
     };
   }, [pathname, transitionId]);
 
@@ -117,7 +113,7 @@ export function V2RouteReset() {
     background: "#f7f6f1 url('/assets/knit/white-stockinette-canvas.webp') 0 0 / 36vw auto repeat",
     opacity: loading ? 1 : 0,
     visibility: loading ? 'visible' : 'hidden',
-    pointerEvents: loading ? 'auto' : 'none',
+    pointerEvents: 'none',
     transition: 'opacity 140ms ease',
   };
 
@@ -130,7 +126,7 @@ export function V2RouteReset() {
   };
 
   return (
-    <div className={`v2-route-loader${loading ? ' is-active' : ''}`} style={loaderStyle} role="status" aria-label="ページを読み込み中" aria-hidden={!loading}>
+    <div className={`v2-route-loader${loading ? ' is-active' : ''}${departing.current ? ' is-departing' : ''}`} style={loaderStyle} role="status" aria-label="ページを読み込み中" aria-hidden={!loading}>
       <div
         className="v2-route-loader-mark"
         style={{ display: 'grid', justifyItems: 'center', gap: 15, color: '#006fc7', fontSize: 11, fontWeight: 600, letterSpacing: '.16em' }}

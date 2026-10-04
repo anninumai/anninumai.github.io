@@ -6,7 +6,7 @@
 }
 
 .knitted-v2-case h1 {
-  font-size: clamp(76px, 11.4vw, 176px);
+  font-size: clamp(calc(76 * var(--v2-px, 1px)), 11.4vw, calc(176 * var(--v2-px, 1px)));
   line-height: .91;
   white-space: normal;
   letter-spacing: -.055em;
@@ -18,14 +18,14 @@
 
 .knitted-v2-hero .title-row {
   align-items: flex-end;
-  padding-bottom: 35px;
+  padding-bottom: calc(35 * var(--v2-px, 1px));
 }
 
 .knitted-v2-version {
-  padding-bottom: 12px;
+  padding-bottom: calc(12 * var(--v2-px, 1px));
   color: var(--muted-foreground);
   font-family: var(--mono);
-  font-size: 12px;
+  font-size: calc(12 * var(--v2-px, 1px));
   letter-spacing: .08em;
 }
 
@@ -34,8 +34,8 @@
 }
 
 .knitted-v2-project-subtitle {
-  max-width: 980px;
-  margin-top: 6px;
+  max-width: calc(980 * var(--v2-px, 1px));
+  margin-top: calc(6 * var(--v2-px, 1px));
 }
 
 .knitted-v2-project-subtitle strong {
@@ -51,14 +51,14 @@
 .knitted-v2-hero-photo img {
   width: 100%;
   height: auto;
-  max-height: 820px;
+  max-height: calc(820 * var(--v2-px, 1px));
   object-fit: cover;
   object-position: center 63%;
 }
 
 .knitted-v2-overview,
 .knitted-v2-inspiration {
-  padding-block: 120px;
+  padding-block: calc(120 * var(--v2-px, 1px));
 }
 
 .knitted-v2-overview {
@@ -67,8 +67,8 @@
 
 .knitted-v2-performance-video {
   width: 100%;
-  max-width: 900px;
-  margin: 48px 0 0;
+  max-width: calc(900 * var(--v2-px, 1px));
+  margin: calc(48 * var(--v2-px, 1px)) 0 0;
 }
 
 .knitted-v2-performance-video video {
@@ -79,30 +79,30 @@
 }
 
 .knitted-v2-kicker {
-  margin-bottom: 18px;
+  margin-bottom: calc(18 * var(--v2-px, 1px));
   color: var(--primary);
   font-family: var(--mono);
-  font-size: 12px;
+  font-size: calc(12 * var(--v2-px, 1px));
   letter-spacing: .06em;
 }
 
 .knitted-v2-intent {
-  max-width: 900px;
-  margin-top: 38px;
-  padding-top: 32px;
+  max-width: calc(900 * var(--v2-px, 1px));
+  margin-top: calc(38 * var(--v2-px, 1px));
+  padding-top: calc(32 * var(--v2-px, 1px));
   border-top: 1px solid var(--border);
   font-family: var(--serif);
-  font-size: clamp(22px, 2.4vw, 34px);
+  font-size: clamp(calc(22 * var(--v2-px, 1px)), 2.4vw, calc(34 * var(--v2-px, 1px)));
   line-height: 1.8;
 }
 
 .knitted-v2-system-summary {
-  max-width: 900px;
-  margin-top: 38px;
-  padding: 28px 30px;
-  border-left: 3px solid var(--primary);
+  max-width: calc(900 * var(--v2-px, 1px));
+  margin-top: calc(38 * var(--v2-px, 1px));
+  padding: calc(28 * var(--v2-px, 1px)) calc(30 * var(--v2-px, 1px));
+  border-left: calc(3 * var(--v2-px, 1px)) solid var(--primary);
   background: var(--knitted-pale);
-  font-size: clamp(17px, 1.6vw, 22px);
+  font-size: clamp(calc(17 * var(--v2-px, 1px)), 1.6vw, calc(22 * var(--v2-px, 1px)));
   line-height: 1.95;
 }
 
@@ -122,9 +122,9 @@
 .knitted-v2-material-pair {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 24px;
+  gap: calc(24 * var(--v2-px, 1px));
   align-items: start;
-  margin-top: 48px;
+  margin-top: calc(48 * var(--v2-px, 1px));
 }
 
 .knitted-v2-sensory-pair img {
@@ -137,23 +137,23 @@
 }
 
 .knitted-v2-role {
-  padding-block: 110px;
+  padding-block: calc(110 * var(--v2-px, 1px));
   background: var(--knitted-pale);
 }
 
 .knitted-v2-scope {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 38px;
+  gap: calc(10 * var(--v2-px, 1px));
+  margin-top: calc(38 * var(--v2-px, 1px));
 }
 
 .knitted-v2-scope span {
-  padding: 12px 15px;
+  padding: calc(12 * var(--v2-px, 1px)) calc(15 * var(--v2-px, 1px));
   border: 1px solid #cbd4e1;
   background: white;
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: calc(11 * var(--v2-px, 1px));
   letter-spacing: .03em;
 }
 
@@ -163,16 +163,16 @@
 }
 
 .knitted-v2-case .project-switch {
-  padding-block: 50px 65px;
+  padding-block: calc(50 * var(--v2-px, 1px)) calc(65 * var(--v2-px, 1px));
 }
 
 .knitted-v2-case .project-switch a {
-  font-size: clamp(38px, 6vw, 84px);
+  font-size: clamp(calc(38 * var(--v2-px, 1px)), 6vw, calc(84 * var(--v2-px, 1px)));
 }
 
 .knitted-v2-case .footer-title {
   font-family: var(--sans);
-  font-size: clamp(40px, 7vw, 92px);
+  font-size: clamp(calc(40 * var(--v2-px, 1px)), 7vw, calc(92 * var(--v2-px, 1px)));
 }
 
 @media (max-width: 760px) {
@@ -182,11 +182,11 @@
   }
 
   .knitted-v2-case h1 {
-    font-size: 64px;
+    font-size: calc(64 * var(--v2-px, 1px));
   }
 
   .knitted-v2-version {
-    padding-bottom: 7px;
+    padding-bottom: calc(7 * var(--v2-px, 1px));
   }
 
   .knitted-v2-hero-photo {
@@ -194,27 +194,27 @@
   }
 
   .knitted-v2-hero-photo img {
-    max-height: 600px;
+    max-height: calc(600 * var(--v2-px, 1px));
   }
 
   .knitted-v2-overview,
   .knitted-v2-inspiration {
-    padding-block: 70px;
+    padding-block: calc(70 * var(--v2-px, 1px));
   }
 
   .knitted-v2-role {
-    padding-block: 68px;
+    padding-block: calc(68 * var(--v2-px, 1px));
   }
 
   .knitted-v2-system-summary {
-    padding: 24px 22px;
-    font-size: 16px;
+    padding: calc(24 * var(--v2-px, 1px)) calc(22 * var(--v2-px, 1px));
+    font-size: calc(16 * var(--v2-px, 1px));
   }
 
   .knitted-v2-sensory-pair,
   .knitted-v2-tech-pair {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: calc(30 * var(--v2-px, 1px));
   }
 
 }

@@ -1,0 +1,26 @@
+/* Preserve the laptop composition; enlarge type and spacing together, then
+   centre the complete composition on ultrawide displays. No CSS zoom. */
+.v2-site{
+  display:contents;
+  --v2-px:clamp(1px,.078125vw,1.75px);
+  --v2-page-width:min(100vw,2240px);
+  --gutter:clamp(22px,4.6vw,calc(80 * var(--v2-px)));
+  --type-body:calc(14 * var(--v2-px));
+  --type-lead:calc(20 * var(--v2-px));
+  --type-heading:calc(32 * var(--v2-px));
+  --type-support:calc(10 * var(--v2-px));
+  font-size:var(--type-body);
+}
+.v2-site .wrap{max-width:var(--v2-page-width)}
+.v2-site .v2-shared-header{padding-inline:max(3vw,calc((100vw - var(--v2-page-width))/2 + var(--v2-page-width)*.03))}
+/* Avoid hundreds of filtered compositor surfaces for the wordmark. */
+.v2-site .v2-knit-letter i.is-knit{filter:none}
+/* Keep the fade, but never blur the entire long, image-heavy case study. */
+.v2-site :is(.x-v2-case,.persol-v2-case,.display-v2-case,.knitted-v2-case,.focus-v2-case,.lens-v2-case,.experiment-v2-case)>main{animation:v2-content-arrive .3s ease-out both}
+@keyframes v2-content-arrive{from{opacity:.35}to{opacity:1}}
+/* A slow or failed script must not leave an opaque loading screen forever. */
+.v2-route-loader.is-active{animation:v2-loader-failsafe 3s step-end forwards}
+.v2-route-loader.is-departing{animation:none}
+@keyframes v2-loader-failsafe{to{opacity:0;visibility:hidden}}
+@media(max-width:760px){.v2-site .v2-shared-header{padding-inline:20px}}
+@media(prefers-reduced-motion:reduce){.v2-site :is(.x-v2-case,.persol-v2-case,.display-v2-case,.knitted-v2-case,.focus-v2-case,.lens-v2-case,.experiment-v2-case)>main{animation:none}}

@@ -50,7 +50,7 @@ export function AboutGesture() {
     <div className="about-v2-gesture" ref={imageRef} aria-hidden="true">
       <Image src={frames[frame]} alt="" width={1122} height={1402} priority unoptimized />
     </div>
-    <div className="about-v2-profile-copy" style={{ width: 180 + frame * 110, '--about-frame': frame } as CSSProperties}>
+    <div className="about-v2-profile-copy" style={{ width: `calc(${180 + frame * 110} * var(--v2-px, 1px))`, '--about-frame': frame } as CSSProperties}>
       <p>オーストラリアでCommunication Designを学び、ブランディング、UX/UIデザインの実務を経験してきました。</p>
       <p>AIアバター、ヘルスケア、バーチャルファッションなど、人の感情や身体、自己表現と密接に関わるプロジェクトに携わり、デジタルプロダクトやサービスのコンセプト立案から、UX/UI設計、プロトタイプ制作まで一貫して取り組んでいます。</p>
       <p>感覚や身体性に寄り添う直感的なインターフェースに関心があります。また、人の知覚に働きかけ、世界の感じ方を豊かにするインターフェースを探っています。</p>

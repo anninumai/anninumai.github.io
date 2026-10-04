@@ -6,7 +6,7 @@
 }
 
 .persol-v2-case h1 {
-  font-size: clamp(72px, 10.7vw, 166px);
+  font-size: clamp(calc(72 * var(--v2-px, 1px)), 10.7vw, calc(166 * var(--v2-px, 1px)));
   line-height: .9;
   white-space: normal;
   letter-spacing: -.055em;
@@ -17,10 +17,10 @@
 }
 
 .persol-v2-version {
-  padding-bottom: 12px;
+  padding-bottom: calc(12 * var(--v2-px, 1px));
   color: var(--muted-foreground);
   font-family: var(--mono);
-  font-size: 12px;
+  font-size: calc(12 * var(--v2-px, 1px));
   letter-spacing: .08em;
 }
 
@@ -29,8 +29,8 @@
 }
 
 .persol-v2-project-subtitle {
-  max-width: 900px;
-  margin-top: 6px;
+  max-width: calc(900 * var(--v2-px, 1px));
+  margin-top: calc(6 * var(--v2-px, 1px));
 }
 
 .persol-v2-project-subtitle strong {
@@ -39,40 +39,40 @@
 
 .persol-v2-intro-grid {
   display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(240px, .8fr);
-  gap: clamp(50px, 8vw, 130px);
+  grid-template-columns: minmax(0, 2fr) minmax(calc(240 * var(--v2-px, 1px)), .8fr);
+  gap: clamp(calc(50 * var(--v2-px, 1px)), 8vw, calc(130 * var(--v2-px, 1px)));
   align-items: start;
-  padding-block: 28px 72px;
+  padding-block: calc(28 * var(--v2-px, 1px)) calc(72 * var(--v2-px, 1px));
   border-bottom: 1px solid var(--border);
 }
 
 .persol-v2-summary {
-  max-width: 780px;
-  margin-top: 30px;
+  max-width: calc(780 * var(--v2-px, 1px));
+  margin-top: calc(30 * var(--v2-px, 1px));
 }
 
 .persol-v2-summary p {
-  font-size: 14px;
+  font-size: calc(14 * var(--v2-px, 1px));
   line-height: 1.4;
   letter-spacing: .1em;
 }
 
 .persol-v2-project-facts {
   margin: 0;
-  padding-top: 4px;
+  padding-top: calc(4 * var(--v2-px, 1px));
   color: var(--muted-foreground);
 }
 
 .persol-v2-project-facts > div {
   display: grid;
-  grid-template-columns: 82px minmax(0, 1fr);
-  gap: 14px;
-  padding: 5px 0;
+  grid-template-columns: calc(82 * var(--v2-px, 1px)) minmax(0, 1fr);
+  gap: calc(14 * var(--v2-px, 1px));
+  padding: calc(5 * var(--v2-px, 1px)) 0;
   align-items: baseline;
 }
 
 .persol-v2-project-facts dt {
-  font-size: 10px;
+  font-size: calc(10 * var(--v2-px, 1px));
   font-weight: 400;
   line-height: 1.4;
   letter-spacing: .12em;
@@ -81,7 +81,7 @@
 
 .persol-v2-project-facts dd {
   margin: 0;
-  font-size: 12px;
+  font-size: calc(12 * var(--v2-px, 1px));
   font-weight: 400;
   line-height: 1.55;
   letter-spacing: .035em;
@@ -90,7 +90,7 @@
 .persol-v2-fact-action button {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
-  gap: 12px;
+  gap: calc(12 * var(--v2-px, 1px));
   width: 100%;
   padding: 0;
   border: 0;
@@ -109,28 +109,28 @@
 
 .persol-v2-fact-action button:focus-visible {
   outline: 1px solid currentColor;
-  outline-offset: 4px;
+  outline-offset: calc(4 * var(--v2-px, 1px));
 }
 
 .persol-v2-disclosure-icon {
-  font-size: 14px;
+  font-size: calc(14 * var(--v2-px, 1px));
   line-height: 1;
 }
 
 .persol-v2-disclosure-panel {
   display: grid;
   grid-column: 1 / -1;
-  grid-template-columns: minmax(0, 1.3fr) minmax(280px, .7fr);
-  gap: clamp(48px, 8vw, 120px);
-  padding: 42px 0 12px;
+  grid-template-columns: minmax(0, 1.3fr) minmax(calc(280 * var(--v2-px, 1px)), .7fr);
+  gap: clamp(calc(48 * var(--v2-px, 1px)), 8vw, calc(120 * var(--v2-px, 1px)));
+  padding: calc(42 * var(--v2-px, 1px)) 0 calc(12 * var(--v2-px, 1px));
   border-top: 1px solid var(--border);
   animation: persol-v2-panel-in 180ms ease-out;
 }
 
 .persol-v2-panel-label {
-  margin: 0 0 22px;
+  margin: 0 0 calc(22 * var(--v2-px, 1px));
   color: var(--muted-foreground);
-  font-size: 10px;
+  font-size: calc(10 * var(--v2-px, 1px));
   line-height: 1.4;
   letter-spacing: .12em;
 }
@@ -143,14 +143,14 @@
 
 .persol-v2-contribution-list li {
   display: grid;
-  grid-template-columns: 34px minmax(0, 1fr);
-  gap: 12px;
-  padding: 8px 0;
+  grid-template-columns: calc(34 * var(--v2-px, 1px)) minmax(0, 1fr);
+  gap: calc(12 * var(--v2-px, 1px));
+  padding: calc(8 * var(--v2-px, 1px)) 0;
 }
 
 .persol-v2-contribution-list li > span {
   color: var(--muted-foreground);
-  font-size: 10px;
+  font-size: calc(10 * var(--v2-px, 1px));
   letter-spacing: .08em;
 }
 
@@ -158,7 +158,7 @@
 .persol-v2-ownership-list dd,
 .persol-v2-credits-list dd {
   margin: 0;
-  font-size: 12px;
+  font-size: calc(12 * var(--v2-px, 1px));
   line-height: 1.65;
   letter-spacing: .06em;
 }
@@ -169,13 +169,13 @@
 }
 
 .persol-v2-ownership-list > div {
-  margin-bottom: 18px;
+  margin-bottom: calc(18 * var(--v2-px, 1px));
 }
 
 .persol-v2-ownership-list dt,
 .persol-v2-credits-list dt {
-  margin-bottom: 5px;
-  font-size: 11px;
+  margin-bottom: calc(5 * var(--v2-px, 1px));
+  font-size: calc(11 * var(--v2-px, 1px));
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: .06em;
@@ -192,19 +192,19 @@
 .persol-v2-credits-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 40px;
-  max-width: 760px;
+  gap: calc(40 * var(--v2-px, 1px));
+  max-width: calc(760 * var(--v2-px, 1px));
 }
 
 .persol-v2-credits-list > div {
-  padding-top: 14px;
+  padding-top: calc(14 * var(--v2-px, 1px));
   border-top: 1px solid var(--border);
 }
 
 @keyframes persol-v2-panel-in {
   from {
     opacity: 0;
-    transform: translateY(-4px);
+    transform: translateY(calc(-4 * var(--v2-px, 1px)));
   }
   to {
     opacity: 1;
@@ -225,7 +225,7 @@
 
 .persol-v2-character,
 .persol-v2-role {
-  padding-block: 120px;
+  padding-block: calc(120 * var(--v2-px, 1px));
 }
 
 .persol-v2-photo {
@@ -248,9 +248,9 @@
 .persol-v2-pair {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 24px;
+  gap: calc(24 * var(--v2-px, 1px));
   align-items: start;
-  margin-top: 48px;
+  margin-top: calc(48 * var(--v2-px, 1px));
 }
 
 .persol-v2-pair img {
@@ -259,8 +259,8 @@
 }
 
 .persol-v2-film {
-  max-width: 960px;
-  margin-top: 48px;
+  max-width: calc(960 * var(--v2-px, 1px));
+  margin-top: calc(48 * var(--v2-px, 1px));
 }
 
 .persol-v2-film video {
@@ -271,30 +271,30 @@
 }
 
 .persol-v2-film figcaption {
-  margin-top: 8px;
+  margin-top: calc(8 * var(--v2-px, 1px));
 }
 
 .persol-v2-accessibility {
-  padding-block: 110px;
+  padding-block: calc(110 * var(--v2-px, 1px));
   background: var(--persol-pale);
 }
 
 .persol-v2-statement {
-  max-width: 900px;
-  margin-top: 38px;
-  padding: 30px 32px;
-  border-left: 3px solid var(--primary);
+  max-width: calc(900 * var(--v2-px, 1px));
+  margin-top: calc(38 * var(--v2-px, 1px));
+  padding: calc(30 * var(--v2-px, 1px)) calc(32 * var(--v2-px, 1px));
+  border-left: calc(3 * var(--v2-px, 1px)) solid var(--primary);
   background: white;
-  font-size: clamp(18px, 1.8vw, 25px);
+  font-size: clamp(calc(18 * var(--v2-px, 1px)), 1.8vw, calc(25 * var(--v2-px, 1px)));
   line-height: 1.95;
 }
 
 .persol-v2-ui-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 32px 24px;
+  gap: calc(32 * var(--v2-px, 1px)) calc(24 * var(--v2-px, 1px));
   align-items: start;
-  margin-top: 52px;
+  margin-top: calc(52 * var(--v2-px, 1px));
 }
 
 .persol-v2-ui-grid img {
@@ -304,79 +304,79 @@
 }
 
 .persol-v2-design-reference {
-  margin-top: 48px;
+  margin-top: calc(48 * var(--v2-px, 1px));
 }
 
 .persol-v2-scope {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 38px;
+  gap: calc(10 * var(--v2-px, 1px));
+  margin-top: calc(38 * var(--v2-px, 1px));
 }
 
 .persol-v2-role-lead {
-  max-width: 950px;
-  margin: 0 0 34px;
+  max-width: calc(950 * var(--v2-px, 1px));
+  margin: 0 0 calc(34 * var(--v2-px, 1px));
   font-family: var(--serif);
-  font-size: clamp(28px, 3.1vw, 46px);
+  font-size: clamp(calc(28 * var(--v2-px, 1px)), 3.1vw, calc(46 * var(--v2-px, 1px)));
   line-height: 1.65;
 }
 
 .persol-v2-scope span {
-  padding: 12px 15px;
+  padding: calc(12 * var(--v2-px, 1px)) calc(15 * var(--v2-px, 1px));
   border: 1px solid #d8ced6;
   background: white;
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: calc(11 * var(--v2-px, 1px));
 }
 
 .persol-v2-review {
-  max-width: 830px;
-  margin-top: 50px;
+  max-width: calc(830 * var(--v2-px, 1px));
+  margin-top: calc(50 * var(--v2-px, 1px));
 }
 
 .persol-v2-review img {
-  max-height: 800px;
+  max-height: calc(800 * var(--v2-px, 1px));
   object-fit: contain;
   background: #f8f8f8;
 }
 
 .persol-v2-additional {
-  padding-block: 110px;
+  padding-block: calc(110 * var(--v2-px, 1px));
 }
 
 .persol-v2-proposal-pair {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
+  gap: calc(24 * var(--v2-px, 1px));
   align-items: start;
-  margin-top: 48px;
+  margin-top: calc(48 * var(--v2-px, 1px));
 }
 
 .persol-v2-research-evidence {
-  margin-top: 48px;
+  margin-top: calc(48 * var(--v2-px, 1px));
 }
 
 .persol-v2-case .project-switch {
-  padding-block: 50px 65px;
+  padding-block: calc(50 * var(--v2-px, 1px)) calc(65 * var(--v2-px, 1px));
 }
 
 .persol-v2-case .project-switch a {
-  font-size: clamp(38px, 6vw, 84px);
+  font-size: clamp(calc(38 * var(--v2-px, 1px)), 6vw, calc(84 * var(--v2-px, 1px)));
 }
 
 .persol-v2-case .footer-title {
   font-family: var(--sans);
-  font-size: clamp(44px, 8vw, 106px);
+  font-size: clamp(calc(44 * var(--v2-px, 1px)), 8vw, calc(106 * var(--v2-px, 1px)));
 }
 
 @media (max-width: 760px) {
   .persol-v2-case h1 {
-    font-size: 58px;
+    font-size: calc(58 * var(--v2-px, 1px));
   }
 
   .persol-v2-version {
-    padding-bottom: 7px;
+    padding-bottom: calc(7 * var(--v2-px, 1px));
   }
 
   .persol-v2-hero-visual {
@@ -387,24 +387,24 @@
   .persol-v2-role,
   .persol-v2-accessibility,
   .persol-v2-additional {
-    padding-block: 70px;
+    padding-block: calc(70 * var(--v2-px, 1px));
   }
 
   .persol-v2-intro-grid {
     grid-template-columns: 1fr;
-    gap: 34px;
-    padding-block: 24px 52px;
+    gap: calc(34 * var(--v2-px, 1px));
+    padding-block: calc(24 * var(--v2-px, 1px)) calc(52 * var(--v2-px, 1px));
   }
 
   .persol-v2-disclosure-panel {
     grid-template-columns: 1fr;
-    gap: 40px;
-    padding-top: 34px;
+    gap: calc(40 * var(--v2-px, 1px));
+    padding-top: calc(34 * var(--v2-px, 1px));
   }
 
   .persol-v2-credits-list {
     grid-template-columns: 1fr;
-    gap: 26px;
+    gap: calc(26 * var(--v2-px, 1px));
   }
 
   .persol-v2-pair,
@@ -414,8 +414,8 @@
   }
 
   .persol-v2-statement {
-    padding: 24px 22px;
-    font-size: 16px;
+    padding: calc(24 * var(--v2-px, 1px)) calc(22 * var(--v2-px, 1px));
+    font-size: calc(16 * var(--v2-px, 1px));
   }
 }
 

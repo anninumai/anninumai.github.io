@@ -15,8 +15,8 @@
 }
 
 .lens-v2-project-subtitle {
-  max-width: 900px;
-  margin-top: 6px;
+  max-width: calc(900 * var(--v2-px, 1px));
+  margin-top: calc(6 * var(--v2-px, 1px));
 }
 
 .lens-v2-project-subtitle strong {
@@ -24,25 +24,25 @@
 }
 
 .lens-v2-case h1 {
-  font-size: clamp(90px, 14vw, 205px);
+  font-size: clamp(calc(90 * var(--v2-px, 1px)), 14vw, calc(205 * var(--v2-px, 1px)));
 }
 
 .lens-v2-hero .title-row {
   justify-content: flex-start;
   align-items: baseline;
-  padding-bottom: 30px;
+  padding-bottom: calc(30 * var(--v2-px, 1px));
 }
 
 .lens-v2-version {
   color: var(--muted-foreground);
   font-family: var(--mono);
-  font-size: clamp(18px, 2.8vw, 41px);
+  font-size: clamp(calc(18 * var(--v2-px, 1px)), 2.8vw, calc(41 * var(--v2-px, 1px)));
   letter-spacing: 0.08em;
   white-space: nowrap;
 }
 
 .lens-v2-image {
-  margin-top: 38px;
+  margin-top: calc(38 * var(--v2-px, 1px));
 }
 
 .lens-v2-image > a {
@@ -61,27 +61,27 @@
 }
 
 .lens-v2-overview {
-  padding-block: 92px 72px;
+  padding-block: calc(92 * var(--v2-px, 1px)) calc(72 * var(--v2-px, 1px));
 }
 
 .lens-v2-lead {
-  max-width: 980px;
-  font-size: clamp(24px, 3vw, 44px);
+  max-width: calc(980 * var(--v2-px, 1px));
+  font-size: clamp(calc(24 * var(--v2-px, 1px)), 3vw, calc(44 * var(--v2-px, 1px)));
   font-weight: 500;
   line-height: 1.7;
   letter-spacing: 0.01em;
 }
 
 .lens-v2-overview .body-copy {
-  max-width: 860px;
+  max-width: calc(860 * var(--v2-px, 1px));
 }
 
 .lens-v2-keywords {
   display: grid;
   grid-template-columns: 1fr 3fr;
-  gap: clamp(24px, 4vw, 68px);
+  gap: clamp(calc(24 * var(--v2-px, 1px)), 4vw, calc(68 * var(--v2-px, 1px)));
   align-items: start;
-  padding-block: 26px;
+  padding-block: calc(26 * var(--v2-px, 1px));
   border-block: 1px solid var(--border);
 }
 
@@ -91,78 +91,78 @@
 
 .lens-v2-keywords p {
   font-family: var(--serif);
-  font-size: clamp(19px, 2vw, 29px);
+  font-size: clamp(calc(19 * var(--v2-px, 1px)), 2vw, calc(29 * var(--v2-px, 1px)));
   line-height: 1.8;
 }
 
 .lens-v2-keywords i {
-  padding-inline: 8px;
+  padding-inline: calc(8 * var(--v2-px, 1px));
   color: #aaaeb5;
   font-style: normal;
 }
 
 .lens-v2-background {
-  padding-block: 110px;
+  padding-block: calc(110 * var(--v2-px, 1px));
 }
 
 .lens-v2-background-lead {
-  max-width: 850px;
-  font-size: clamp(25px, 3vw, 43px);
+  max-width: calc(850 * var(--v2-px, 1px));
+  font-size: clamp(calc(25 * var(--v2-px, 1px)), 3vw, calc(43 * var(--v2-px, 1px)));
   font-weight: 500;
   line-height: 1.65;
 }
 
 .lens-v2-background-bridge {
-  max-width: 850px;
-  margin-top: 34px;
-  padding: 28px 30px;
-  border-left: 3px solid var(--primary);
+  max-width: calc(850 * var(--v2-px, 1px));
+  margin-top: calc(34 * var(--v2-px, 1px));
+  padding: calc(28 * var(--v2-px, 1px)) calc(30 * var(--v2-px, 1px));
+  border-left: calc(3 * var(--v2-px, 1px)) solid var(--primary);
   background: #f4f5f7;
-  font-size: 17px;
+  font-size: calc(17 * var(--v2-px, 1px));
   line-height: 2;
 }
 
 .lens-v2-source-link {
   display: inline-flex;
   align-items: center;
-  min-height: 44px;
-  margin-top: 20px;
+  min-height: calc(44 * var(--v2-px, 1px));
+  margin-top: calc(20 * var(--v2-px, 1px));
   color: var(--muted-foreground);
-  font-size: 12px;
+  font-size: calc(12 * var(--v2-px, 1px));
   line-height: 1.8;
   text-decoration: underline;
-  text-underline-offset: 5px;
+  text-underline-offset: calc(5 * var(--v2-px, 1px));
 }
 
 .lens-v2-mechanism,
 .lens-v2-outcome {
-  padding-block: 120px;
+  padding-block: calc(120 * var(--v2-px, 1px));
 }
 
 .lens-v2-kicker {
-  margin-bottom: 19px;
+  margin-bottom: calc(19 * var(--v2-px, 1px));
   color: var(--primary);
   font-family: var(--mono);
-  font-size: 12px;
+  font-size: calc(12 * var(--v2-px, 1px));
   letter-spacing: 0.06em;
 }
 
 .lens-v2-section-intro {
-  margin-top: 28px;
+  margin-top: calc(28 * var(--v2-px, 1px));
 }
 
 .lens-v2-principles {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 22px;
-  margin: 46px 0 0;
+  gap: calc(22 * var(--v2-px, 1px));
+  margin: calc(46 * var(--v2-px, 1px)) 0 0;
   padding: 0;
   list-style: none;
 }
 
 .lens-v2-principles li {
-  min-height: 310px;
-  padding: 28px;
+  min-height: calc(310 * var(--v2-px, 1px));
+  padding: calc(28 * var(--v2-px, 1px));
   border: 1px solid #dfe1e6;
   background: #f6f6f7;
 }
@@ -179,48 +179,48 @@
   display: block;
   color: var(--primary);
   font-family: var(--serif);
-  font-size: 48px;
+  font-size: calc(48 * var(--v2-px, 1px));
   font-style: italic;
 }
 
 .lens-v2-principles h3 {
-  margin: 33px 0 17px;
-  font-size: 20px;
+  margin: calc(33 * var(--v2-px, 1px)) 0 calc(17 * var(--v2-px, 1px));
+  font-size: calc(20 * var(--v2-px, 1px));
   font-weight: 500;
   line-height: 1.65;
 }
 
 .lens-v2-principles p {
-  font-size: 15px;
+  font-size: calc(15 * var(--v2-px, 1px));
   line-height: 2;
 }
 
 .lens-v2-statement {
-  margin-top: 24px;
-  padding: 27px 30px;
-  border-left: 3px solid var(--primary);
+  margin-top: calc(24 * var(--v2-px, 1px));
+  padding: calc(27 * var(--v2-px, 1px)) calc(30 * var(--v2-px, 1px));
+  border-left: calc(3 * var(--v2-px, 1px)) solid var(--primary);
   background: #f4f5f7;
-  font-size: clamp(18px, 1.7vw, 24px);
+  font-size: clamp(calc(18 * var(--v2-px, 1px)), 1.7vw, calc(24 * var(--v2-px, 1px)));
   line-height: 1.9;
 }
 
 .lens-v2-inspiration {
   display: grid;
-  grid-template-columns: 150px 1fr;
-  gap: 20px 35px;
-  margin-top: 65px;
-  padding-block: 30px;
+  grid-template-columns: calc(150 * var(--v2-px, 1px)) 1fr;
+  gap: calc(20 * var(--v2-px, 1px)) calc(35 * var(--v2-px, 1px));
+  margin-top: calc(65 * var(--v2-px, 1px));
+  padding-block: calc(30 * var(--v2-px, 1px));
   border-block: 1px solid var(--border);
 }
 
 .lens-v2-inspiration > span {
-  padding-top: 5px;
+  padding-top: calc(5 * var(--v2-px, 1px));
   color: var(--primary);
 }
 
 .lens-v2-inspiration p {
-  max-width: 820px;
-  font-size: 16px;
+  max-width: calc(820 * var(--v2-px, 1px));
+  font-size: calc(16 * var(--v2-px, 1px));
   line-height: 2.1;
 }
 
@@ -228,45 +228,45 @@
   grid-column: 2;
   display: inline-flex;
   align-items: center;
-  min-height: 44px;
+  min-height: calc(44 * var(--v2-px, 1px));
   width: fit-content;
-  font-size: 13px;
+  font-size: calc(13 * var(--v2-px, 1px));
   text-decoration: underline;
-  text-underline-offset: 5px;
+  text-underline-offset: calc(5 * var(--v2-px, 1px));
 }
 
 .lens-v2-role-section {
-  padding-block: 110px;
+  padding-block: calc(110 * var(--v2-px, 1px));
   background: #f1f2f4;
 }
 
 .lens-v2-role-section .body-copy {
-  max-width: 850px;
+  max-width: calc(850 * var(--v2-px, 1px));
 }
 
 .lens-v2-scope {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 40px;
+  gap: calc(10 * var(--v2-px, 1px));
+  margin-top: calc(40 * var(--v2-px, 1px));
 }
 
 .lens-v2-scope span {
-  padding: 12px 15px;
+  padding: calc(12 * var(--v2-px, 1px)) calc(15 * var(--v2-px, 1px));
   border: 1px solid #d3d6dc;
   background: white;
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: calc(11 * var(--v2-px, 1px));
   letter-spacing: 0.03em;
 }
 
 .lens-v2-outcome .lens-v2-image {
-  margin-top: 48px;
+  margin-top: calc(48 * var(--v2-px, 1px));
 }
 
 .lens-v2-finding {
-  margin-top: 46px;
-  padding: 31px 34px;
+  margin-top: calc(46 * var(--v2-px, 1px));
+  padding: calc(31 * var(--v2-px, 1px)) calc(34 * var(--v2-px, 1px));
   border: 1px solid #dfe2e7;
   background: #f6f7f8;
 }
@@ -277,40 +277,40 @@
 }
 
 .lens-v2-finding p {
-  margin-top: 17px;
-  font-size: 16px;
+  margin-top: calc(17 * var(--v2-px, 1px));
+  font-size: calc(16 * var(--v2-px, 1px));
   line-height: 2.1;
 }
 
 .lens-v2-next {
-  margin: 28px 0 0;
-  padding: 38px;
+  margin: calc(28 * var(--v2-px, 1px)) 0 0;
+  padding: calc(38 * var(--v2-px, 1px));
   background: linear-gradient(135deg, var(--lens-lilac), var(--lens-green));
 }
 
 .lens-v2-next p {
-  margin-top: 20px;
-  font-size: clamp(19px, 2vw, 28px);
+  margin-top: calc(20 * var(--v2-px, 1px));
+  font-size: clamp(calc(19 * var(--v2-px, 1px)), 2vw, calc(28 * var(--v2-px, 1px)));
   line-height: 1.8;
 }
 
 .lens-v2-case .project-switch {
-  padding-block: 45px 70px;
+  padding-block: calc(45 * var(--v2-px, 1px)) calc(70 * var(--v2-px, 1px));
 }
 
 .lens-v2-case .project-switch a {
-  font-size: clamp(38px, 6vw, 84px);
+  font-size: clamp(calc(38 * var(--v2-px, 1px)), 6vw, calc(84 * var(--v2-px, 1px)));
 }
 
 .lens-v2-case .footer-title {
   font-family: var(--sans);
-  font-size: clamp(30px, 5vw, 70px);
+  font-size: clamp(calc(30 * var(--v2-px, 1px)), 5vw, calc(70 * var(--v2-px, 1px)));
 }
 
 @media (max-width: 1100px) {
   .lens-v2-keywords {
-    grid-template-columns: 150px minmax(0, 1fr);
-    gap: 30px;
+    grid-template-columns: calc(150 * var(--v2-px, 1px)) minmax(0, 1fr);
+    gap: calc(30 * var(--v2-px, 1px));
   }
 }
 
@@ -318,11 +318,11 @@
   .lens-v2-hero .title-row {
     display: flex;
     align-items: baseline;
-    gap: 14px;
+    gap: calc(14 * var(--v2-px, 1px));
   }
 
   .lens-v2-image {
-    margin-top: 24px;
+    margin-top: calc(24 * var(--v2-px, 1px));
   }
 
   .lens-v2-hero > .lens-v2-image {
@@ -330,92 +330,92 @@
   }
 
   .lens-v2-overview {
-    padding-block: 58px 48px;
+    padding-block: calc(58 * var(--v2-px, 1px)) calc(48 * var(--v2-px, 1px));
   }
 
   .lens-v2-lead {
-    font-size: 24px;
+    font-size: calc(24 * var(--v2-px, 1px));
   }
 
   .lens-v2-keywords {
     display: block;
-    padding-block: 22px;
+    padding-block: calc(22 * var(--v2-px, 1px));
   }
 
   .lens-v2-keywords p {
-    margin-top: 13px;
-    font-size: 19px;
+    margin-top: calc(13 * var(--v2-px, 1px));
+    font-size: calc(19 * var(--v2-px, 1px));
   }
 
   .lens-v2-keywords i {
-    padding-inline: 4px;
+    padding-inline: calc(4 * var(--v2-px, 1px));
   }
 
   .lens-v2-mechanism,
   .lens-v2-outcome {
-    padding-block: 70px;
+    padding-block: calc(70 * var(--v2-px, 1px));
   }
 
   .lens-v2-background {
-    padding-block: 68px;
+    padding-block: calc(68 * var(--v2-px, 1px));
   }
 
   .lens-v2-background-lead {
-    font-size: 25px;
+    font-size: calc(25 * var(--v2-px, 1px));
   }
 
   .lens-v2-background-bridge {
-    padding: 22px;
-    font-size: 15px;
+    padding: calc(22 * var(--v2-px, 1px));
+    font-size: calc(15 * var(--v2-px, 1px));
   }
 
   .lens-v2-principles {
     grid-template-columns: 1fr;
-    margin-top: 32px;
+    margin-top: calc(32 * var(--v2-px, 1px));
   }
 
   .lens-v2-principles li {
     min-height: 0;
-    padding: 23px;
+    padding: calc(23 * var(--v2-px, 1px));
   }
 
   .lens-v2-principles h3 {
-    margin-top: 23px;
+    margin-top: calc(23 * var(--v2-px, 1px));
   }
 
   .lens-v2-statement {
-    padding: 22px;
+    padding: calc(22 * var(--v2-px, 1px));
   }
 
   .lens-v2-inspiration {
     display: block;
-    margin-top: 45px;
+    margin-top: calc(45 * var(--v2-px, 1px));
   }
 
   .lens-v2-inspiration p {
-    margin-top: 17px;
-    font-size: 15px;
+    margin-top: calc(17 * var(--v2-px, 1px));
+    font-size: calc(15 * var(--v2-px, 1px));
   }
 
   .lens-v2-inspiration a {
-    margin-top: 12px;
+    margin-top: calc(12 * var(--v2-px, 1px));
   }
 
   .lens-v2-role-section {
-    padding-block: 68px;
+    padding-block: calc(68 * var(--v2-px, 1px));
   }
 
   .lens-v2-scope {
-    margin-top: 30px;
+    margin-top: calc(30 * var(--v2-px, 1px));
   }
 
   .lens-v2-finding,
   .lens-v2-next {
-    padding: 24px 21px;
+    padding: calc(24 * var(--v2-px, 1px)) calc(21 * var(--v2-px, 1px));
   }
 
   .lens-v2-next p {
-    font-size: 20px;
+    font-size: calc(20 * var(--v2-px, 1px));
   }
 }
 

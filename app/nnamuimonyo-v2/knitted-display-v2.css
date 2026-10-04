@@ -6,7 +6,7 @@
 }
 
 .display-v2-case h1 {
-  font-size: clamp(72px, 10.8vw, 168px);
+  font-size: clamp(calc(72 * var(--v2-px, 1px)), 10.8vw, calc(168 * var(--v2-px, 1px)));
   line-height: .91;
   white-space: normal;
   letter-spacing: -.055em;
@@ -18,14 +18,14 @@
 
 .display-v2-hero .title-row {
   align-items: flex-end;
-  padding-bottom: 35px;
+  padding-bottom: calc(35 * var(--v2-px, 1px));
 }
 
 .display-v2-version {
-  padding-bottom: 12px;
+  padding-bottom: calc(12 * var(--v2-px, 1px));
   color: var(--muted-foreground);
   font-family: var(--mono);
-  font-size: 12px;
+  font-size: calc(12 * var(--v2-px, 1px));
   letter-spacing: .08em;
 }
 
@@ -34,8 +34,8 @@
 }
 
 .display-v2-project-subtitle {
-  max-width: 900px;
-  margin-top: 6px;
+  max-width: calc(900 * var(--v2-px, 1px));
+  margin-top: calc(6 * var(--v2-px, 1px));
 }
 
 .display-v2-project-subtitle strong {
@@ -44,7 +44,7 @@
 
 .display-v2-hero-photo {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(260px, .42fr);
+  grid-template-columns: minmax(0, 1fr) minmax(calc(260 * var(--v2-px, 1px)), .42fr);
   align-items: end;
   overflow: hidden;
   background: var(--display-pale);
@@ -52,23 +52,23 @@
 
 .display-v2-hero-photo img {
   width: 100%;
-  height: min(76vh, 780px);
+  height: min(76vh, calc(780 * var(--v2-px, 1px)));
   object-fit: cover;
   object-position: center 48%;
 }
 
 .display-v2-hero-photo figcaption {
-  max-width: 320px;
-  padding: 35px;
+  max-width: calc(320 * var(--v2-px, 1px));
+  padding: calc(35 * var(--v2-px, 1px));
   font-family: var(--serif);
-  font-size: clamp(20px, 2.2vw, 31px);
+  font-size: clamp(calc(20 * var(--v2-px, 1px)), 2.2vw, calc(31 * var(--v2-px, 1px)));
   line-height: 1.65;
 }
 
 .display-v2-overview,
 .display-v2-inspiration,
 .display-v2-role {
-  padding-block: 120px;
+  padding-block: calc(120 * var(--v2-px, 1px));
 }
 
 .display-v2-overview {
@@ -95,9 +95,9 @@
 .display-v2-pair {
   display: grid;
   grid-template-columns: 1.2fr .8fr;
-  gap: 24px;
+  gap: calc(24 * var(--v2-px, 1px));
   align-items: start;
-  margin-top: 48px;
+  margin-top: calc(48 * var(--v2-px, 1px));
 }
 
 .display-v2-pair img {
@@ -106,21 +106,21 @@
 }
 
 .display-v2-pair figure:last-child {
-  margin-top: 64px;
+  margin-top: calc(64 * var(--v2-px, 1px));
 }
 
 .display-v2-system {
-  padding-block: 110px;
+  padding-block: calc(110 * var(--v2-px, 1px));
   background: var(--display-pale);
 }
 
 .display-v2-requirements {
-  max-width: 780px;
-  margin-top: 48px;
+  max-width: calc(780 * var(--v2-px, 1px));
+  margin-top: calc(48 * var(--v2-px, 1px));
 }
 
 .display-v2-requirements img {
-  max-height: 760px;
+  max-height: calc(760 * var(--v2-px, 1px));
   object-fit: contain;
   background: white;
 }
@@ -128,19 +128,19 @@
 .display-v2-scope {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 38px;
+  gap: calc(10 * var(--v2-px, 1px));
+  margin-top: calc(38 * var(--v2-px, 1px));
 }
 
 .display-v2-scope span {
-  padding: 12px 15px;
+  padding: calc(12 * var(--v2-px, 1px)) calc(15 * var(--v2-px, 1px));
   border: 1px solid #cbd4e1;
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: calc(11 * var(--v2-px, 1px));
 }
 
 .display-v2-exhibition {
-  margin-top: 50px;
+  margin-top: calc(50 * var(--v2-px, 1px));
 }
 
 .display-v2-exhibition img {
@@ -149,21 +149,21 @@
 }
 
 .display-v2-case .project-switch {
-  padding-block: 50px 65px;
+  padding-block: calc(50 * var(--v2-px, 1px)) calc(65 * var(--v2-px, 1px));
 }
 
 .display-v2-case .project-switch a {
-  font-size: clamp(38px, 6vw, 84px);
+  font-size: clamp(calc(38 * var(--v2-px, 1px)), 6vw, calc(84 * var(--v2-px, 1px)));
 }
 
 .display-v2-case .footer-title {
   font-family: var(--sans);
-  font-size: clamp(40px, 7vw, 92px);
+  font-size: clamp(calc(40 * var(--v2-px, 1px)), 7vw, calc(92 * var(--v2-px, 1px)));
 }
 
 @media (max-width: 760px) {
   .display-v2-case h1 {
-    font-size: 60px;
+    font-size: calc(60 * var(--v2-px, 1px));
   }
 
   .display-v2-hero .title-row {
@@ -172,7 +172,7 @@
   }
 
   .display-v2-version {
-    padding-bottom: 7px;
+    padding-bottom: calc(7 * var(--v2-px, 1px));
   }
 
   .display-v2-hero-photo {
@@ -185,14 +185,14 @@
   }
 
   .display-v2-hero-photo figcaption {
-    padding: 24px var(--gutter);
+    padding: calc(24 * var(--v2-px, 1px)) var(--gutter);
   }
 
   .display-v2-overview,
   .display-v2-inspiration,
   .display-v2-role,
   .display-v2-system {
-    padding-block: 70px;
+    padding-block: calc(70 * var(--v2-px, 1px));
   }
 
   .display-v2-pair {
