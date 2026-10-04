@@ -30,7 +30,6 @@ const sizes: Record<string, [number, number]> = {
   'future-network.webp': [1168, 1388],
   'future-career-park.webp': [1108, 1394],
   'interviewer-hypotheses.webp': [1918, 1008],
-  'interviewer-design-proposals.webp': [2260, 2034],
 };
 
 function Label({ children }: { n: string; children: ReactNode }) {
@@ -210,13 +209,7 @@ export default function PersolV2() {
             <Photo
               name="interviewer-hypotheses.webp"
               alt="人間型、ロボット型、抽象型のAI面接官を比較した仮説資料"
-              caption="別のAI面接サービスで、アバター表現の3つの方向性を比較。"
-              className="persol-v2-research-evidence"
-            />
-            <Photo
-              name="interviewer-design-proposals.webp"
-              alt="人間型3D、デフォルメ、ロボット、ドット、波形など、AI面接官のビジュアル提案一覧"
-              caption="リサーチをもとに制作したAI面接官のビジュアル案と展開イメージ。"
+              caption="アバター表現の3つの方向性を比較。"
               className="persol-v2-research-evidence"
             />
           </div>
