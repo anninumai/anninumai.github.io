@@ -13,18 +13,21 @@ const SOURCE_ROW_GAP = 12.25;
 
 export function KnitBackground() {
   const photoRef = useRef<HTMLDivElement>(null);
+  const gradientCanvasRef = useRef<HTMLCanvasElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const motifCanvasRef = useRef<HTMLCanvasElement>(null);
   const cursorShadowRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
+    const gradientCanvas = gradientCanvasRef.current;
     const motifCanvas = motifCanvasRef.current;
     const photo = photoRef.current;
-    if (!canvas || !motifCanvas || !photo) return;
+    if (!canvas || !gradientCanvas || !motifCanvas || !photo) return;
     const context = canvas.getContext('2d');
+    const gradientContext = gradientCanvas.getContext('2d');
     const motifContext = motifCanvas.getContext('2d');
-    if (!context || !motifContext) return;
+    if (!context || !gradientContext || !motifContext) return;
     let resizeFrame = 0;
     let currentCamera = 0;
     let lastCursorCell = '';
@@ -32,6 +35,7 @@ export function KnitBackground() {
     let lastShadowScale = 0;
     let motifFrame = 0;
     let lastMotifPaint = -Infinity;
+    let lastGradientPaint = -Infinity;
     let motifWidth = window.innerWidth;
     let motifColumnGap = 1;
     let motifRowGap = 1;
@@ -48,6 +52,21 @@ export function KnitBackground() {
     const random = (seed: number) => {
       const value = Math.sin(seed * 12.9898 + 78.233) * 43758.5453;
       return value - Math.floor(value);
+    };
+
+    const gradientStops = [
+      [247, 255, 158],
+      [192, 187, 255],
+      [255, 204, 237],
+    ];
+
+    const gradientColor = (amount: number) => {
+      const scaled = Math.max(0, Math.min(1, amount)) * 2;
+      const index = Math.min(1, Math.floor(scaled));
+      const mix = scaled - index;
+      const from = gradientStops[index];
+      const to = gradientStops[index + 1];
+      return `rgb(${Math.round(from[0] + (to[0] - from[0]) * mix)} ${Math.round(from[1] + (to[1] - from[1]) * mix)} ${Math.round(from[2] + (to[2] - from[2]) * mix)})`;
     };
 
     const drawCursorShadow = (columnGap: number, rowGap: number) => {
@@ -143,7 +162,52 @@ export function KnitBackground() {
       photo.style.top = `${-photoTileHeight}px`;
       photo.style.height = `${window.innerHeight + photoTileHeight * 2}px`;
       photo.style.transform = `translate3d(0, ${-(camera % photoTileHeight)}px, 0)`;
+      gradientCanvas.style.transform = `translate3d(0, ${-(camera % rowGap)}px, 0)`;
       canvas.style.transform = `translate3d(0, ${-(camera % rowGap)}px, 0)`;
+    };
+
+    const paintMovingGradient = (time: number) => {
+      const width = window.innerWidth;
+      const height = window.innerHeight + motifRowGap * 2;
+      const columnGap = motifColumnGap;
+      const rowGap = motifRowGap;
+      const ratio = motifRatio;
+      const stitchWidth = columnGap * 0.72;
+      const stitchHeight = rowGap * 1.06;
+      const paletteSteps = 12;
+      const paths = Array.from({ length: paletteSteps }, () => new Path2D());
+      const seconds = time * 0.001;
+      const cameraOffset = currentCamera / Math.max(height, 1);
+
+      for (let row = -2; row < height / rowGap + 3; row += 1) {
+        const y = row * rowGap;
+        const ny = y / height + cameraOffset;
+        for (let column = -2; column < width / columnGap + 3; column += 1) {
+          const x = column * columnGap;
+          const nx = x / Math.max(width, 1);
+          const field =
+            0.5 +
+            Math.sin(nx * 5.1 + ny * 1.7 + seconds * 0.2) * 0.2 +
+            Math.cos(ny * 4.3 - nx * 1.2 - seconds * 0.15) * 0.18 +
+            Math.sin((nx + ny) * 7.2 + seconds * 0.11) * 0.09;
+          const amount = Math.max(0, Math.min(1, field));
+          const paletteIndex = Math.min(paletteSteps - 1, Math.floor(amount * paletteSteps));
+          const path = paths[paletteIndex];
+          path.moveTo(x - stitchWidth * 0.5, y - stitchHeight * 0.5);
+          path.lineTo(x, y + stitchHeight * 0.5);
+          path.lineTo(x + stitchWidth * 0.5, y - stitchHeight * 0.5);
+        }
+      }
+
+      gradientContext.setTransform(ratio, 0, 0, ratio, 0, 0);
+      gradientContext.clearRect(0, 0, width, height);
+      gradientContext.lineCap = 'round';
+      gradientContext.lineJoin = 'round';
+      gradientContext.lineWidth = Math.max(1.25, columnGap * 0.56);
+      for (let index = 0; index < paletteSteps; index += 1) {
+        gradientContext.strokeStyle = gradientColor((index + 0.5) / paletteSteps);
+        gradientContext.stroke(paths[index]);
+      }
     };
 
     const resizeMotifCanvas = (width: number, columnGap: number, rowGap: number, ratio: number) => {
@@ -221,6 +285,10 @@ export function KnitBackground() {
     };
 
     const animateMotifs = (time: number) => {
+      if (time - lastGradientPaint >= 90) {
+        lastGradientPaint = time;
+        paintMovingGradient(time);
+      }
       if (time - lastMotifPaint >= 32) {
         lastMotifPaint = time;
         paintMotifs(time);
@@ -240,6 +308,11 @@ export function KnitBackground() {
       canvas.style.width = `${width}px`;
       canvas.style.height = `${height}px`;
       canvas.style.top = `${-rowGap}px`;
+      gradientCanvas.width = Math.round(width * ratio);
+      gradientCanvas.height = Math.round(height * ratio);
+      gradientCanvas.style.width = `${width}px`;
+      gradientCanvas.style.height = `${height}px`;
+      gradientCanvas.style.top = `${-rowGap}px`;
       context.setTransform(ratio, 0, 0, ratio, 0, 0);
       context.clearRect(0, 0, width, height);
 
@@ -270,6 +343,7 @@ export function KnitBackground() {
       context.stroke(stitches);
       context.restore();
       resizeMotifCanvas(width, columnGap, rowGap, ratio);
+      paintMovingGradient(performance.now());
       paintMotifs(performance.now());
       positionTexture(currentCamera);
       if (lastShadowPosition) {
@@ -310,6 +384,7 @@ export function KnitBackground() {
   return (
     <div className="v2-knit-background" aria-hidden="true">
       <div className="v2-knit-photo" ref={photoRef} />
+      <canvas className="v2-knit-gradient-overlay" ref={gradientCanvasRef} />
       <canvas className="v2-knit-stitch-overlay" ref={canvasRef} />
       <canvas className="v2-knit-motif-overlay" ref={motifCanvasRef} />
       <canvas className="v2-knit-cursor-shadow" ref={cursorShadowRef} />
