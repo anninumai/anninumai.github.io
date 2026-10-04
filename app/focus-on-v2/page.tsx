@@ -111,12 +111,6 @@ export default function FocusOnV2() {
                 width={2225}
                 height={2400}
               />
-              <div className="focus-v2-input-note">
-                <span className="eyebrow">DESIGN INTENTION</span>
-                <p>
-                  正しい感情名を答えることではなく、言葉になる前の状態から入力を始められることを優先しました。
-                </p>
-              </div>
             </div>
           </div>
         </section>
