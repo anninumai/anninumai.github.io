@@ -151,18 +151,18 @@
   line-height: 2;
 }
 
-.focus-v2-character-visual {
-  position: relative;
-  min-height: 510px;
+.focus-v2-character-gallery {
+  display: grid;
+  gap: 24px;
   margin-top: 42px;
-  overflow: hidden;
-  border: 1px solid #cad8cf;
-  background: #456e56;
 }
 
-.focus-v2-character-visual img {
-  object-fit: cover;
-  object-position: left center;
+.focus-v2-character-gallery .focus-v2-figure {
+  margin-top: 0;
+}
+
+.focus-v2-character-gallery .focus-v2-figure > a {
+  background: white;
 }
 
 .focus-v2-ux-scope {

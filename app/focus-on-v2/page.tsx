@@ -133,12 +133,31 @@ export default function FocusOnV2() {
               <p className="body-copy">
                 ユーザーを管理したり、回復へ急かしたりするのではなく、自分のペースで旅をしながら、ときどき投稿に反応する。ユーザーが自分の感情や状態を重ねられる余白と、健康管理サービスの緊張感を和らげる親しみやすさの両立を目指しました。
               </p>
-              <div className="focus-v2-character-visual">
-                <Image
-                  src={`${base}hero-onomatopoeia.png`}
-                  alt="形を変えながらユーザーに寄り添うFocusくん"
-                  fill
-                  sizes="(max-width: 760px) 100vw, 70vw"
+              <div className="focus-v2-character-gallery">
+                <ProjectImage
+                  src="character-artboard-1.png"
+                  alt="Focusくんの基本の姿と、何者なのかを探し続けるキャラクター設定"
+                  width={4787}
+                  height={3392}
+                />
+                <ProjectImage
+                  src="character-artboard-2.png"
+                  alt="Focusくんの変形や分裂、頑張りすぎたときの姿を描いたキャラクター設定"
+                  width={4787}
+                  height={3392}
+                />
+                <ProjectImage
+                  src="character-artboard-3.png"
+                  alt="食べられるFocusくんと、眠りに誘うFocusくんのキャラクター設定"
+                  width={4787}
+                  height={3392}
+                />
+                <ProjectImage
+                  src="sharing-insight.png"
+                  alt="Focusくんが投稿に反応する画面と、共有後の体験の検討資料"
+                  caption="投稿に反応するFocusくんを、共有後の画面体験へ展開。"
+                  width={2400}
+                  height={1350}
                 />
               </div>
             </div>
@@ -152,9 +171,23 @@ export default function FocusOnV2() {
               Focus onのUX/UI設計を一貫して担当しました。調査から、疲れに気づくことや言語化することだけでなく、誰かに伝えること、共有後の反応を待つことにも負担があると整理し、入力、振り返り、共有相手の選択、投稿、共有後の反応までを一続きの体験として設計しました。その体験を具体化するため、カスタマージャーニー、サイトマップ、画面遷移、情報設計、UIデザイン、プロトタイプを制作しました。また、調査結果をもとに代表と機能の優先順位を検討し、「伝えられた・受け止めてもらえた」という実感につながる体験を優先度Aとして、短い記録・投稿・共有を支える機能群を実装へ接続しました。
             </p>
             <ProjectImage
-              src="sharing-insight.png"
-              alt="投稿から共有、支援者からの反応までの画面"
-              caption="投稿、共有範囲の選択、共有後の反応までを一続きに設計。"
+              src="research.png"
+              alt="文献調査、ユーザーヒアリング、ユーザーの状態を整理したリサーチ資料"
+              caption="文献とユーザーヒアリングから、疲れの自覚・言語化・共有にある負担を整理。"
+              width={2400}
+              height={1350}
+            />
+            <ProjectImage
+              src="journey.png"
+              alt="疲れのストーリー、カスタマージャーニー、機能検討をまとめた体験設計資料"
+              caption="カスタマージャーニーをもとに、入力から共有後の反応までの体験を設計。"
+              width={2400}
+              height={1350}
+            />
+            <ProjectImage
+              src="requirements.png"
+              alt="機能の優先順位、サイトマップ、画面構成をまとめた設計資料"
+              caption="課題を機能の優先順位へ落とし込み、サイトマップと画面構成へ展開。"
               width={2400}
               height={1350}
             />
