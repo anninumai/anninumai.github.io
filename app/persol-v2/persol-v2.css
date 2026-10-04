@@ -57,6 +57,10 @@
   letter-spacing: .1em;
 }
 
+.persol-v2-summary p + p {
+  margin-top: 1em;
+}
+
 .persol-v2-project-facts {
   margin: 0;
   padding-top: calc(4 * var(--v2-px, 1px));
