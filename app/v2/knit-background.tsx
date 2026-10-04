@@ -177,14 +177,28 @@ export function KnitBackground() {
       const paletteSteps = 12;
       const paths = Array.from({ length: paletteSteps }, () => new Path2D());
       const seconds = time * 0.001;
-      const cameraOffset = currentCamera / Math.max(height, 1);
+      const firstWorldRow = Math.floor(currentCamera / rowGap) - 1;
+      // Use world-space stitch coordinates, just like the sparkle motifs.
+      // A loop is either present or absent; changing the number of visible
+      // loops creates the soft motion without tinting the whole photograph.
+      const spatialScale = Math.max(width, 1);
 
       for (let row = -2; row < height / rowGap + 3; row += 1) {
         const y = row * rowGap;
-        const ny = y / height + cameraOffset;
+        const worldRow = firstWorldRow + row;
+        const ny = worldRow * rowGap / spatialScale;
         for (let column = -2; column < width / columnGap + 3; column += 1) {
           const x = column * columnGap;
-          const nx = x / Math.max(width, 1);
+          const nx = x / spatialScale;
+          const threshold = random(column * 127.1 + worldRow * 311.7);
+          // Most loops stay white. Skip them before evaluating the moving field.
+          if (threshold > 0.24) continue;
+          const wave =
+            Math.sin(nx * 12 + ny * 6 - seconds * 0.65) * 0.5 +
+            Math.cos(ny * 13 - nx * 5 + seconds * 0.42) * 0.3 +
+            Math.sin((nx - ny) * 21 + seconds * 0.28) * 0.2;
+          const density = Math.max(0, wave - 0.12) * 0.28;
+          if (threshold > density) continue;
           const field =
             0.5 +
             Math.sin(nx * 5.1 + ny * 1.7 + seconds * 0.2) * 0.2 +
@@ -203,7 +217,7 @@ export function KnitBackground() {
       gradientContext.clearRect(0, 0, width, height);
       gradientContext.lineCap = 'round';
       gradientContext.lineJoin = 'round';
-      gradientContext.lineWidth = Math.max(1.25, columnGap * 0.56);
+      gradientContext.lineWidth = Math.max(1.35, columnGap * 0.5);
       for (let index = 0; index < paletteSteps; index += 1) {
         gradientContext.strokeStyle = gradientColor((index + 0.5) / paletteSteps);
         gradientContext.stroke(paths[index]);
@@ -249,7 +263,7 @@ export function KnitBackground() {
         const visiblePixelRatio = Math.min(fadeIn, fadeOut);
         const seed = motif * 97 + cycle * 131 + 17;
         const baseColumn = 8 + random(seed * 3) * Math.max(1, columnCount - 16);
-        const baseRow = 8 + random(seed * 7) * 134;
+        const baseRow = Math.round(8 + random(seed * 7) * 134);
         const template = motifTemplates[Math.floor(random(seed * 11) * motifTemplates.length)];
         const spacing = random(seed * 13) > 0.72 ? 2 : 1;
         const colorIndex = Math.floor(random(seed * 19) * motifColors.length);
@@ -285,6 +299,10 @@ export function KnitBackground() {
     };
 
     const animateMotifs = (time: number) => {
+      if (document.hidden) {
+        motifFrame = 0;
+        return;
+      }
       if (time - lastGradientPaint >= 90) {
         lastGradientPaint = time;
         paintMovingGradient(time);
@@ -294,6 +312,13 @@ export function KnitBackground() {
         paintMotifs(time);
       }
       motifFrame = requestAnimationFrame(animateMotifs);
+    };
+
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const onVisibilityChange = () => {
+      if (!document.hidden && !motifFrame && !reducedMotion.matches) {
+        motifFrame = requestAnimationFrame(animateMotifs);
+      }
     };
 
     const draw = () => {
@@ -364,9 +389,10 @@ export function KnitBackground() {
     };
 
     draw();
-    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    if (!reducedMotion.matches) {
       motifFrame = requestAnimationFrame(animateMotifs);
     }
+    document.addEventListener('visibilitychange', onVisibilityChange);
     window.addEventListener('resize', onResize);
     window.addEventListener('v2-archive-camera', onCamera as EventListener);
     window.addEventListener('pointermove', onPointerMove, { passive: true });
@@ -374,6 +400,7 @@ export function KnitBackground() {
     return () => {
       cancelAnimationFrame(resizeFrame);
       cancelAnimationFrame(motifFrame);
+      document.removeEventListener('visibilitychange', onVisibilityChange);
       window.removeEventListener('resize', onResize);
       window.removeEventListener('v2-archive-camera', onCamera as EventListener);
       window.removeEventListener('pointermove', onPointerMove);

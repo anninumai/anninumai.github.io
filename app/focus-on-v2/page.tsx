@@ -133,9 +133,6 @@ export default function FocusOnV2() {
               <p className="body-copy">
                 ユーザーを管理したり、回復へ急かしたりするのではなく、自分のペースで旅をしながら、ときどき投稿に反応する。ユーザーが自分の感情や状態を重ねられる余白と、健康管理サービスの緊張感を和らげる親しみやすさの両立を目指しました。
               </p>
-              <p className="focus-v2-character-statement">
-                投稿を受け止めるインターフェースであると同時に、サービスとの継続的な関係をつくるブランドキャラクターとして設計。
-              </p>
               <div className="focus-v2-character-visual">
                 <Image
                   src={`${base}hero-onomatopoeia.png`}
@@ -151,7 +148,6 @@ export default function FocusOnV2() {
         <section className="wrap section-grid focus-v2-experience" id="experience">
           <Label n="04">EXPERIENCE</Label>
           <div>
-            <p className="focus-v2-kicker">PRIORITY A</p>
             <h2>「伝えられた・受け止めてもらえた」と実感できること。</h2>
             <p className="body-copy">
               調査から、疲れに気づくことや言語化することだけでなく、誰かに伝えること、共有後の反応を待つことにも負担があると整理。入力から共有後の反応までを、一続きの体験として設計しました。

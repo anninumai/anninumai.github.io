@@ -30,7 +30,6 @@ export default function SummerV2() {
     sections={[
       {
         label: '着眼点・体験',
-        title: '音の組み合わせから、一人ひとりの夏をつくる。',
         paragraphs: ['夏には決まった形がありません。それでも音を聴くと、光、温度、場所、過去の記憶まで思い浮かぶことがあります。音を選ぶ、重ねる、組み合わせて聴くという操作によって、鑑賞者自身の記憶から夏が立ち上がるインタラクションを構想しました。'],
         figure: {
           src: '/assets/summer/screen.png',

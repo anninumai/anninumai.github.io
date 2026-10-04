@@ -26,7 +26,6 @@ export default function RainClockV2() {
     sections={[
       {
         label: '着眼点・体験',
-        title: '目に見えない距離を、身体に届く時間へ。',
         paragraphs: ['雨粒が落ちる時間へ変換することで、普段は意識しない空との距離を、身体に関係するスケールとして捉え直しました。情報を読むのではなく、時間の経過を眺めながら距離を感じる体験を目指しています。'],
         figure: {
           src: '/assets/rain-clock/02.png',

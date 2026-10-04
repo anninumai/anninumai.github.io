@@ -82,7 +82,6 @@ export default function KnittedDisplayV2() {
               height={1650}
               priority
             />
-            <figcaption>糸、編み目、陰影、変形によって情報が現れる画面。</figcaption>
           </figure>
           <ProjectIntroV2
             title={<h1 id="project-title">Knitted <em>Display</em></h1>}
@@ -148,7 +147,6 @@ export default function KnittedDisplayV2() {
         <section className="wrap section-grid display-v2-role" id="role">
           <Label n="03">MY ROLE / OUTCOME</Label>
           <div>
-            <h2>見え方の仮説を、素材による試作へ。</h2>
             <p className="body-copy">
               編みスクリーンのアイデア、見え方の仮説、成立条件を整理し、共同制作者へ制作を依頼。完成した試作が意図した表現につながっているかを確認し、素材条件と改善点を言語化しました。
             </p>

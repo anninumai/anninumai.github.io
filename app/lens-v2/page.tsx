@@ -98,23 +98,12 @@ export default function LensV2() {
           <Label n="02">BACKGROUND</Label>
           <div>
             <p className="lens-v2-kicker">WHY MEMORY, WHY NOW</p>
-            <p className="lens-v2-background-lead">
-              情報として知るだけでは、自分の経験にはならない。
-            </p>
             <p className="body-copy">
               デジタル上では大量の情報に触れられる一方、画面の中の情報が切り替わっても、自分がいる場所や身体は変わりません。そのため、異なる環境に身を置いたときのように感覚が揺さぶられ、普段とは違う自分が引き出される実感は生まれにくい。自分の感覚に向き合うことは、自分自身や身の回りの世界を新鮮に捉え直すきっかけになります。
             </p>
             <p className="lens-v2-background-bridge">
               そこでLensは、まだ存在しない人生を情報として説明するのではなく、その場の空気や感情まで想像できる「記憶」として届けることで、自分自身の可能性を実感を伴って感じられないか、という問いから始まりました。
             </p>
-            <a
-              className="lens-v2-source-link"
-              href="https://www.hakuhodo.co.jp/magazine/120922/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              背景となった対談：感覚の旅 第1回 — 東大・鳴海准教授と考える感覚体験のゆくえ ↗
-            </a>
           </div>
         </section>
 

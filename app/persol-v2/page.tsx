@@ -116,7 +116,6 @@ export default function PersolV2() {
           <div className="wrap section-grid">
             <Label n="02">UI / ACCESSIBILITY</Label>
             <div>
-              <h2>選考中の不安を、画面の状態設計によって減らす。</h2>
               <p className="body-copy">
                 AI面接では、接続や録画の失敗が選考結果への不安に直結します。
               </p>

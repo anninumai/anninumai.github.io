@@ -26,7 +26,6 @@ export default function RyuseiWaveV2() {
     sections={[
       {
         label: '着眼点・表現',
-        title: '形を描き切らず、知覚に像の続きを委ねる。',
         paragraphs: ['点の配置と動きに曖昧さを残し、星空と魚群のどちらにも見える状態をつくりました。見る人の経験や注意によって像が変化する、視覚的な補完そのものを表現として扱っています。'],
         figure: {
           src: '/assets/ryusei-wave/work.png',
