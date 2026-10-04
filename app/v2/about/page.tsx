@@ -8,7 +8,7 @@ import './about-v2.css';
 export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
-  title: 'About — Aino Kishimoto / 岸本あいの',
+  title: 'annin | Aino Kishimoto',
   description: '岸本あいののプロフィール、経歴、展示・受賞歴。',
 };
 
@@ -53,15 +53,6 @@ export default function AboutV2Page() {
     <a className="skip" href="#about-v2-main">本文へ移動</a>
     <V2Header />
     <main id="about-v2-main">
-      <section className="about-v2-hero" aria-labelledby="about-v2-title">
-        <div className="about-v2-hero-heading wrap">
-          <span className="about-v2-eyebrow">ABOUT / 01</span>
-          <h1 id="about-v2-title">Aino Kishimoto<span>岸本あいの</span></h1>
-          <p>Product &amp; Experience Designer</p>
-        </div>
-        <div className="about-v2-hero-background" aria-hidden="true" />
-      </section>
-
       <section className="about-v2-hands" aria-label="手の動きと自己紹介">
         <HandSequence />
       </section>
