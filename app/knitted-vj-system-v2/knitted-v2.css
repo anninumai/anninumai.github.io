@@ -65,15 +65,10 @@
   border-bottom: 1px solid var(--border);
 }
 
-.knitted-v2-performance {
-  padding-block: 110px;
-  border-bottom: 1px solid var(--border);
-}
-
 .knitted-v2-performance-video {
   width: 100%;
   max-width: 900px;
-  margin: 0;
+  margin: 48px 0 0;
 }
 
 .knitted-v2-performance-video video {
@@ -203,8 +198,7 @@
   }
 
   .knitted-v2-overview,
-  .knitted-v2-inspiration,
-  .knitted-v2-performance {
+  .knitted-v2-inspiration {
     padding-block: 70px;
   }
 
