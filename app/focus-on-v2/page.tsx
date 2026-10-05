@@ -92,10 +92,9 @@ export default function FocusOnV2() {
           />
         </section>
 
-        <section className="wrap section-grid focus-v2-problem" id="problem" aria-labelledby="focus-v2-problem-title">
+        <section className="wrap section-grid focus-v2-problem" id="problem" aria-label="PROBLEM">
           <Label n="01">PROBLEM</Label>
           <div>
-            <h2 id="focus-v2-problem-title">本人のつらさと、周囲に見える困りごとのズレ。</h2>
             <p className="body-copy">
               疲れていることに気づけない、言葉にできない、伝えても理解されない。本人が感じるつらさと、周囲から見える行動のズレを背景に、自己認識・言語化・共有・自己管理のハードルを整理しました。
             </p>
