@@ -6,9 +6,10 @@ import './experiment-case-v2.css';
 
 type Credit = { label: string; value: string };
 type Figure = { src: string; alt: string; caption: string };
-type Section = { label: string; title?: string; paragraphs: string[]; figure?: Figure };
+type Section = { label: string; title?: string; paragraphs: string[]; figure?: Figure; gallery?: ReactNode };
 
 type ExperimentCaseV2Props = {
+  className?: string;
   current: string;
   title: ReactNode;
   titleLabel: string;
@@ -24,6 +25,7 @@ type ExperimentCaseV2Props = {
 };
 
 export function ExperimentCaseV2({
+  className = '',
   current,
   title,
   titleLabel,
@@ -38,7 +40,7 @@ export function ExperimentCaseV2({
   sections,
 }: ExperimentCaseV2Props) {
   return (
-    <div className="experiment-v2-case">
+    <div className={`experiment-v2-case ${className}`}>
       <a className="skip" href="#overview">本文へ移動</a>
       <V2Header reserveSpace />
       <main>
@@ -75,6 +77,7 @@ export function ExperimentCaseV2({
                   <figcaption>{section.figure.caption}</figcaption>
                 </figure>
               )}
+              {section.gallery}
             </div>
           </section>
         ))}

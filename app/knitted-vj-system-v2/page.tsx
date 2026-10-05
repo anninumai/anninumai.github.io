@@ -4,6 +4,7 @@ import { V2Header } from '../v2/v2-header';
 import type { ReactNode } from 'react';
 import { ProjectNavV2 } from '../project-nav-v2';
 import { ProjectIntroV2 } from '../project-intro-v2';
+import { UprightImage, UprightPhoto } from './upright-photo';
 import './knitted-v2.css';
 
 export const dynamic = 'force-static';
@@ -17,10 +18,8 @@ export const metadata: Metadata = {
 const base = '/assets/knitted/';
 
 const sizes: Record<string, [number, number]> = {
-  'live-original.webp': [4000, 6000],
   'material.webp': [2000, 1333],
   'skin.webp': [844, 562],
-  'hands.webp': [1333, 2000],
   'interface.webp': [2000, 1824],
   'system.webp': [2000, 1333],
   'touchdesigner.webp': [2000, 1187],
@@ -78,13 +77,11 @@ export default function KnittedVJSystemV2() {
       <main>
         <section className="hero wrap knitted-v2-hero" aria-labelledby="project-title">
           <figure className="knitted-v2-hero-photo">
-            <Image
-              unoptimized
+            <UprightImage
               src={`${base}live-original.webp`}
               alt="白いニットをまとい、糸を張った装置を操作する演者と生成映像"
-              width={4000}
-              height={6000}
-              priority
+              width={6000}
+              height={4000}
             />
             <figcaption>
               Knitted VJ System — Scratch&amp;Build at TOKYO NODE
@@ -113,9 +110,6 @@ export default function KnittedVJSystemV2() {
             <p className="body-copy">
               身体には、触れたときの感覚、手を動かすリズム、素材の抵抗や柔らかさの記憶、ある感覚から別の感覚を呼び起こす連想が蓄積されています。編むという行為では、糸の張力や抵抗を感じ取りながら、手の力や動きを調整し、形や構造をつくっていきます。そこには、画面上の操作や言葉だけでは捉えにくい、身体を使って判断しながらつくる知があります。そこで本作では、触覚・運動感覚・素材とのやり取りを計算機への入力として扱い、身体を使って探る過程そのものから、映像表現やインタラクションを生み出せないかと考えました。糸を引く、張る、ほどくといった操作によるテンションを計測し、その値を映像の位置や大きさへ反映することで、反応を見た演者の動きが再び変化する、触覚・視覚・聴覚と身体の動きが循環するライブパフォーマンスを設計しました。
             </p>
-            <p className="knitted-v2-intent">
-              触れて感じること、身体を通して世界と関わること。この作品が、そこから得られる豊かさについて改めて考えるきっかけになればと願っています。
-            </p>
             <figure className="knitted-v2-performance-video">
               <video
                 controls
@@ -136,10 +130,12 @@ export default function KnittedVJSystemV2() {
               <figcaption>TOKYO NODEでのライブパフォーマンス。</figcaption>
             </figure>
             <div className="knitted-v2-sensory-pair">
-              <Photo
-                name="hands.webp"
+              <UprightPhoto
+                src={`${base}hands.webp`}
                 alt="糸の張力を感じながら編む演者の手"
                 caption="糸の抵抗を感じ、手の力と動きを調整する。"
+                width={2000}
+                height={1333}
               />
               <Photo
                 name="interface.webp"

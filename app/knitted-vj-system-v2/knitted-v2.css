@@ -48,12 +48,11 @@
   background: #ececec;
 }
 
-.knitted-v2-hero-photo img {
+.knitted-v2-hero-photo .knitted-v2-upright-image {
+  display: block;
   width: 100%;
   height: auto;
   max-height: calc(820 * var(--v2-px, 1px));
-  object-fit: cover;
-  object-position: center 63%;
 }
 
 .knitted-v2-overview,
@@ -107,16 +106,6 @@
   letter-spacing: .06em;
 }
 
-.knitted-v2-intent {
-  max-width: calc(900 * var(--v2-px, 1px));
-  margin-top: calc(38 * var(--v2-px, 1px));
-  padding-top: calc(32 * var(--v2-px, 1px));
-  border-top: 1px solid var(--border);
-  font-family: var(--serif);
-  font-size: clamp(calc(22 * var(--v2-px, 1px)), 2.4vw, calc(34 * var(--v2-px, 1px)));
-  line-height: 1.8;
-}
-
 .knitted-v2-system-summary {
   max-width: calc(900 * var(--v2-px, 1px));
   margin-top: calc(38 * var(--v2-px, 1px));
@@ -136,6 +125,63 @@
   overflow: hidden;
   border: 1px solid var(--border);
   background: #eef0f3;
+}
+
+.knitted-v2-photo-button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #eef0f3;
+  cursor: zoom-in;
+}
+
+.knitted-v2-photo-button .knitted-v2-upright-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1.25;
+}
+
+.knitted-v2-photo-dialog {
+  width: 100vw;
+  height: 100dvh;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 60px 24px 24px;
+  border: 0;
+  background: rgb(10 15 25 / 94%);
+  color: white;
+}
+
+.knitted-v2-photo-dialog[open] {
+  display: grid;
+  place-items: center;
+}
+
+.knitted-v2-photo-dialog .knitted-v2-upright-image {
+  display: block;
+  width: min(100%, calc((100dvh - 84px) * .6665));
+  height: auto;
+  max-width: 100%;
+  max-height: calc(100dvh - 84px);
+  aspect-ratio: 1333 / 2000;
+}
+
+.knitted-v2-photo-dialog form {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+}
+
+.knitted-v2-photo-dialog button {
+  padding: 8px 12px;
+  border: 1px solid currentColor;
+  background: transparent;
+  color: white !important;
+  cursor: pointer;
 }
 
 .knitted-v2-sensory-pair,
@@ -214,7 +260,7 @@
     margin-inline: calc(var(--gutter) * -1);
   }
 
-  .knitted-v2-hero-photo img {
+  .knitted-v2-hero-photo .knitted-v2-upright-image {
     max-height: calc(600 * var(--v2-px, 1px));
   }
 

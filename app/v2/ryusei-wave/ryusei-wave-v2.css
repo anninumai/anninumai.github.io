@@ -1,0 +1,75 @@
+.ryusei-wave-v2 .experiment-v2-hero-figure > a {
+  aspect-ratio: 2.2;
+  background: #07142b;
+}
+
+.ryusei-wave-v2 .experiment-v2-hero-figure img {
+  height: 100%;
+  max-height: none;
+  object-fit: cover;
+  object-position: center 87%;
+}
+
+.ryusei-wave-v2 .experiment-v2-section > div {
+  min-width: 0;
+}
+
+.ryusei-v2-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: calc(20 * var(--v2-px, 1px));
+  margin-top: calc(52 * var(--v2-px, 1px));
+}
+
+.ryusei-v2-gallery figure {
+  min-width: 0;
+  margin: 0;
+}
+
+.ryusei-v2-crop {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: #07142b;
+}
+
+/* Reuse the existing contact sheet, showing one photograph per frame. */
+.ryusei-v2-crop img {
+  position: absolute;
+  max-width: none;
+  height: auto;
+}
+
+.ryusei-v2-day img {
+  width: 134%;
+  top: 0;
+  left: -17%;
+}
+
+.ryusei-v2-night img,
+.ryusei-v2-detail img {
+  width: 202%;
+  bottom: 0;
+}
+
+.ryusei-v2-night img { left: 0; }
+.ryusei-v2-detail img { right: 0; }
+
+@media (max-width: 700px) {
+  .ryusei-wave-v2 .experiment-v2-hero-figure > a {
+    aspect-ratio: 4 / 3;
+  }
+
+  .ryusei-v2-gallery {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: 85%;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    gap: 16px;
+    margin-top: 36px;
+  }
+
+  .ryusei-v2-gallery figure { scroll-snap-align: start; }
+}
