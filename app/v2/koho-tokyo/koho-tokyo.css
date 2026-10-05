@@ -1,0 +1,12 @@
+.koho-tokyo-v2-case .experiment-v2-hero-figure a,
+.koho-tokyo-v2-case .experiment-v2-detail a {
+  background: #fff;
+}
+
+.koho-tokyo-v2-case .experiment-v2-hero-figure img {
+  object-fit: contain;
+}
+
+.koho-tokyo-v2-case .experiment-v2-detail img {
+  max-height: none;
+}
