@@ -119,9 +119,6 @@ export default function KnittedVJSystemV2() {
               <p className="body-copy">
                 『攻殻機動隊展 Ghost and the Shell』は、アニメ制作30周年を記念し、歴代アニメシリーズを横断して紹介する大規模展覧会。TOKYO NODEで、1,000点以上の制作資料や体験型展示、現代クリエイターによるインスタレーションを通して、その世界を展開しました。
               </p>
-              <p className="body-copy">
-                会期中の「電脳夜市」は、「未来のクラフト」をテーマに、トーク、マルシェ、Audio Visualライブが集まるイベント。その一つである「Scratch&amp;Build」では、独自のソフトウェアやハードウェアを用い、音と映像をその場で構築する即興パフォーマンスが行われました。
-              </p>
             </div>
           </div>
         </section>
