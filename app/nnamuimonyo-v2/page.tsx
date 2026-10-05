@@ -76,10 +76,10 @@ export default function KnittedDisplayV2() {
           <figure className="display-v2-hero-photo">
             <Image
               unoptimized
-              src={`${base}display-texture.webp`}
-              alt="青と水色の糸による立体的な編み地"
-              width={1206}
-              height={1650}
+              src={`${base}exhibition-poster-full.webp`}
+              alt="「暮らしの思想」展のポスター。濃紺とマゼンタの編み地を背景に、展示名と会期を記したビジュアル"
+              width={1146}
+              height={1428}
               priority
             />
           </figure>
