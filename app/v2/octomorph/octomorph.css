@@ -1,0 +1,62 @@
+.octomorph-v2-hero {
+  display: grid;
+  gap: clamp(calc(42 * var(--v2-px, 1px)), 6vw, calc(82 * var(--v2-px, 1px)));
+  padding-bottom: clamp(calc(70 * var(--v2-px, 1px)), 9vw, calc(130 * var(--v2-px, 1px)));
+}
+
+.octomorph-v2-hero-media video,
+.octomorph-v2-output video {
+  display: block;
+  width: 100%;
+  background: #090b10;
+}
+
+.octomorph-v2-hero-media video {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.octomorph-v2-section {
+  padding-block: clamp(calc(72 * var(--v2-px, 1px)), 9vw, calc(132 * var(--v2-px, 1px)));
+  border-top: 1px solid var(--work-line);
+}
+
+.octomorph-v2-section .body-copy {
+  max-width: calc(780 * var(--v2-px, 1px));
+}
+
+.octomorph-v2-output,
+.octomorph-v2-interface {
+  margin-top: calc(52 * var(--v2-px, 1px));
+}
+
+.octomorph-v2-output video {
+  aspect-ratio: 1388 / 336;
+}
+
+.octomorph-v2-interface a {
+  display: block;
+  background: #090b10;
+}
+
+.octomorph-v2-interface img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 700px) {
+  .octomorph-v2-hero {
+    gap: calc(34 * var(--v2-px, 1px));
+  }
+
+  .octomorph-v2-section {
+    padding-block: calc(64 * var(--v2-px, 1px));
+  }
+
+  .octomorph-v2-output,
+  .octomorph-v2-interface {
+    margin-top: calc(36 * var(--v2-px, 1px));
+  }
+}
