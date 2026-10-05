@@ -16,3 +16,18 @@ export function gestureOpenness(frame: number) {
 export function gestureShowsProfile(frame: number) {
   return frame < 3;
 }
+
+export type GestureState = { frame: number; story: number; closedSinceOpen: boolean };
+export const initialGestureState: GestureState = { frame: 0, story: 0, closedSinceOpen: false };
+
+export function advanceGesture(state: GestureState, frame: number, storyCount: number): GestureState {
+  if (state.frame === frame) return state;
+  const reopened = state.closedSinceOpen && gestureShowsProfile(frame);
+  return {
+    frame,
+    story: reopened ? (state.story + 1) % storyCount : state.story,
+    // Photo 5 arms one change; photo 4 alone never does. Consume it only when
+    // the hands open far enough for the text to reappear (photos 1–3).
+    closedSinceOpen: reopened ? false : frame === 4 || state.closedSinceOpen,
+  };
+}
