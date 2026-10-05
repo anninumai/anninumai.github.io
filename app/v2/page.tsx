@@ -18,7 +18,7 @@ const projects = [
   { title: 'X couture', image: '/assets/v2-thumbs/x-couture.webp', href: '/v2/x-couture' },
   { title: 'Knitted VJ System', image: '/assets/v2-thumbs/knitted-vj.webp', href: '/v2/knitted-vj-system' },
   { title: 'Lens — Memory Maker', image: '/assets/v2-thumbs/lens.webp', href: '/v2/lens' },
-  { title: '編みスクリーン', image: '/assets/v2-thumbs/knitted-display.webp', href: '/v2/knitted-display' },
+  { title: 'Knitted Display', image: '/assets/v2-thumbs/knitted-display.webp', href: '/v2/knitted-display' },
   { title: 'Ryusei Wave', image: '/assets/v2-thumbs/ryusei-wave.webp', href: '/v2/ryusei-wave' },
   { title: '雨粒時計', image: '/assets/v2-thumbs/rain-clock.webp', href: '/v2/rain-clock' },
   { title: '夏の存在証明', image: '/assets/v2-thumbs/summer.webp', href: '/v2/summer' },

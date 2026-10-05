@@ -4,7 +4,7 @@ const projects = [
   ['/v2/x-couture', 'X couture'],
   ['/v2/knitted-vj-system', 'Knitted VJ System'],
   ['/v2/lens', 'Lens'],
-  ['/v2/knitted-display', '編みスクリーン'],
+  ['/v2/knitted-display', 'Knitted Display'],
   ['/v2/ryusei-wave', 'Ryusei Wave'],
   ['/v2/rain-clock', '雨粒時計'],
   ['/v2/summer', '夏の存在証明'],
