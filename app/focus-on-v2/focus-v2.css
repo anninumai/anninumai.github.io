@@ -212,7 +212,7 @@
 .focus-v2-award p {
   max-width: calc(800 * var(--v2-px, 1px));
   margin-top: calc(17 * var(--v2-px, 1px));
-  font-size: clamp(calc(18 * var(--v2-px, 1px)), 2vw, calc(26 * var(--v2-px, 1px)));
+  font-size: var(--type-body);
   line-height: 1.8;
 }
 
