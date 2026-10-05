@@ -7,7 +7,7 @@
 .v2-knit-cursor-shadow.is-visible{opacity:1}
 @media(any-hover:none),(prefers-reduced-motion:reduce){.v2-index>.v2-knit-cursor-shadow{display:none}}
 .v2-index>.v2-background-motion{position:fixed;z-index:21;right:max(3vw,calc((100vw - var(--v2-page-width))/2 + var(--v2-page-width)*.03));bottom:16px;padding:7px 10px;border:1px solid #006fc733;background:#faf9f5dc;color:#006fc7;font:500 10px var(--sans);letter-spacing:.08em;cursor:pointer}
-.v2-index>.v2-shared-header>.v2-about-link{margin-left:auto;font-family:var(--sans);font-size:calc(13 * var(--v2-px));font-weight:600;letter-spacing:.14em}
+.v2-index>.v2-shared-header>.v2-about-link{margin-left:auto;font-size:calc(13 * var(--v2-px))}
 .v2-index ::selection{background:#ffe500;color:#006fc7}
 .v2-index>.v2-shared-header{position:fixed;z-index:20;inset:0 0 auto;background:transparent;border-bottom:0}
 .v2-archive-track{

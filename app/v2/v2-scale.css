@@ -1,3 +1,12 @@
+/* The same five glyphs on every device, without an external font request. */
+@font-face{
+  font-family:'V2 About';
+  src:url('/fonts/zen-kaku-gothic-new/about-bold.woff2') format('woff2');
+  font-style:normal;
+  font-weight:700;
+  font-display:swap;
+  unicode-range:U+0041-0042,U+004F,U+0054-0055;
+}
 /* Preserve the laptop composition; enlarge type and spacing together, then
    centre the complete composition on ultrawide displays. No CSS zoom. */
 .v2-site{
@@ -15,6 +24,16 @@
 .v2-site .v2-shared-header{padding-inline:max(3vw,calc((100vw - var(--v2-page-width))/2 + var(--v2-page-width)*.03))}
 /* Enlarge the target without changing the word's position or type size. */
 .v2-site .v2-about-link{position:relative}
+.v2-site .v2-shared-header .v2-about-link{
+  font-family:'V2 About',var(--sans);
+  font-weight:700;
+  font-style:normal;
+  font-synthesis:none;
+  letter-spacing:.14em;
+  line-height:1;
+  -webkit-text-size-adjust:100%;
+  text-size-adjust:100%;
+}
 .v2-site .v2-about-link::before{content:"";position:absolute;inset:-16px -12px}
 /* Avoid hundreds of filtered compositor surfaces for the wordmark. */
 .v2-site .v2-knit-letter i.is-knit{filter:none}

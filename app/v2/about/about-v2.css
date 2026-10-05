@@ -1,6 +1,6 @@
 .about-v2-page{--about-blue:#174a87;--about-ink:#102846;color:var(--about-ink);background:#e7effb;overflow:clip}
 .about-v2-page .v2-shared-header{position:absolute;color:var(--about-ink)}
-.about-v2-page .v2-shared-header>a:last-child{margin-left:auto;font-family:var(--sans);font-size:calc(13 * var(--v2-px, 1px));font-weight:600;letter-spacing:.14em}
+.about-v2-page .v2-shared-header>a:last-child{margin-left:auto;font-size:calc(13 * var(--v2-px, 1px))}
 .about-v2-records{--about-portrait-height:clamp(calc(2400 * var(--v2-px, 1px)),220vw,calc(3500 * var(--v2-px, 1px)));position:relative;z-index:1;isolation:isolate;min-height:calc(var(--about-portrait-height)*.94);padding-top:calc(var(--about-portrait-height)*.34);padding-bottom:calc(140 * var(--v2-px, 1px));background:#dceaf9}
 .about-v2-records:focus-visible{outline:calc(2 * var(--v2-px, 1px)) solid var(--about-blue);outline-offset:calc(-5 * var(--v2-px, 1px))}
 .about-v2-records::before,.about-v2-records::after{content:'';position:absolute;z-index:-1;top:0;bottom:0;left:50%;width:100vw;transform:translateX(-50%);pointer-events:none}
