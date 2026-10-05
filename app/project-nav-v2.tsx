@@ -8,6 +8,7 @@ const projects = [
   ['/v2/ryusei-wave', 'Ryusei Wave'],
   ['/v2/rain-clock', '雨粒時計'],
   ['/v2/summer', '夏の存在証明'],
+  ['/v2/sekisuihouse', '積水ハウス — Key Visual'],
 ];
 
 export function ProjectNavV2({ current }: { current: string }) {

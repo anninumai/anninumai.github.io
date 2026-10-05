@@ -1,0 +1,37 @@
+.sekisui-v2-case .experiment-v2-hero-figure img {
+  aspect-ratio: 16 / 9;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+}
+
+.sekisui-v2-studies {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: calc(32 * var(--v2-px, 1px)) calc(24 * var(--v2-px, 1px));
+  margin-top: calc(48 * var(--v2-px, 1px));
+}
+
+.sekisui-v2-studies figure { margin: 0; min-width: 0; }
+.sekisui-v2-studies a { display: block; }
+.sekisui-v2-studies img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 11;
+  object-fit: contain;
+}
+.sekisui-v2-studies figcaption {
+  margin-top: calc(10 * var(--v2-px, 1px));
+  font-size: var(--type-support);
+  line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+  .sekisui-v2-studies {
+    grid-template-columns: 1fr;
+    margin-top: 32px;
+    gap: 28px;
+  }
+  .sekisui-v2-studies img { aspect-ratio: auto; }
+}

@@ -22,6 +22,7 @@ const projects = [
   { title: 'Ryusei Wave', image: '/assets/v2-thumbs/ryusei-wave.webp', href: '/v2/ryusei-wave' },
   { title: '雨粒時計', image: '/assets/v2-thumbs/rain-clock.webp', href: '/v2/rain-clock' },
   { title: '夏の存在証明', image: '/assets/v2-thumbs/summer.webp', href: '/v2/summer' },
+  { title: '積水ハウス — Key Visual', image: '/assets/v2-thumbs/sekisuihouse.webp', href: '/v2/sekisuihouse' },
 ];
 
 export default function PortfolioV2Home() {

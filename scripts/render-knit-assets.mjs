@@ -7,6 +7,8 @@ import { resolve } from 'node:path';
 
 const root = resolve(import.meta.dirname, '..');
 const output = resolve(root, 'public/assets/v2-knit');
+// Optional filenames regenerate only new cards, preserving existing assets.
+const selectedFiles = new Set(process.argv.slice(2));
 await mkdir(output, { recursive: true });
 const width = 780;
 const height = 520;
@@ -35,7 +37,7 @@ function contains(points, x, y) {
   return inside;
 }
 
-for (const file of (await readdir(resolve(root, 'public/assets/v2-thumbs'))).filter(file=>file.endsWith('.webp'))) {
+for (const file of (await readdir(resolve(root, 'public/assets/v2-thumbs'))).filter(file=>file.endsWith('.webp') && (!selectedFiles.size || selectedFiles.has(file)))) {
   const src = `/assets/v2-thumbs/${file}`;
   const seed = [...src].reduce((value,c)=>((value*31)+c.charCodeAt(0))>>>0,2166136261);
   const noise = salt => { const v=Math.sin(seed*.0001+salt*78.233)*43758.5453; return v-Math.floor(v); };
@@ -107,6 +109,8 @@ for (const file of (await readdir(resolve(root, 'public/assets/v2-thumbs'))).fil
   await sharp(Buffer.from(svg(width,height,`<path d="${mask}" fill="white"/>`))).webp({lossless:true}).toFile(resolve(output,file.replace('.webp','-mask.webp')));
   console.log(`Rendered ${file}`);
 }
+
+if (selectedFiles.size) process.exit(0);
 
 // Two frozen samples of the original pastel field. CSS gently crossfades
 // their opacity; there is no full-screen JavaScript animation loop.
