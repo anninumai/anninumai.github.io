@@ -16,7 +16,7 @@ type ExperimentCaseV2Props = {
   subtitle: string;
   summary: string;
   role: string[];
-  period: string;
+  period?: string;
   tools: string[];
   team: string;
   credits?: Credit[];

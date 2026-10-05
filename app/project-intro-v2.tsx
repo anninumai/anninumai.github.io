@@ -14,7 +14,7 @@ type ProjectIntroV2Props = {
   subtitle: string;
   summary: string;
   role: string[];
-  period: string;
+  period?: string;
   tools: string[];
   team: string;
   periodLabel?: string;
@@ -50,7 +50,7 @@ export function ProjectIntroV2({
             {role.map((item) => <span key={item}>#{item}</span>)}
           </dd>
         </div>
-        <div><dt>{periodLabel}</dt><dd>{period}</dd></div>
+        {period && <div><dt>{periodLabel}</dt><dd>{period}</dd></div>}
         {tools.length > 0 && <div><dt>使用ツール</dt><dd><ToolList tools={tools} /></dd></div>}
         <div className={hasTeamDetail ? 'v2-project-fact-action' : undefined}>
           <dt>チーム</dt>
