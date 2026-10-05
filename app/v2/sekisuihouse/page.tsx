@@ -43,16 +43,33 @@ export default function SekisuiHouseV2() {
         label: 'CONCEPT',
         paragraphs: ['異なる個性がつながり、知恵が広がっていく様子を、異なる色や形が有機的に重なり合う表現として提案しました。立体的な配置と空間の奥行きを用い、個々のつながりが広がっていく様子を視覚化しています。'],
         gallery: (
-          <div className="sekisui-v2-studies" aria-label="キービジュアルのラフ案">
-            {studies.map((study) => (
-              <figure key={study.file}>
-                <a href={`/assets/sekisuihouse/${study.file}.webp`} target="_blank" rel="noreferrer" aria-label={`${study.alt}を拡大`}>
-                  <Image unoptimized src={`/assets/sekisuihouse/${study.file}.webp`} alt={study.alt} width={1920} height={study.height} loading="lazy" />
+          <>
+            <div className="sekisui-v2-final-media" aria-label="3Dビジュアルとアニメーション案">
+              <a className="sekisui-v2-composition" href="/assets/sekisuihouse/composition.webp" target="_blank" rel="noreferrer" aria-label="多彩な立体パーツを重ねたビジュアルを拡大">
+                <Image unoptimized src="/assets/sekisuihouse/composition.webp" alt="多彩な色と形の立体パーツが画面いっぱいに重なる3Dビジュアル" width={1282} height={904} loading="lazy" />
+              </a>
+              <div className="sekisui-v2-media-pair">
+                <a href="/assets/sekisuihouse/artwork.webp" target="_blank" rel="noreferrer" aria-label="パーツが球状に集まるアートワークを拡大">
+                  <Image unoptimized src="/assets/sekisuihouse/artwork.webp" alt="色と形の異なるパーツが球状に集まるアートワーク" width={1600} height={1578} loading="lazy" />
                 </a>
-                <figcaption>{study.caption}</figcaption>
-              </figure>
-            ))}
-          </div>
+                <video autoPlay muted loop playsInline controls preload="metadata" poster="/assets/sekisuihouse/composition.webp" aria-label="立体パーツが動きながら重なり合うアニメーション案">
+                  <source src="/assets/sekisuihouse/animation.mp4" type="video/mp4" />
+                  <track kind="captions" src="/assets/sekisuihouse/animation.vtt" srcLang="ja" label="日本語" />
+                  お使いのブラウザでは動画を再生できません。
+                </video>
+              </div>
+            </div>
+            <div className="sekisui-v2-studies" aria-label="キービジュアルのラフ案">
+              {studies.map((study) => (
+                <figure key={study.file}>
+                  <a href={`/assets/sekisuihouse/${study.file}.webp`} target="_blank" rel="noreferrer" aria-label={`${study.alt}を拡大`}>
+                    <Image unoptimized src={`/assets/sekisuihouse/${study.file}.webp`} alt={study.alt} width={1920} height={study.height} loading="lazy" />
+                  </a>
+                  <figcaption>{study.caption}</figcaption>
+                </figure>
+              ))}
+            </div>
+          </>
         ),
       },
     ]}
