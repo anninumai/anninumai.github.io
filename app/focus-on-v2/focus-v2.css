@@ -100,7 +100,7 @@
   padding-top: calc(120 * var(--v2-px, 1px));
 }
 
-/* Show the source slide about the perception gap, without the adjacent statistics. */
+/* Show the two background slides separately so their text remains readable. */
 .focus-v2-problem-context > a {
   position: relative;
   aspect-ratio: 1020 / 578;
@@ -115,21 +115,8 @@
   top: calc(-16 / 578 * 100%);
 }
 
-.focus-v2-problem-details {
-  margin-top: calc(32 * var(--v2-px, 1px));
-  padding-block: calc(18 * var(--v2-px, 1px));
-  border-block: 1px solid var(--border);
-}
-
-.focus-v2-problem-details summary {
-  font-size: var(--type-body);
-  line-height: 1.7;
-  cursor: pointer;
-}
-
-.focus-v2-problem-details summary:focus-visible {
-  outline: 2px solid currentColor;
-  outline-offset: 6px;
+.focus-v2-problem-statistics img {
+  left: 0;
 }
 
 .focus-v2-insight,

@@ -101,22 +101,20 @@ export default function FocusOnV2() {
             </p>
             <ProjectImage
               src="context-gap.webp"
+              alt="8.8%、28.7%、20.3%などの数値を掲載した教育支援の背景資料"
+              caption="制作時に参照した、教育支援や不登校に関する統計資料。クリックで資料全体を拡大。"
+              width={2048}
+              height={609}
+              className="focus-v2-problem-context focus-v2-problem-statistics"
+            />
+            <ProjectImage
+              src="context-gap.webp"
               alt="本人が感じる痛みと、周囲から見える困りごとの認識のズレを図解した資料"
               caption="本人と周囲の認識のズレを整理した背景資料。クリックで資料全体を拡大。"
               width={2048}
               height={609}
               className="focus-v2-problem-context"
             />
-            <details className="focus-v2-problem-details">
-              <summary>課題を整理した資料を見る</summary>
-              <ProjectImage
-                src="research-barriers.webp"
-                alt="疲れの自己認識・言語化・共有・自己管理にあるハードルと、想定する利用者像の検討資料"
-                caption="4つのハードルと想定する利用者像を整理した、設計時の検討資料。"
-                width={2002}
-                height={1856}
-              />
-            </details>
           </div>
         </section>
 
