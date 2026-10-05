@@ -65,6 +65,27 @@
   border-bottom: 1px solid var(--border);
 }
 
+.knitted-v2-context {
+  padding-top: calc(120 * var(--v2-px, 1px));
+}
+
+.knitted-v2-context-layout {
+  display: grid;
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+  gap: calc(32 * var(--v2-px, 1px));
+  align-items: start;
+}
+
+.knitted-v2-context .knitted-v2-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.knitted-v2-context-copy > :first-child {
+  margin-top: 0;
+}
+
 .knitted-v2-performance-video {
   width: 100%;
   max-width: calc(900 * var(--v2-px, 1px));
@@ -200,6 +221,15 @@
   .knitted-v2-overview,
   .knitted-v2-inspiration {
     padding-block: calc(70 * var(--v2-px, 1px));
+  }
+
+  .knitted-v2-context {
+    padding-top: calc(70 * var(--v2-px, 1px));
+  }
+
+  .knitted-v2-context-layout {
+    grid-template-columns: 1fr;
+    gap: calc(28 * var(--v2-px, 1px));
   }
 
   .knitted-v2-role {
