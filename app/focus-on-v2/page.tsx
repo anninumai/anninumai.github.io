@@ -92,6 +92,34 @@ export default function FocusOnV2() {
           />
         </section>
 
+        <section className="wrap section-grid focus-v2-problem" id="problem" aria-labelledby="focus-v2-problem-title">
+          <Label n="01">PROBLEM</Label>
+          <div>
+            <h2 id="focus-v2-problem-title">本人のつらさと、周囲に見える困りごとのズレ。</h2>
+            <p className="body-copy">
+              疲れていることに気づけない、言葉にできない、伝えても理解されない。本人が感じるつらさと、周囲から見える行動のズレを背景に、自己認識・言語化・共有・自己管理のハードルを整理しました。
+            </p>
+            <ProjectImage
+              src="context-gap.webp"
+              alt="本人が感じる痛みと、周囲から見える困りごとの認識のズレを図解した資料"
+              caption="本人と周囲の認識のズレを整理した背景資料。クリックで資料全体を拡大。"
+              width={2048}
+              height={609}
+              className="focus-v2-problem-context"
+            />
+            <details className="focus-v2-problem-details">
+              <summary>課題を整理した資料を見る</summary>
+              <ProjectImage
+                src="research-barriers.webp"
+                alt="疲れの自己認識・言語化・共有・自己管理にあるハードルと、想定する利用者像の検討資料"
+                caption="4つのハードルと想定する利用者像を整理した、設計時の検討資料。"
+                width={2002}
+                height={1856}
+              />
+            </details>
+          </div>
+        </section>
+
         <section className="wrap section-grid focus-v2-insight" id="insight">
           <Label n="02">INSIGHT / INPUT</Label>
           <div>

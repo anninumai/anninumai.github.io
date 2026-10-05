@@ -96,6 +96,42 @@
   font-style: normal;
 }
 
+.focus-v2-problem {
+  padding-top: calc(120 * var(--v2-px, 1px));
+}
+
+/* Show the source slide about the perception gap, without the adjacent statistics. */
+.focus-v2-problem-context > a {
+  position: relative;
+  aspect-ratio: 1020 / 578;
+}
+
+.focus-v2-problem-context img {
+  position: absolute;
+  width: calc(2048 / 1020 * 100%);
+  max-width: none;
+  height: auto;
+  left: calc(-1028 / 1020 * 100%);
+  top: calc(-16 / 578 * 100%);
+}
+
+.focus-v2-problem-details {
+  margin-top: calc(32 * var(--v2-px, 1px));
+  padding-block: calc(18 * var(--v2-px, 1px));
+  border-block: 1px solid var(--border);
+}
+
+.focus-v2-problem-details summary {
+  font-size: var(--type-body);
+  line-height: 1.7;
+  cursor: pointer;
+}
+
+.focus-v2-problem-details summary:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 6px;
+}
+
 .focus-v2-insight,
 .focus-v2-experience,
 .focus-v2-outcome {
@@ -267,6 +303,10 @@
 
   .focus-v2-keywords i {
     padding-inline: calc(4 * var(--v2-px, 1px));
+  }
+
+  .focus-v2-problem {
+    padding-top: calc(70 * var(--v2-px, 1px));
   }
 
   .focus-v2-insight,
