@@ -107,24 +107,8 @@ export default function KnittedVJSystemV2() {
           />
         </section>
 
-        <section className="wrap section-grid knitted-v2-context" id="exhibition-context" aria-label="EXHIBITION CONTEXT">
-          <Label n="01">EXHIBITION CONTEXT</Label>
-          <div className="knitted-v2-context-layout">
-            <Photo
-              name="exhibition.webp"
-              alt="TOKYO NODEの展示空間に掲示された攻殻機動隊のビジュアル"
-              caption="攻殻機動隊展 Ghost and the Shell — 会場の風景。"
-            />
-            <div className="knitted-v2-context-copy">
-              <p className="body-copy">
-                『攻殻機動隊展 Ghost and the Shell』は、アニメ制作30周年を記念し、歴代アニメシリーズを横断して紹介する大規模展覧会。TOKYO NODEで、1,000点以上の制作資料や体験型展示、現代クリエイターによるインスタレーションを通して、その世界を展開しました。
-              </p>
-            </div>
-          </div>
-        </section>
-
         <section className="wrap section-grid knitted-v2-inspiration" id="inspiration">
-          <Label n="02">INSPIRATION</Label>
+          <Label n="01">INSPIRATION</Label>
           <div>
             <p className="body-copy">
               身体には、触れたときの感覚、手を動かすリズム、素材の抵抗や柔らかさの記憶、ある感覚から別の感覚を呼び起こす連想が蓄積されています。編むという行為では、糸の張力や抵抗を感じ取りながら、手の力や動きを調整し、形や構造をつくっていきます。そこには、画面上の操作や言葉だけでは捉えにくい、身体を使って判断しながらつくる知があります。そこで本作では、触覚・運動感覚・素材とのやり取りを計算機への入力として扱い、身体を使って探る過程そのものから、映像表現やインタラクションを生み出せないかと考えました。糸を引く、張る、ほどくといった操作によるテンションを計測し、その値を映像の位置や大きさへ反映することで、反応を見た演者の動きが再び変化する、触覚・視覚・聴覚と身体の動きが循環するライブパフォーマンスを設計しました。
@@ -162,6 +146,22 @@ export default function KnittedVJSystemV2() {
                 alt="衣装、演者の手、糸、センサーがつながる装置"
                 caption="身体と素材、計算機が接する場所。"
               />
+            </div>
+          </div>
+        </section>
+
+        <section className="wrap section-grid knitted-v2-context" id="exhibition-context" aria-label="EXHIBITION CONTEXT">
+          <Label n="02">EXHIBITION CONTEXT</Label>
+          <div className="knitted-v2-context-layout">
+            <Photo
+              name="exhibition.webp"
+              alt="TOKYO NODEの展示空間に掲示された攻殻機動隊のビジュアル"
+              caption="攻殻機動隊展 Ghost and the Shell — 会場の風景。"
+            />
+            <div className="knitted-v2-context-copy">
+              <p className="body-copy">
+                『攻殻機動隊展 Ghost and the Shell』は、アニメ制作30周年を記念し、歴代アニメシリーズを横断して紹介する大規模展覧会。TOKYO NODEで、1,000点以上の制作資料や体験型展示、現代クリエイターによるインスタレーションを通して、その世界を展開しました。
+              </p>
             </div>
           </div>
         </section>
