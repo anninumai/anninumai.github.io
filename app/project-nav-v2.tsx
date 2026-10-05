@@ -10,6 +10,7 @@ const projects = [
   ['/v2/summer', '夏の存在証明'],
   ['/v2/sekisuihouse', '積水ハウス — Key Visual'],
   ['/v2/koho-tokyo', '広報東京都'],
+  ['/v2/3d-characters', '3D Characters'],
 ];
 
 export function ProjectNavV2({ current }: { current: string }) {

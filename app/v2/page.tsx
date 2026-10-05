@@ -24,6 +24,7 @@ const projects = [
   { title: '夏の存在証明', image: '/assets/v2-thumbs/summer.webp', href: '/v2/summer' },
   { title: '積水ハウス — Key Visual', image: '/assets/v2-thumbs/sekisuihouse.webp', href: '/v2/sekisuihouse' },
   { title: '広報東京都', image: '/assets/v2-thumbs/koho-tokyo.webp', href: '/v2/koho-tokyo' },
+  { title: '3D Characters', image: '/assets/v2-thumbs/3d-characters.webp', href: '/v2/3d-characters' },
 ];
 
 export default function PortfolioV2Home() {
