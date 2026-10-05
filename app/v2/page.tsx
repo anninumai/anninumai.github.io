@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import '../home.css';
 import './v2-home.css';
 import { KnitBackground } from './knit-background';
+import { KnitCursorShadow } from './knit-cursor-shadow';
 import { PortfolioArchive } from './portfolio-archive';
 import { V2Header } from './v2-header';
 
@@ -31,6 +32,7 @@ export default function PortfolioV2Home() {
   return (
     <div className="work-index v2-index" id="top">
       <KnitBackground />
+      <KnitCursorShadow />
       <a className="skip" href="#works">作品一覧へ移動</a>
       <V2Header />
 
