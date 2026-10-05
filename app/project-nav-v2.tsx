@@ -9,7 +9,7 @@ const projects = [
   ['/v2/rain-clock', '雨粒時計'],
   ['/v2/summer', '夏の存在証明'],
   ['/v2/sekisuihouse', '積水ハウス — Key Visual'],
-  ['/v2/koho-tokyo', '広報東京都 2023.09'],
+  ['/v2/koho-tokyo', '広報東京都'],
 ];
 
 export function ProjectNavV2({ current }: { current: string }) {

@@ -23,7 +23,7 @@ const projects = [
   { title: '雨粒時計', image: '/assets/v2-thumbs/rain-clock.webp', href: '/v2/rain-clock' },
   { title: '夏の存在証明', image: '/assets/v2-thumbs/summer.webp', href: '/v2/summer' },
   { title: '積水ハウス — Key Visual', image: '/assets/v2-thumbs/sekisuihouse.webp', href: '/v2/sekisuihouse' },
-  { title: '広報東京都 2023.09', image: '/assets/v2-thumbs/koho-tokyo.webp', href: '/v2/koho-tokyo' },
+  { title: '広報東京都', image: '/assets/v2-thumbs/koho-tokyo.webp', href: '/v2/koho-tokyo' },
 ];
 
 export default function PortfolioV2Home() {
