@@ -97,10 +97,7 @@ export default function PersolV2() {
           <Label n="01">CHARACTER INTERACTION</Label>
           <div>
             <p className="body-copy">
-              AIキャラクターを単なる装飾や案内役ではなく、候補者と同じ目線に立ちながら、少し見守りたくなるパートナーとして捉えました。
-            </p>
-            <p className="body-copy">
-              キャラクターの性格や振る舞いを損なわず、候補者が迷わず操作できるインタラクションを検討。サービスの世界観と、面接に必要な分かりやすさの両立を図りました。
+              候補者と同じ目線に立ちながら、少し見守りたくなるパートナーであり、キャラクターの性格や振る舞いを損なわず、候補者が迷わず操作できるインターフェースやインタラクションを検討
             </p>
             <div className="persol-v2-pair">
               <Photo
