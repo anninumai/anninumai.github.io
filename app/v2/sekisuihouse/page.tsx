@@ -6,7 +6,7 @@ import './sekisuihouse.css';
 export const dynamic = 'force-static';
 export const metadata: Metadata = {
   title: '積水ハウス — イノベーション施設 キービジュアル提案',
-  description: '積水ハウスとAddrecによるイノベーション施設のキービジュアル提案。STUDIO HOLIDAYのチームで、コンセプト設計、3Dグラフィック制作、アニメーションのデザインを担当しました。',
+  description: '積水ハウスとAddrecによるイノベーション施設のキービジュアル提案。異なる色や形が有機的に重なり合う3Dビジュアル。',
 };
 
 const studies = [
@@ -14,6 +14,7 @@ const studies = [
   { file: 'sketch-02', height: 1113, alt: '色と形の異なるパーツが集まり、一つの立体になるラフ', caption: 'パーツがつながる立体構成。' },
   { file: 'sketch-03', height: 1134, alt: '同じ立体を異なる角度から見た構成の比較', caption: '視点と奥行きの検討。' },
   { file: 'sketch-04', height: 1266, alt: 'キービジュアルの動きとWebページへの展開を検討したラフ', caption: 'アニメーションとWebへの展開案。' },
+  { file: 'visual-study', height: 1058, alt: '多彩な有機的パーツを立体的に重ねたビジュアルの検討案', caption: 'コンセプトをもとにしたビジュアルの調整。' },
 ];
 
 export default function SekisuiHouseV2() {
@@ -53,15 +54,6 @@ export default function SekisuiHouseV2() {
             ))}
           </div>
         ),
-      },
-      {
-        label: 'MY ROLE',
-        paragraphs: ['STUDIO HOLIDAYのチームで、コンセプト設計、3Dグラフィック制作、アニメーションのデザインを担当しました。'],
-        figure: {
-          src: '/assets/sekisuihouse/visual-study.webp',
-          alt: '多彩な有機的パーツを立体的に重ねたビジュアルの検討案',
-          caption: 'コンセプトをもとにしたビジュアルの調整。',
-        },
       },
     ]}
   />;
