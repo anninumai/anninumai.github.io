@@ -56,19 +56,19 @@ export default function AboutV2Page() {
         <AboutGesture />
         <div className="about-v2-record-grid">
           <section>
-            <h2><span>03</span>Experience</h2>
+            <h2>Experience</h2>
             <RecordList items={experience} />
           </section>
           <section>
-            <h2><span>04</span>Awards / Selected</h2>
+            <h2>Awards / Selected</h2>
             <RecordList items={recognition} />
           </section>
           <section>
-            <h2><span>05</span>Exhibitions / Performance</h2>
+            <h2>Exhibitions / Performance</h2>
             <RecordList items={exhibitions} />
           </section>
           <section>
-            <h2><span>06</span>Education</h2>
+            <h2>Education</h2>
             <div className="about-v2-education">
               <p><strong>Billy Blue College of Design,<br />Torrens University Australia</strong><small>Bachelor of Communication Design</small></p>
               <p><strong>Chiba Prefectural Kohnodai High School</strong></p>
