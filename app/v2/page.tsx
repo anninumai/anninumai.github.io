@@ -8,9 +8,28 @@ import { V2Header } from './v2-header';
 
 export const dynamic = 'force-static';
 
+const shareTitle = 'anninのポートフォリオ';
+const shareDescription = 'anninのポートフォリオ。UX/UI、インタラクション、映像などの作品を紹介します。';
+const shareImage = 'https://anninumai.github.io/assets/v2-thumbs/persol.webp';
+
 export const metadata: Metadata = {
-  title: 'Aino Kishimoto — Portfolio',
-  description: '岸本あいののポートフォリオ。サイバーエージェント応募向けに再編集したケーススタディです。',
+  metadataBase: new URL('https://anninumai.github.io'),
+  title: shareTitle,
+  description: shareDescription,
+  openGraph: {
+    type: 'website',
+    url: 'https://anninumai.github.io/v2/',
+    siteName: 'annin',
+    title: shareTitle,
+    description: shareDescription,
+    images: [{ url: shareImage, width: 1600, height: 900, alt: shareTitle }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: shareTitle,
+    description: shareDescription,
+    images: [shareImage],
+  },
 };
 
 const projects = [
