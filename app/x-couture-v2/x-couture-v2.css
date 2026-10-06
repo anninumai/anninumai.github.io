@@ -129,6 +129,14 @@
   margin-top: calc(50 * var(--v2-px, 1px));
 }
 
+.x-v2-runway-film iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  background: #171717;
+}
+
 .x-v2-runway-link {
   position: relative;
   display: block;

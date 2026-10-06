@@ -1,0 +1,18 @@
+.summer-v2-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(18px, 3vw, 48px);
+  margin-top: calc(42 * var(--v2-px, 1px));
+}
+
+.summer-v2-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 700px) {
+  .summer-v2-gallery {
+    grid-template-columns: 1fr;
+  }
+}

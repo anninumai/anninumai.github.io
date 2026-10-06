@@ -21,7 +21,6 @@ export default function CharactersV2() {
     title={<h1 id="project-title">3D Characters</h1>}
     titleLabel="3D Characters"
     subtitle="3Dキャラクターと造形の自主制作"
-    summary="表情や質感、かたちの違いを通して、それぞれの存在感を描きました。"
     role={['3Dキャラクター', 'アニメーション']}
     tools={['Blender']}
     team="個人制作"
@@ -36,6 +35,8 @@ export default function CharactersV2() {
       gallery: <div className="characters-v2-gallery" aria-label="3Dキャラクターと造形の作品">
         <video
           controls
+          autoPlay
+          muted
           loop
           playsInline
           preload="metadata"

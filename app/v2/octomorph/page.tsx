@@ -36,7 +36,6 @@ export default function OctomorphV2() {
               <track kind="captions" src={`${base}live-at-venue.vtt`} srcLang="ja" label="映像の説明" />
               お使いのブラウザでは動画を再生できません。
             </video>
-            <figcaption>OCTOMORPH — 渋谷サクラステージ 4F・404 Not Found</figcaption>
           </figure>
 
           <ProjectIntroV2
@@ -58,6 +57,8 @@ export default function OctomorphV2() {
             <figure className="octomorph-v2-output">
               <video
                 controls
+                autoPlay
+                muted
                 loop
                 playsInline
                 preload="metadata"

@@ -151,22 +151,13 @@ export default function XCoutureV2() {
               構築した制作体制によって、約3〜4カ月にわたる二つのデジタルファッション制作を進行。うち一つを、Rakuten Fashion Week TOKYO 2022 A/Wに向けたyoshiokuboとの実制作として完成させました。
             </p>
             <figure className="x-v2-runway-film">
-              <a
-                className="x-v2-runway-link"
-                href="https://www.youtube.com/watch?v=PF7KoWcs-2U"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="yoshiokubo 2022 A/W Collectionの動画をYouTubeで再生"
-              >
-                <Image
-                  unoptimized
-                  src="https://i.ytimg.com/vi_webp/PF7KoWcs-2U/maxresdefault.webp"
-                  alt="yoshiokubo 2022 A/W Collectionの動画サムネイル"
-                  width={1280}
-                  height={720}
-                />
-                <span className="x-v2-runway-play" aria-hidden="true">▶</span>
-              </a>
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/PF7KoWcs-2U?autoplay=1&mute=1&loop=1&playlist=PF7KoWcs-2U&playsinline=1&rel=0"
+                title="yoshiokubo 2022 A/W Collection"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                loading="lazy"
+              />
             </figure>
             <Photo
               src="/assets/fashion-week-team.webp"

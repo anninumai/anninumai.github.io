@@ -115,6 +115,9 @@ export default function PersolV2() {
               {/* oxlint-disable-next-line jsx-a11y/media-has-caption -- The supplied source has no caption track. */}
               <video
                 controls
+                autoPlay
+                muted
+                loop
                 playsInline
                 preload="metadata"
                 poster={`${base}hero-together.webp`}

@@ -14,7 +14,7 @@ type ExperimentCaseV2Props = {
   title: ReactNode;
   titleLabel: string;
   subtitle: string;
-  summary: string;
+  summary?: string;
   role: string[];
   period?: string;
   tools: string[];
@@ -49,7 +49,6 @@ export function ExperimentCaseV2({
             <a href={hero.src} target="_blank" rel="noreferrer" aria-label={`${hero.alt}を拡大`}>
               <img src={hero.src} alt={hero.alt} fetchPriority="high" />
             </a>
-            <figcaption>{hero.caption}</figcaption>
           </figure>
           <ProjectIntroV2
             title={title}

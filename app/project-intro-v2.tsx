@@ -12,7 +12,7 @@ type CreditItem = {
 type ProjectIntroV2Props = {
   title: ReactNode;
   subtitle: string;
-  summary: string;
+  summary?: string;
   role: string[];
   period?: string;
   tools: string[];
@@ -40,7 +40,7 @@ export function ProjectIntroV2({
       <div className="v2-project-intro-copy">
         {title}
         <p className="v2-project-intro-subtitle"><strong>{subtitle}</strong></p>
-        <p className="v2-project-intro-summary">{summary}</p>
+        {summary && <p className="v2-project-intro-summary">{summary}</p>}
       </div>
 
       <dl className="v2-project-facts" aria-label="プロジェクト情報">

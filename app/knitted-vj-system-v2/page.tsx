@@ -83,9 +83,6 @@ export default function KnittedVJSystemV2() {
               width={6000}
               height={4000}
             />
-            <figcaption>
-              Knitted VJ System — Scratch&amp;Build at TOKYO NODE
-            </figcaption>
           </figure>
           <ProjectIntroV2
             title={<h1 id="project-title">Knitted <em>VJ System</em></h1>}
@@ -113,6 +110,9 @@ export default function KnittedVJSystemV2() {
             <figure className="knitted-v2-performance-video">
               <video
                 controls
+                autoPlay
+                muted
+                loop
                 playsInline
                 preload="metadata"
                 poster={`${base}video-poster.webp`}
