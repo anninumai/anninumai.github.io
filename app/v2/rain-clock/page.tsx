@@ -14,7 +14,7 @@ export default function RainClockV2() {
     titleLabel="雨粒時計"
     subtitle="空を身近に感じられる、雨の時計"
     summary="雨粒が身体に触れたとき、遠くにある空が急に近く感じられた経験から、雨粒が雲から地上へ届くまでの距離を『時間』として表すWebプロトタイプを制作しました。"
-    role={['Web', 'インタラクション', 'UI/UX']}
+    role={['Web', 'インタラクション', 'UX/UI']}
     period="2022.06"
     tools={['STUDIO']}
     team="個人制作"

@@ -9,7 +9,7 @@ import './lens-v2.css';
 export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
-  title: 'Lens ~ Memory Maker — 記憶提供サービス',
+  title: 'Lens — Memory Maker — 記憶提供サービス',
   description:
     '存在しない人生の記憶をデザインしてくれるサービス、Memory Maker。',
 };
@@ -78,7 +78,7 @@ export default function LensV2() {
             eager
           />
           <ProjectIntroV2
-            title={<h1 id="project-title">Lens~<strong>Memory Maker</strong></h1>}
+            title={<h1 id="project-title">Lens — <strong>Memory Maker</strong></h1>}
             subtitle="存在しない人生の記憶をデザインしてくれるサービス"
             summary="存在しない人生の情景を、写真と日記によって本人の記憶として成立させるサービスプロトタイプ。生成された情景だけでなく、届くまでの時間、選ぶ操作、アルバムへの蓄積まで、記憶が自分のものとして受け取られる前後の体験を設計しました。"
             role={['サービスデザイン', 'UX/UI', '生成AI', 'プロトタイプ']}

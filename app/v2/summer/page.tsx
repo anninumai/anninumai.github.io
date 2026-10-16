@@ -22,7 +22,7 @@ export default function SummerV2() {
     tools={['Figma', 'Claude Code']}
     team="2名共同制作"
     credits={[
-      { label: 'アイデア・UI/UXデザイン', value: 'Aino Kishimoto' },
+      { label: 'アイデア・UX/UIデザイン', value: 'Aino Kishimoto' },
       { label: '実装', value: 'Shuhey Koyama' },
     ]}
     hero={{

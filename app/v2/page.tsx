@@ -40,7 +40,7 @@ const projects = [
   { title: '広報東京都 表紙企画', image: '/assets/v2-thumbs/koho-tokyo.webp', href: '/v2/koho-tokyo' },
   { title: 'Focus on', image: '/assets/v2-thumbs/focus-on.webp', href: '/v2/focus-on' },
   { title: 'Lens — Memory Maker', image: '/assets/v2-thumbs/lens.webp', href: '/v2/lens' },
-  { title: 'Ryusei wave 二子玉川ライズ', image: '/assets/v2-thumbs/ryusei-wave.webp', href: '/v2/ryusei-wave' },
+  { title: 'Ryusei Wave 二子玉川ライズ', image: '/assets/v2-thumbs/ryusei-wave.webp', href: '/v2/ryusei-wave' },
   { title: 'OCTOMORPH', image: '/assets/v2-thumbs/octomorph.webp', href: '/v2/octomorph' },
   { title: '3D Characters', image: '/assets/v2-thumbs/3d-characters.webp', href: '/v2/3d-characters' },
   { title: 'Knitted Display', image: '/assets/v2-thumbs/knitted-display.webp', href: '/v2/knitted-display' },

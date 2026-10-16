@@ -95,7 +95,7 @@ export default function KnittedDisplayV2() {
               { label: 'コンセプト・ディレクション・レビュー', value: 'Aino Kishimoto' },
               { label: 'デザイン・進行管理', value: 'koichi ishi' },
               { label: 'ニッター', value: 'miq' },
-              { label: 'テクニカル', value: 'shuhey koyama' },
+              { label: 'テクニカル', value: 'Shuhey Koyama' },
             ]}
           />
         </section>

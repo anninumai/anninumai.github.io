@@ -12,21 +12,21 @@ export const metadata: Metadata = {
 };
 
 const experience = [
-  { year: '2023', title: 'UI/UX Research & Design', detail: 'STUDIO HOLIDAY', logo: '/assets/about/studio-holiday.webp' },
+  { year: '2023', title: 'UX/UI Research & Design', detail: 'STUDIO HOLIDAY', logo: '/assets/about/studio-holiday.webp' },
   { year: '2022', title: 'UX/UI Design Internship', detail: 'SEESAW', logo: '/assets/about/seesaw.webp' },
   { year: '2021', title: 'Communication Design Internship', detail: 'Landor Tokyo', logo: '/assets/about/landor.webp' },
 ];
 
 const recognition = [
   { year: '2026', title: '電通テクノロジーとアイデアの学校', detail: 'Silver Award' },
-  { year: '2025', title: 'Lens', detail: 'SHIBUYA QWS 第22期採択', href: '/v2/lens' },
+  { year: '2025', title: 'Lens — Memory Maker', detail: 'SHIBUYA QWS 第22期採択', href: '/v2/lens' },
   { year: '2022', title: 'Focus on', detail: 'キャンパスベンチャーグランプリ大阪 最優秀賞（12月）', href: '/v2/focus-on' },
 ];
 
 const exhibitions = [
   { year: '2026', title: 'OCTOMORPH', detail: 'メディア芸術祭アフターイベント｜渋谷サクラステージ 4F・404 Not Found' },
   { year: '2026', title: 'Knitted VJ System', detail: '攻殻機動隊展 Ghost and the Shell × TOKYO NODE', href: '/v2/knitted-vj-system' },
-  { year: '2026', title: '編みスクリーン', detail: 'んあむぃむぉにょ展「暮らしの思想」', href: '/v2/knitted-display' },
+  { year: '2026', title: 'Knitted Display', detail: 'んあむぃむぉにょ展「暮らしの思想」', href: '/v2/knitted-display' },
   { year: '2025', title: 'Ryusei Wave', detail: '二子玉川ライズ', href: '/v2/ryusei-wave' },
   { year: '2022', title: 'X couture', detail: 'Rakuten Fashion Week TOKYO 2022 A/W', href: '/v2/x-couture' },
 ];
@@ -70,7 +70,7 @@ export default function AboutV2Page() {
           <section>
             <h2>Education</h2>
             <div className="about-v2-education">
-              <p><strong>Billy Blue College of Design,<br />Torrens University Australia</strong><small>Communication Design（中退）</small></p>
+              <p><strong>Billy Blue College of Design,<br />Torrens University Australia</strong><small>Bachelor of Communication Design（中退）</small></p>
               <p><strong>Chiba Prefectural Kohnodai High School</strong></p>
             </div>
           </section>

@@ -2,7 +2,7 @@ export const aboutStories = [
   {
     id: 'introduction',
     paragraphs: [
-      'Billy Blue Design college at Torrens university,Communication Designを専攻、デジタルプロダクトやサービスのコンセプト立案から、UX/UI設計、プロトタイプ制作まで一貫して取り組んでいます。',
+      'Billy Blue College of Design（Torrens University Australia）でCommunication Designを学び、デジタルプロダクトやサービスのコンセプト立案から、UX/UI設計、プロトタイプ制作まで一貫して取り組んでいます。',
       '人の知覚や感覚特性に働きかける体験設計に関心があり、多感覚知覚、触知覚などの研究領域を参照しながら、インタラクションデザインの開発・制作を行っています。',
       '媒体を問わず、デジタルとフィジカルのあいだを横断した制作活動を行っています。',
     ],
