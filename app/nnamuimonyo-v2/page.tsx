@@ -88,12 +88,12 @@ export default function KnittedDisplayV2() {
             subtitle="情報の手触りを感じられる、柔らかなディスプレイ"
             summary="糸、編み目、陰影、変形によって情報が現れる「物質としての画面」のプロトタイプ。暮らしのなかにある柔らかな素材そのものが変化し、情報や気配を伝えるインターフェースを提案しました。"
             role={['マテリアルデザイン', 'テキスタイル', '触覚インターフェース', 'プロトタイプ']}
-            period="2026.07.26–08.01"
+            period="2026.07.25–08.01"
             tools={['Knitting', 'Material Prototype']}
             team="4名共同制作"
             credits={[
               { label: 'コンセプト・ディレクション・レビュー', value: 'Aino Kishimoto' },
-              { label: 'デザイン・進行管理', value: 'koichi ishi' },
+              { label: 'デザイン・進行管理', value: 'Koichi Ishii' },
               { label: 'ニッター', value: 'miq' },
               { label: 'テクニカル', value: 'Shuhey Koyama' },
             ]}

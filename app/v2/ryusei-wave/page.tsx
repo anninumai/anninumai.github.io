@@ -23,8 +23,8 @@ export default function RyuseiWaveV2() {
     team="個人制作"
     hero={{
       src: '/assets/ryusei-wave/exhibition-original.webp',
-      alt: '夜の二子玉川ライズに設置された3連LEDキューブの映像展示',
-      caption: 'Ryusei Wave — 二子玉川ライズでの展示風景。',
+      alt: '夜の玉川髙島屋S・Cに設置された3連LEDキューブの映像展示',
+      caption: 'Ryusei Wave — 玉川髙島屋S・Cでの展示風景。',
     }}
     sections={[
       {
@@ -55,7 +55,7 @@ export default function RyuseiWaveV2() {
       },
       {
         label: '展示',
-        paragraphs: ['2025年8月、二子玉川ライズの3連LEDキューブで展示しました。異なる面と距離から見ても一つの運動として感じられるよう、複数画面へ映像を展開しました。'],
+        paragraphs: ['2025年8月、玉川髙島屋S・Cの3連LEDキューブで展示しました。異なる面と距離から見ても一つの運動として感じられるよう、複数画面へ映像を展開しました。'],
       },
     ]}
   />;

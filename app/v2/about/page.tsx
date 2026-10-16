@@ -27,7 +27,7 @@ const exhibitions = [
   { year: '2026', title: 'OCTOMORPH', detail: 'メディア芸術祭アフターイベント｜渋谷サクラステージ 4F・404 Not Found' },
   { year: '2026', title: 'Knitted VJ System', detail: '攻殻機動隊展 Ghost and the Shell × TOKYO NODE', href: '/v2/knitted-vj-system' },
   { year: '2026', title: 'Knitted Display', detail: 'んあむぃむぉにょ展「暮らしの思想」', href: '/v2/knitted-display' },
-  { year: '2025', title: 'Ryusei Wave', detail: '二子玉川ライズ', href: '/v2/ryusei-wave' },
+  { year: '2025', title: 'Ryusei Wave', detail: '玉川髙島屋S・C', href: '/v2/ryusei-wave' },
   { year: '2022', title: 'X couture', detail: 'Rakuten Fashion Week TOKYO 2022 A/W', href: '/v2/x-couture' },
 ];
 
