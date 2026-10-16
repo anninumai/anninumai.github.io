@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 const experience = [
-  { year: '2024', title: 'UI/UX Research & Design', place: 'STUDIO HOLIDAY', logo: '/assets/about/studio-holiday.webp' },
+  { year: '2023', title: 'UI/UX Research & Design', place: 'STUDIO HOLIDAY', logo: '/assets/about/studio-holiday.webp' },
   { year: '2022', title: 'UX/UI Design Internship', place: 'SEESAW', logo: '/assets/about/seesaw.webp' },
   { year: '2021', title: 'Communication Design Internship', place: 'Landor Tokyo', logo: '/assets/about/landor.webp' },
 ];
@@ -91,7 +91,7 @@ export default function AboutPage() {
         <article className="about-education">
           <div className="about-section-heading"><span>05</span><h2>Education</h2></div>
           <div className="about-education-content">
-            <p><strong>Billy Blue College of Design,<br/>Torrens University Australia</strong><span>Bachelor of Communication Design</span></p>
+            <p><strong>Billy Blue College of Design,<br/>Torrens University Australia</strong><span>Communication Design（中退）</span></p>
             <p><strong>Chiba Prefectural Kohnodai High School</strong></p>
           </div>
         </article>

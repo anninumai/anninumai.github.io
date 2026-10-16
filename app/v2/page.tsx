@@ -37,7 +37,7 @@ const projects = [
   { title: '積水ハウス — Key Visual', image: '/assets/v2-thumbs/sekisuihouse.webp', href: '/v2/sekisuihouse' },
   { title: 'Knitted VJ System TOKYO NODE 出展', image: '/assets/v2-thumbs/knitted-vj.webp', href: '/v2/knitted-vj-system' },
   { title: 'X couture RAKUTEN FASHION 出展', image: '/assets/v2-thumbs/x-couture.webp', href: '/v2/x-couture' },
-  { title: '東京メトロ日刊 表紙企画', image: '/assets/v2-thumbs/koho-tokyo.webp', href: '/v2/koho-tokyo' },
+  { title: '広報東京都 表紙企画', image: '/assets/v2-thumbs/koho-tokyo.webp', href: '/v2/koho-tokyo' },
   { title: 'Focus on', image: '/assets/v2-thumbs/focus-on.webp', href: '/v2/focus-on' },
   { title: 'Lens — Memory Maker', image: '/assets/v2-thumbs/lens.webp', href: '/v2/lens' },
   { title: 'Ryusei wave 二子玉川ライズ', image: '/assets/v2-thumbs/ryusei-wave.webp', href: '/v2/ryusei-wave' },
