@@ -163,7 +163,7 @@ export default function LensV2() {
             <div>
               <p className="lens-v2-kicker">FROM QUESTION TO EXPERIENCE</p>
               <p className="body-copy">
-                問題設定、先行研究、コンセプト立案から、体験設計、UI・UX、CI・VI、プロトタイプ制作、探索的なユーザー確認までを一貫して担当しました。
+                問題設定、先行研究、コンセプト立案から、体験設計、UX/UI、CI・VI、プロトタイプ制作、探索的なユーザー確認までを一貫して担当しました。
               </p>
               <p className="body-copy">
                 生成画像だけでなく、写真日記が届くまでの時間、情景を選ぶ操作、アルバムへの蓄積まで、記憶が生成され、自分のものとして受け取られる前後の体験を設計しました。
