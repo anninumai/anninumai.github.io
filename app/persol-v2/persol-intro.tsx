@@ -6,18 +6,17 @@ import { ToolList } from '../tool-list';
 const credits = [
   { role: '事業・サービス開発', names: ['PERSOL CAREER'] },
   { role: 'クリエイティブディレクション', names: ['Hirochika Horiuchi（STUDIO HOLIDAY）'] },
-  { role: 'UX/UI設計', scope: 'Dawn・Polaris', names: ['Hirune Imamura'] },
+  { role: 'UX/UIディレクション', scope: 'Dawn・Polaris', names: ['Hirune Imamura'] },
   { role: 'UX/UIデザインリード', scope: 'Dawn・TS', names: ['Aino Kishimoto'] },
-  { role: 'UX/UI設計支援・体験提案', scope: 'Dawn・Polaris', names: ['Aino Kishimoto'] },
+  { role: 'UX/UIデザインサポート', scope: 'Dawn・Polaris', names: ['Aino Kishimoto'] },
   { role: 'ブランド企画・制作連携', scope: 'WiTTO', names: ['Hitomi Tokuma'] },
   { role: 'ネーミング', scope: 'WiTTO', names: ['Sotaro Funahashi'] },
   { role: '体験設計ディレクション', scope: 'PAIM', names: ['Hirochika Horiuchi〈個人体験〉', 'Kazuhisa Kitamura〈法人体験〉', 'Dan Ushikubo〈A2A対話〉'] },
-  { role: '体験企画・コンセプト提案', scope: 'PAIM', names: ['Aino Kishimoto'] },
+  { role: 'UX企画・コンセプト提案', scope: 'PAIM', names: ['Aino Kishimoto'] },
   { role: 'プロジェクト進行', scope: 'PAIM', names: ['Jun Ebata'] },
-  { role: 'UX設計・プロトタイピング', scope: 'PAIM', names: ['FUTUREK'] },
+  { role: 'UXデザイン・プロトタイピング', scope: 'PAIM', names: ['FUTUREK'] },
   { role: '進行・レビュー', scope: 'AI面接官', names: ['Yuta Yasutake'] },
-  { role: 'アバター調査・デザイン提案', scope: 'AI面接官', names: ['Aino Kishimoto'] },
-  { role: 'アバターデザインレビュー', names: ['Kiri Ando'] },
+  { role: 'アバター調査・デザイン', scope: 'AI面接官', names: ['Aino Kishimoto'] },
   { role: 'デザイン・開発協力', names: ['MCD', 'FUTUREK', 'Preferred Networks'] },
 ];
 
