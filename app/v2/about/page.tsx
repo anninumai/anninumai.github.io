@@ -12,15 +12,15 @@ export const metadata: Metadata = {
 };
 
 const experience = [
-  { year: 'Jun 2023 – Sep 2026', title: 'UX/UI Research & Design', detail: 'STUDIO HOLIDAY', logo: '/assets/about/studio-holiday.webp' },
-  { year: 'Jul 2021 – Nov 2022', title: 'UX/UI Design Internship', detail: 'SEESAW', logo: '/assets/about/seesaw.webp' },
-  { year: 'Apr 2021 – Jun 2021', title: 'Communication Design Internship', detail: 'Landor Tokyo', logo: '/assets/about/landor.webp' },
+  { year: '2023–2026', title: 'UX/UI Research & Design', detail: 'STUDIO HOLIDAY', logo: '/assets/about/studio-holiday.webp' },
+  { year: '2021–2022', title: 'UX/UI Design Internship', detail: 'SEESAW', logo: '/assets/about/seesaw.webp' },
+  { year: '2021', title: 'Communication Design Internship', detail: 'Landor Tokyo', logo: '/assets/about/landor.webp' },
 ];
 
 const recognition = [
   { year: '2026', title: '電通テクノロジーとアイデアの学校', detail: 'Silver Award' },
   { year: '2025', title: 'Lens — Memory Maker', detail: 'SHIBUYA QWS 第22期採択', href: '/v2/lens' },
-  { year: '2022', title: 'Focus on', detail: 'キャンパスベンチャーグランプリ大阪 最優秀賞（12月）', href: '/v2/focus-on' },
+  { year: '2022', title: 'Focus on', detail: 'キャンパスベンチャーグランプリ大阪 最優秀賞', href: '/v2/focus-on' },
 ];
 
 const exhibitions = [
@@ -71,11 +71,11 @@ export default function AboutV2Page() {
             <h2>Education</h2>
             <dl className="about-v2-education">
               <div>
-                <dt><time dateTime="2019-09">Sep 2019</time><span>–</span><time dateTime="2022-12">Dec 2022</time></dt>
+                <dt><time dateTime="2019">2019</time><span>–</span><time dateTime="2022">2022</time></dt>
                 <dd><strong>Billy Blue College of Design / Torrens University Australia</strong><small>Bachelor of Communication Design（中退）</small></dd>
               </div>
               <div>
-                <dt><time dateTime="2015-04">Apr 2015</time><span>–</span><time dateTime="2018-03">Mar 2018</time></dt>
+                <dt><time dateTime="2015">2015</time><span>–</span><time dateTime="2018">2018</time></dt>
                 <dd><strong>Chiba Prefectural Kohnodai High School</strong></dd>
               </div>
             </dl>
