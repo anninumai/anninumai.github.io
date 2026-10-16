@@ -74,10 +74,9 @@ export default function PersolCase() {
       <section className="overview wrap section-grid" id="overview" aria-label="プロジェクト概要">
         <Label n="01">OVERVIEW</Label>
         <div>
-          <p className="intro">2024年5月から2026年3月まで、大規模AI転職サービスに関連する複数の体験設計に、リサーチ・企画支援からUX/UIの提案・制作へと、時期に応じて担当領域を変えながら参加しました。独立URL型AI面接ではデザイン担当として、接続確認から面接完了までのUX/UIを検討し、複数の選択肢と判断材料をつくりました。</p>
-          <p className="body-copy">2024年は会議参加・事例調査・UI企画を支援。2025年はUX/UIやブランド表現の提案・制作を担当し、2026年3月までは別のAI面接サービスでのアバター調査・デザイン提案などにも関わりました。</p>
+          <p className="intro">AI転職サービスにおいて、UX/UIとAIキャラクターとの体験、カラー・タイポグラフィの提案・制作を担当しました。独立URL型AI面接ではデザイン担当として、接続確認から面接完了までのUX/UIを検討し、複数の選択肢と判断材料をつくりました。</p>
           <dl className="metadata">
-            <div><dt>PERIOD</dt><dd>2024.05–2026.03<br />企画・調査支援を含む</dd></div>
+            <div><dt>PERIOD</dt><dd>2024.05–2026.03</dd></div>
             <div><dt>ROLE</dt><dd>Product Designer<br/>UX/UI・提案</dd></div>
             <div><dt>TEAM</dt><dd>PERSOL Career<br/>社内外デザインチーム</dd></div>
             <div><dt>FIELD</dt><dd>AI Career<br/>Interaction Design</dd></div>
