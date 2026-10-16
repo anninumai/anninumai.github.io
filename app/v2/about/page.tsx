@@ -69,10 +69,16 @@ export default function AboutV2Page() {
           </section>
           <section>
             <h2>Education</h2>
-            <div className="about-v2-education">
-              <p><strong>Billy Blue College of Design,<br />Torrens University Australia</strong><small>Bachelor of Communication Design（中退）</small></p>
-              <p><strong>Chiba Prefectural Kohnodai High School</strong></p>
-            </div>
+            <dl className="about-v2-education">
+              <div>
+                <dt><time dateTime="2019-12">Dec 2019</time><small>入学</small></dt>
+                <dd><strong>Billy Blue College of Design / Torrens University Australia</strong><small>Bachelor of Communication Design（中退）</small></dd>
+              </div>
+              <div>
+                <dt><time dateTime="2015-04">Apr 2015</time><span>–</span><time dateTime="2018-03">Mar 2018</time></dt>
+                <dd><strong>Chiba Prefectural Kohnodai High School</strong></dd>
+              </div>
+            </dl>
           </section>
         </div>
       </section>
