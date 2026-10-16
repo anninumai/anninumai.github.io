@@ -20,7 +20,7 @@ const experience = [
 const recognition = [
   { year: '2026', title: '電通テクノロジーとアイデアの学校', detail: 'Silver Award' },
   { year: '2025', title: 'Lens', detail: 'SHIBUYA QWS 第22期採択', href: '/v2/lens' },
-  { year: '2022', title: 'Focus on', detail: 'キャンパスベンチャーグランプリ大阪 最優秀賞・日刊工業新聞社賞', href: '/v2/focus-on' },
+  { year: '2022', title: 'Focus on', detail: 'キャンパスベンチャーグランプリ大阪 最優秀賞（12月）', href: '/v2/focus-on' },
 ];
 
 const exhibitions = [

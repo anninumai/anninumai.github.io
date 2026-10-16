@@ -81,7 +81,7 @@ export default function FocusOnV2() {
             subtitle="名前がない感情でも、伝え、受け止めてもらえる感覚共有アプリ"
             summary="言葉にしにくい疲れを記録し、信頼できる相手へ共有するアプリのUX/UIとキャラクター体験を設計しました。既存ユーザーへのヒアリングと論文調査から、曖昧な身体感覚と説明の間をつなぐオノマトペや、投稿を受け止めるキャラクター「Focusくん」を提案しました。"
             role={['UX/UI', 'キャラクターデザイン', 'リサーチ']}
-            period="2023.06–12"
+            period="2022.06–12"
             tools={['Figma', 'Illustrator', 'Prototype']}
             team="Focus on チーム"
             credits={[
@@ -218,7 +218,7 @@ export default function FocusOnV2() {
           <div>
             <aside className="focus-v2-award">
               <p>
-                「発達障害児者支援アプリFocus on」の事業プランとして、チームで第24回キャンパスベンチャーグランプリ大阪の<strong>最優秀賞</strong>を受賞しました。
+                2022年12月、「発達障害児者支援アプリFocus on」の事業プランとして、チームで第24回キャンパスベンチャーグランプリ大阪の<strong>最優秀賞</strong>を受賞しました。
               </p>
               <a
                 href="https://cvg.nikkan.co.jp/cvg_osaka_backnumber"

@@ -27,15 +27,15 @@ export default function FocusOn() {
   <header className="site-header" id="top"><a className="wordmark" href="/">Portfolio<span className="wordmark-dot">.</span></a><span className="header-caption">PORTFOLIO / CASE STUDY 08</span><a className="header-link" href="/lens">07 — Lens ↗</a></header>
   <main>
    <section className="hero wrap" aria-labelledby="project-title">
-    <div className="eyebrow hero-eyebrow"><span>HEALTHCARE × COMMUNICATION</span><span>2023</span></div>
+    <div className="eyebrow hero-eyebrow"><span>HEALTHCARE × COMMUNICATION</span><span>2022</span></div>
     <div className="title-row"><h1 id="project-title">Focus <em>on</em></h1><div className="hero-category">Healthcare App<span>UX/UI DESIGN</span></div></div>
     <figure className="hero-figure"><div className="hero-picture"><img src={base+'hero-onomatopoeia.webp'} alt="Focus onのキャラクターと、疲れの記録・振り返り・共有画面" width="2238" height="1254" fetchPriority="high" /></div><figcaption><span className="figure-no">FIG. 01</span><span>Focus on — 疲れの記録・共有を支えるUX/UI改善提案。</span></figcaption></figure>
    </section>
    <section className="overview wrap section-grid" id="overview" aria-label="プロジェクト概要">
     <Label n="01">OVERVIEW</Label>
     <div><p className="intro">日々の疲れを記録し、信頼できる相手へ共有するアプリ「Focus on」のUX/UI改善を担当しました。</p><p className="body-copy">事前調査と既存ユーザーへのヒアリングから、疲れを認識・言語化することに加え、周囲へ共有することにも大きなハードルがあると整理。代表と機能をA・B・Dに分類し、共有を始めるための機能群を優先度Aとして設計しました。優先度Aの機能群は実装済みです。</p>
-    <div className="focus-award"><span className="eyebrow">AWARD</span><a href="https://cvg.nikkan.co.jp/cvg_osaka_backnumber" target="_blank" rel="noreferrer">第24回キャンパスベンチャーグランプリ大阪<br /><strong>最優秀賞受賞</strong> <span aria-hidden="true">↗</span></a><p>「発達障害児者支援アプリFocus on」の事業プランとしてチームで受賞。</p></div>
-    <dl className="metadata"><div><dt>PERIOD</dt><dd>2023.06–12</dd></div><div><dt>ROLE</dt><dd>ユーザーリサーチ<br />UX・UI設計</dd></div><div><dt>RESEARCH</dt><dd>既存ユーザーへの<br />ヒアリング</dd></div><div><dt>STATUS</dt><dd>共有を支える機能を実装済み<br />掲載資料は設計時のもの</dd></div></dl></div>
+    <div className="focus-award"><span className="eyebrow">AWARD</span><a href="https://cvg.nikkan.co.jp/cvg_osaka_backnumber" target="_blank" rel="noreferrer">第24回キャンパスベンチャーグランプリ大阪<br /><strong>最優秀賞受賞</strong> <span aria-hidden="true">↗</span></a><p>2022年12月、「発達障害児者支援アプリFocus on」の事業プランとしてチームで受賞。</p></div>
+    <dl className="metadata"><div><dt>PERIOD</dt><dd>2022.06–12</dd></div><div><dt>ROLE</dt><dd>ユーザーリサーチ<br />UX・UI設計</dd></div><div><dt>RESEARCH</dt><dd>既存ユーザーへの<br />ヒアリング</dd></div><div><dt>STATUS</dt><dd>共有を支える機能を実装済み<br />掲載資料は設計時のもの</dd></div></dl></div>
    </section>
    <section className="focus-logic wrap" aria-labelledby="focus-logic-title">
     <div className="focus-logic-heading"><span className="eyebrow">DECISION FLOW</span><h2 id="focus-logic-title">調査から、優先順位と実装へ。</h2></div>
