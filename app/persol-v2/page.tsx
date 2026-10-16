@@ -189,7 +189,7 @@ export default function PersolV2() {
               将来の体験設計として、AIが自律的な代理人として発展した場合を想定し、タレント・ディスカバリー・ネットワークやAIエージェントによる転職フェアのコンセプトを構想。
             </p>
             <p className="body-copy">
-              AIアバターの外見と振る舞いについて論文や事例調査も行いました。
+              別のAI面接サービスでは、AIアバターの外見と振る舞いを論文や事例から調査し、印象の比較整理、キャラクターデザインの方向性提案、提案資料の作成を担当しました。
             </p>
             <p className="body-copy">
               こうした検討は、現在の<a href="https://openai.com/index/introducing-dots/" target="_blank" rel="noopener noreferrer">OpenAIのdots</a>や<a href="https://x.ai/bot" target="_blank" rel="noopener noreferrer">xAIのGrok Bot</a>に見られる、文脈を理解し、自律的に動くAIの方向性とも重なると考えています。人がAIとどんな距離感で関わり、何を任せられるのか。目の前の使いやすさだけでなく、その先の関係性まで視野に入れた取り組みとなりました。

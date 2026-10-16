@@ -39,7 +39,7 @@ export default function PersolCase() {
 
     <main>
       <section className="hero wrap" aria-labelledby="project-title">
-        <div className="eyebrow hero-eyebrow"><span>AI × CAREER EXPERIENCE</span><span>8 MONTHS</span></div>
+        <div className="eyebrow hero-eyebrow"><span>AI × CAREER EXPERIENCE</span><span>2024–2026</span></div>
         <div className="title-row">
           <h1 id="project-title">PERSOL<br/><em>AI転職サービス</em></h1>
           <div className="hero-category">UX/UI Design<br/>AI Interaction<span>RESEARCH · CONCEPT DESIGN</span></div>
@@ -52,7 +52,7 @@ export default function PersolCase() {
             <div className="project-map-heading">
               <span>PROJECT STRUCTURE</span>
               <h2 id="project-map-title">プロジェクト全体の構成</h2>
-              <p>約8カ月の中で関わった、4つの領域</p>
+              <p>企画・調査支援から制作まで、関わった4つの領域</p>
             </div>
             <div className="project-map-body">
               <div className="project-map-main">
@@ -74,9 +74,10 @@ export default function PersolCase() {
       <section className="overview wrap section-grid" id="overview" aria-label="プロジェクト概要">
         <Label n="01">OVERVIEW</Label>
         <div>
-          <p className="intro">大規模AI転職サービスに関連する複数の体験設計に、約8カ月間Product Designerとして参加。独立URL型AI面接ではデザイン担当として、接続確認から面接完了までのUX/UIを検討し、複数の選択肢と判断材料をつくりました。</p>
+          <p className="intro">2024年5月から2026年3月まで、大規模AI転職サービスに関連する複数の体験設計に、リサーチ・企画支援からUX/UIの提案・制作へと、時期に応じて担当領域を変えながら参加しました。独立URL型AI面接ではデザイン担当として、接続確認から面接完了までのUX/UIを検討し、複数の選択肢と判断材料をつくりました。</p>
+          <p className="body-copy">2024年は会議参加・事例調査・UI企画を支援。2025年はUX/UIやブランド表現の提案・制作を担当し、2026年3月までは別のAI面接サービスでのアバター調査・デザイン提案などにも関わりました。</p>
           <dl className="metadata">
-            <div><dt>PERIOD</dt><dd>約8カ月</dd></div>
+            <div><dt>PERIOD</dt><dd>2024.05–2026.03<br />企画・調査支援を含む</dd></div>
             <div><dt>ROLE</dt><dd>Product Designer<br/>UX/UI・提案</dd></div>
             <div><dt>TEAM</dt><dd>PERSOL Career<br/>社内外デザインチーム</dd></div>
             <div><dt>FIELD</dt><dd>AI Career<br/>Interaction Design</dd></div>
@@ -235,7 +236,7 @@ export default function PersolCase() {
         <Label n="06">REFLECTION</Label>
         <div>
           <h2>関係者とのレビューを通じたデザインの検討</h2>
-          <p className="body-copy">仕様が変化する新規サービスでは、最初から一つの正解を提示することはできません。約8カ月間、待ち時間、通知、発話状態、例外系などの選択肢を具体的なUIとして提示し、理由を説明しながら関係者と方向性を決めました。</p>
+          <p className="body-copy">仕様が変化する新規サービスでは、最初から一つの正解を提示することはできません。UX/UIの制作では、待ち時間、通知、発話状態、例外系などの選択肢を具体的なUIとして提示し、理由を説明しながら関係者と方向性を決めました。</p>
           <p className="body-copy">詳細なインターフェースを設計する力に加え、PM、リードデザイナー、ディレクター、外部パートナーと共通認識をつくり、不確実な構想を議論可能な形へ変える経験になりました。</p>
           <div className="reflection-line">From interface<br/><em>to relationship.</em></div>
         </div>
@@ -244,12 +245,12 @@ export default function PersolCase() {
       <section className="credits wrap section-grid">
         <Label n="07">ROLE / CREDITS</Label>
         <div>
-          <div className="credits-heading"><h2>私の担当</h2><span>Product Designer / 約8カ月</span></div>
+          <div className="credits-heading"><h2>私の担当</h2><span>Product Designer / UX/UI・Research</span></div>
           <ul>{credits.map((credit,i)=><li key={credit}><span>{String(i+1).padStart(2,'0')}</span>{credit}</li>)}</ul>
           <div className="credit-breakdown">
             <p><strong>親サービス全体</strong><span>リードデザイナーが主導。私は体験分析と改善提案を支援。</span></p>
             <p><strong>独立URL型AI面接</strong><span>私がUX/UIの検討・提案を担当。正式な検証・開発接続はPERSOL Careerが担当。</span></p>
-            <p><strong>ブランディング</strong><span>ディレクター監修下で提案・制作。ネーミング、ロゴ、AIアバターは別担当。</span></p>
+            <p><strong>ブランディング</strong><span>ディレクター監修下でカラー・タイポグラフィ・UIを提案・制作。親サービスのネーミング、ロゴ、Mikaの造形は別担当。</span></p>
             <p><strong>Future Vision</strong><span>私がコンセプトを提案。外部UXパートナーがUX/UIへ具体化。</span></p>
           </div>
           <p className="credit-note">掲載資料にはチームによる成果を含みます。各セクションで、私の担当、協働範囲、他担当者による制作を区別して記載しています。</p>
