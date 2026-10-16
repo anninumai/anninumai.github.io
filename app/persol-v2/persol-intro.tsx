@@ -6,9 +6,9 @@ import { ToolList } from '../tool-list';
 const credits = [
   { role: '事業・サービス開発', names: ['PERSOL CAREER'] },
   { role: 'クリエイティブディレクション', names: ['Hirochika Horiuchi（STUDIO HOLIDAY）'] },
-  { role: 'UX/UIディレクション', scope: 'Dawn・Polaris', names: ['Hirune Imamura'] },
-  { role: 'UX/UIデザインリード', scope: 'Dawn・TS', names: ['Aino Kishimoto'] },
-  { role: 'UX/UIデザインサポート', scope: 'Dawn・Polaris', names: ['Aino Kishimoto'] },
+  { role: 'UX/UIディレクション・デザインリード', scope: 'Dawn・Polaris', names: ['Hirune Imamura'] },
+  { role: 'UX/UIディレクション・デザインリード', scope: 'Dawn_TS', names: ['Aino Kishimoto'] },
+  { role: 'UX/UIデザイン', scope: 'Dawn・Polaris', names: ['Aino Kishimoto'] },
   { role: 'ブランド企画・制作連携', scope: 'WiTTO', names: ['Hitomi Tokuma'] },
   { role: 'ネーミング', scope: 'WiTTO', names: ['Sotaro Funahashi'] },
   { role: '体験設計ディレクション', scope: 'PAIM', names: ['Hirochika Horiuchi〈個人体験〉', 'Kazuhisa Kitamura〈法人体験〉', 'Dan Ushikubo〈A2A対話〉'] },
