@@ -4,21 +4,12 @@ import { useState } from 'react';
 import { ToolList } from '../tool-list';
 
 const credits = [
-  { role: '事業・サービス開発', names: ['PERSOL CAREER'] },
-  { role: 'クリエイティブディレクション', names: ['Hirochika Horiuchi（STUDIO HOLIDAY）'] },
-  { role: 'UX/UIディレクション・デザインリード', scope: 'Dawn・Polaris', names: ['Hirune Imamura'] },
-  { role: 'UX/UIディレクション・デザインリード', scope: 'Dawn_TS', names: ['Aino Kishimoto'] },
-  { role: 'UX/UIデザイン', scope: 'Dawn・Polaris', names: ['Aino Kishimoto'] },
-  { role: 'ブランド企画・制作連携', scope: 'WiTTO', names: ['Hitomi Tokuma'] },
-  { role: 'ネーミング', scope: 'WiTTO', names: ['Sotaro Funahashi'] },
-  { role: 'キャラクターデザイン', scope: 'WiTTO', names: ['Hirochika Horiuchi'] },
-  { role: 'キャラクター体験設計・インタラクションデザイン', scope: 'WiTTO', names: ['Aino Kishimoto'] },
-  { role: '体験設計ディレクション', scope: 'PAIM', names: ['Hirochika Horiuchi〈個人体験〉', 'Kazuhisa Kitamura〈法人体験〉', 'Dan Ushikubo〈A2A対話〉'] },
-  { role: 'UX企画・コンセプト提案', scope: 'PAIM', names: ['Aino Kishimoto'] },
-  { role: 'プロジェクト進行', scope: 'PAIM', names: ['Jun Ebata'] },
-  { role: 'UXデザイン・プロトタイピング', scope: 'PAIM', names: ['FUTUREK'] },
-  { role: '進行・レビュー', scope: 'AI面接官', names: ['Yuta Yasutake'] },
-  { role: 'アバター調査・デザイン', scope: 'AI面接官', names: ['Aino Kishimoto'] },
+  { role: '事業・サービス開発、ブランド企画・制作連携', names: ['PERSOL CAREER'] },
+  { role: 'クリエイティブディレクション、キャラクターデザイン', names: ['Hirochika Horiuchi'] },
+  { role: 'プロジェクトディレクション・進行', names: ['Kazuhisa Kitamura', 'Dan Ushikubo', 'Jun Ebata', 'Yuta Yasutake'] },
+  { role: 'UX/UIディレクション・デザインリード', names: ['Hirune Imamura', 'Aino Kishimoto'] },
+  { role: '将来UX企画/キャラクターリサーチ・デザイン', names: ['Aino Kishimoto'] },
+  { role: 'ネーミング', names: ['Sotaro Funahashi'] },
   { role: 'デザイン・開発協力', names: ['MCD', 'FUTUREK', 'Preferred Networks'] },
 ];
 
@@ -79,8 +70,8 @@ export function PersolIntro() {
           <p className="persol-v2-panel-label">クレジット</p>
           <dl className="persol-v2-credits-list">
             {credits.map((entry) => (
-              <div key={`${entry.role}-${entry.scope ?? ''}`}>
-                <dt>{entry.role}{entry.scope && <span className="persol-v2-credit-scope">（{entry.scope}）</span>}</dt>
+              <div key={entry.role}>
+                <dt>{entry.role}</dt>
                 <dd>{entry.names.map((name) => <span className="persol-v2-credit-name" key={name}>{name}</span>)}</dd>
               </div>
             ))}
