@@ -11,6 +11,8 @@ const credits = [
   { role: 'UX/UIデザイン', scope: 'Dawn・Polaris', names: ['Aino Kishimoto'] },
   { role: 'ブランド企画・制作連携', scope: 'WiTTO', names: ['Hitomi Tokuma'] },
   { role: 'ネーミング', scope: 'WiTTO', names: ['Sotaro Funahashi'] },
+  { role: 'キャラクターデザイン', scope: 'WiTTO', names: ['Hirochika Horiuchi'] },
+  { role: 'キャラクター体験設計・インタラクションデザイン', scope: 'WiTTO', names: ['Aino Kishimoto'] },
   { role: '体験設計ディレクション', scope: 'PAIM', names: ['Hirochika Horiuchi〈個人体験〉', 'Kazuhisa Kitamura〈法人体験〉', 'Dan Ushikubo〈A2A対話〉'] },
   { role: 'UX企画・コンセプト提案', scope: 'PAIM', names: ['Aino Kishimoto'] },
   { role: 'プロジェクト進行', scope: 'PAIM', names: ['Jun Ebata'] },
