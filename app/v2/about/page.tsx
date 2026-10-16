@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 const experience = [
   { year: '2023', title: 'UX/UI Research & Design', detail: 'STUDIO HOLIDAY', logo: '/assets/about/studio-holiday.webp' },
-  { year: '2022', title: 'UX/UI Design Internship', detail: 'SEESAW', logo: '/assets/about/seesaw.webp' },
+  { year: '2021–2022', title: 'UX/UI Design Internship', detail: 'SEESAW', logo: '/assets/about/seesaw.webp' },
   { year: '2021', title: 'Communication Design Internship', detail: 'Landor Tokyo', logo: '/assets/about/landor.webp' },
 ];
 
@@ -55,7 +55,7 @@ export default function AboutV2Page() {
       <section className="about-v2-records wrap" aria-label="経歴と活動" tabIndex={0}>
         <AboutGesture />
         <div className="about-v2-record-grid">
-          <section>
+          <section className="about-v2-experience">
             <h2>Experience</h2>
             <RecordList items={experience} />
           </section>
