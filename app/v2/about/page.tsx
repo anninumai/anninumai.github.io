@@ -71,7 +71,7 @@ export default function AboutV2Page() {
             <h2>Education</h2>
             <dl className="about-v2-education">
               <div>
-                <dt><time dateTime="2020-02">Feb 2020</time><span>–</span><time dateTime="2022-12">Dec 2022</time></dt>
+                <dt><time dateTime="2019-09">Sep 2019</time><span>–</span><time dateTime="2022-12">Dec 2022</time></dt>
                 <dd><strong>Billy Blue College of Design / Torrens University Australia</strong><small>Bachelor of Communication Design（中退）</small></dd>
               </div>
               <div>
