@@ -177,8 +177,10 @@ export function AboutGesture() {
     <div className="about-v2-gesture" ref={imageRef} aria-hidden="true" data-frame={frame + 1}>
       <Image src={gestureFrames[frame]} alt="" width={1122} height={1402} draggable={false} priority unoptimized />
     </div>
-    <article className="about-v2-profile-copy" ref={copyRef} data-story={story + 1} data-compact={aboutStories[story].paragraphs.length > 8} aria-label={`自己紹介と好きなもの ${story + 1} / ${aboutStories.length}`} aria-live="polite" hidden={!gestureShowsProfile(frame)} style={{ width: `calc(${180 + openness * 110} * var(--v2-px, 1px))`, '--about-openness': openness } as CSSProperties}>
-      {aboutStories[story].paragraphs.map((paragraph, index) => <p key={`${aboutStories[story].id}-${index}`}>{paragraph}</p>)}
+    <article className="about-v2-profile-copy" ref={copyRef} data-story={story + 1} data-compact={aboutStories[story].paragraphs.length > 8} aria-live="polite" style={{ width: `calc(${180 + openness * 110} * var(--v2-px, 1px))`, '--about-openness': openness } as CSSProperties}>
+      <div className="about-v2-profile-body" aria-label={`自己紹介と好きなもの ${story + 1} / ${aboutStories.length}`} aria-hidden={!gestureShowsProfile(frame)} data-visible={gestureShowsProfile(frame)}>
+        {aboutStories[story].paragraphs.map((paragraph, index) => <p key={`${aboutStories[story].id}-${index}`}>{paragraph}</p>)}
+      </div>
       <nav className="about-v2-story-pagination" aria-label="自己紹介文を選ぶ">
         {aboutStories.map((item, index) => <button key={item.id} type="button" aria-label={`${index + 1}番目の文章を表示`} aria-current={index === story ? 'true' : undefined} onClick={() => transitionToStory(index)}><span /></button>)}
       </nav>
