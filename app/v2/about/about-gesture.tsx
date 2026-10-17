@@ -134,6 +134,13 @@ export function AboutGesture() {
     const fitCopy = () => {
       section.style.removeProperty('--about-copy-bottom');
       copy.style.removeProperty('--about-fitted-font-size');
+      if (window.matchMedia('(max-width: 760px)').matches) {
+        // Keep every mobile story at the same size as the longest
+        // (CCさくら) story instead of enlarging shorter entries.
+        copy.style.setProperty('--about-fitted-font-size', 'calc(12 * var(--v2-px, 1px))');
+        section.style.setProperty('--about-copy-bottom', `${copy.offsetTop + copy.offsetHeight + 40}px`);
+        return;
+      }
       const maximum = Number.parseFloat(getComputedStyle(copy).fontSize);
       // Prefer fitting above the fold, but never make the whole essay illegibly
       // tiny just to force it into a short phone viewport. No clipped text.

@@ -37,7 +37,7 @@
 @media(max-width:760px){
   .about-v2-records{--about-portrait-height:calc(1800 * var(--v2-px, 1px));padding-top:max(calc(630 * var(--v2-px, 1px)),var(--about-copy-bottom,0px));padding-bottom:calc(100 * var(--v2-px, 1px));touch-action:pan-y}
   .about-v2-record-grid{grid-template-columns:1fr;gap:calc(55 * var(--v2-px, 1px))}
-  .about-v2-profile-copy{top:calc(150 * var(--v2-px, 1px));max-width:76vw;font-size:var(--about-fitted-font-size,calc(calc(12 * var(--v2-px, 1px)) + var(--about-openness)*.7px))}
+  .about-v2-profile-copy{top:calc(150 * var(--v2-px, 1px));max-width:76vw;font-size:var(--about-fitted-font-size,calc(12 * var(--v2-px, 1px)))}
   .about-v2-story-pagination{position:absolute;top:calc(-28 * var(--v2-px, 1px));left:50%;display:flex;justify-content:center;gap:calc(4 * var(--v2-px, 1px));margin:0;transform:translateX(-50%);pointer-events:auto}
   .about-v2-story-pagination button{display:grid;width:calc(12 * var(--v2-px, 1px));height:calc(12 * var(--v2-px, 1px));place-items:center;border:0;background:transparent;cursor:pointer}
   .about-v2-story-pagination button span{display:block;width:calc(3 * var(--v2-px, 1px));height:calc(3 * var(--v2-px, 1px));border-radius:50%;background:#7891b1;opacity:.65;transition:width .2s ease,height .2s ease,opacity .2s ease,border-radius .2s ease}
