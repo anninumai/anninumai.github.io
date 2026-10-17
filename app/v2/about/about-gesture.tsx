@@ -1,18 +1,49 @@
 'use client';
 
 import Image from 'next/image';
-import { useEffect, useLayoutEffect, useReducer, useRef, type CSSProperties } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useReducer, useRef, type CSSProperties } from 'react';
 import { advanceGesture, initialGestureState, gestureFrameAt, gestureFrames, gestureOpenness, gestureShowsProfile } from './gesture-sequence';
 import { aboutStories } from './about-stories';
 
 export function AboutGesture() {
   const imageRef = useRef<HTMLDivElement>(null);
   const copyRef = useRef<HTMLElement>(null);
-  const [{ frame, story }, showFrame] = useReducer(
-    (state: typeof initialGestureState, nextFrame: number) => advanceGesture(state, nextFrame, aboutStories.length),
+  const animationTimers = useRef<number[]>([]);
+  const isAnimating = useRef(false);
+  const [{ frame, story }, dispatch] = useReducer(
+    (state: typeof initialGestureState, action: { type: 'frame'; frame: number } | { type: 'story'; story: number }) => {
+      if (action.type === 'story') return { frame: state.frame, story: action.story, closedSinceOpen: false };
+      return advanceGesture(state, action.frame, aboutStories.length);
+    },
     initialGestureState,
   );
   const openness = gestureOpenness(frame);
+
+  const showFrame = useCallback((nextFrame: number) => dispatch({ type: 'frame', frame: nextFrame }), []);
+  const transitionToStory = useCallback((targetStory: number) => {
+    if (targetStory === story || isAnimating.current) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      dispatch({ type: 'story', story: targetStory });
+      showFrame(0);
+      return;
+    }
+    isAnimating.current = true;
+    animationTimers.current.forEach(window.clearTimeout);
+    animationTimers.current = [];
+    const closing = [1, 2, 3, 4];
+    const opening = [3, 2, 1, 0];
+    closing.forEach((nextFrame, index) => {
+      animationTimers.current.push(window.setTimeout(() => showFrame(nextFrame), index * 55));
+    });
+    const changeAt = closing.length * 55;
+    animationTimers.current.push(window.setTimeout(() => dispatch({ type: 'story', story: targetStory }), changeAt));
+    opening.forEach((nextFrame, index) => {
+      animationTimers.current.push(window.setTimeout(() => {
+        showFrame(nextFrame);
+        if (index === opening.length - 1) isAnimating.current = false;
+      }, changeAt + 35 + index * 55));
+    });
+  }, [showFrame, story]);
 
   useEffect(() => {
     const section = imageRef.current?.closest('.about-v2-records');
@@ -52,8 +83,18 @@ export function AboutGesture() {
       if (pointer.pointerType === 'touch') return;
       updatePosition(pointer.clientX / window.innerWidth);
     };
+    let touchStart: { x: number; y: number } | null = null;
     const onPointerDown = (pointer: PointerEvent) => {
-      if (pointer.pointerType === 'touch') updatePosition(pointer.clientX / window.innerWidth);
+      if (pointer.pointerType === 'touch') touchStart = { x: pointer.clientX, y: pointer.clientY };
+    };
+    const onPointerUp = (pointer: PointerEvent) => {
+      if (pointer.pointerType !== 'touch' || !touchStart) return;
+      const deltaX = pointer.clientX - touchStart.x;
+      const deltaY = pointer.clientY - touchStart.y;
+      touchStart = null;
+      if (Math.abs(deltaX) < 44 || Math.abs(deltaX) <= Math.abs(deltaY) * 1.15) return;
+      const direction = deltaX < 0 ? 1 : -1;
+      transitionToStory((story + direction + aboutStories.length) % aboutStories.length);
     };
     const onKeyDown = (event: Event) => {
       const key = event as KeyboardEvent;
@@ -66,6 +107,7 @@ export function AboutGesture() {
 
     window.addEventListener('pointermove', onPointerMove, { passive: true });
     window.addEventListener('pointerdown', onPointerDown, { passive: true });
+    window.addEventListener('pointerup', onPointerUp, { passive: true });
     section.addEventListener('keydown', onKeyDown);
     return () => {
       disposed = true;
@@ -73,8 +115,14 @@ export function AboutGesture() {
       preloadedImages.length = 0;
       window.removeEventListener('pointermove', onPointerMove);
       window.removeEventListener('pointerdown', onPointerDown);
+      window.removeEventListener('pointerup', onPointerUp);
       section.removeEventListener('keydown', onKeyDown);
     };
+  }, [showFrame, story, transitionToStory]);
+
+  useEffect(() => () => {
+    animationTimers.current.forEach(window.clearTimeout);
+    animationTimers.current = [];
   }, []);
 
   useLayoutEffect(() => {
@@ -129,8 +177,11 @@ export function AboutGesture() {
     <div className="about-v2-gesture" ref={imageRef} aria-hidden="true" data-frame={frame + 1}>
       <Image src={gestureFrames[frame]} alt="" width={1122} height={1402} draggable={false} priority unoptimized />
     </div>
-    <article className="about-v2-profile-copy" ref={copyRef} data-story={story + 1} data-compact={aboutStories[story].paragraphs.length > 8} aria-label={`自己紹介と好きなもの ${story + 1} / ${aboutStories.length}`} hidden={!gestureShowsProfile(frame)} style={{ width: `calc(${180 + openness * 110} * var(--v2-px, 1px))`, '--about-openness': openness } as CSSProperties}>
+    <article className="about-v2-profile-copy" ref={copyRef} data-story={story + 1} data-compact={aboutStories[story].paragraphs.length > 8} aria-label={`自己紹介と好きなもの ${story + 1} / ${aboutStories.length}`} aria-live="polite" hidden={!gestureShowsProfile(frame)} style={{ width: `calc(${180 + openness * 110} * var(--v2-px, 1px))`, '--about-openness': openness } as CSSProperties}>
       {aboutStories[story].paragraphs.map((paragraph, index) => <p key={`${aboutStories[story].id}-${index}`}>{paragraph}</p>)}
+      <nav className="about-v2-story-pagination" aria-label="自己紹介文を選ぶ">
+        {aboutStories.map((item, index) => <button key={item.id} type="button" aria-label={`${index + 1}番目の文章を表示`} aria-current={index === story ? 'true' : undefined} onClick={() => transitionToStory(index)}><span /></button>)}
+      </nav>
     </article>
   </>;
 }

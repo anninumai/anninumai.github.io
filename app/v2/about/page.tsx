@@ -12,19 +12,19 @@ export const metadata: Metadata = {
 };
 
 const experience = [
-  { year: '2023–2026', title: 'UX/UI Research & Design', detail: 'STUDIO HOLIDAY', logo: '/assets/about/studio-holiday.webp' },
-  { year: '2021–2022', title: 'UX/UI Design Internship', detail: 'SEESAW', logo: '/assets/about/seesaw.webp' },
-  { year: '2021', title: 'Communication Design Internship', detail: 'Landor Tokyo', logo: '/assets/about/landor.webp' },
+  { year: '2023–2026', title: 'UX/UI Research & Design', detail: 'STUDIO HOLIDAY', logo: '/assets/about/studio-holiday.webp', href: 'https://studioholiday.jp/' },
+  { year: '2021–2022', title: 'UX/UI Design Internship', detail: 'SEESAW', logo: '/assets/about/seesaw.webp', href: 'https://seesaw-design.co.jp/' },
+  { year: '2021', title: 'Communication Design Internship', detail: 'Landor Tokyo', logo: '/assets/about/landor.webp', href: 'https://landor.com/ja/' },
 ];
 
 const recognition = [
-  { year: '2026', title: '電通テクノロジーとアイデアの学校', detail: 'Silver Award' },
+  { year: '2026', title: '電通テクノロジーとアイデアの学校', detail: 'Silver Award', href: 'https://www.dentsu.co.jp/careers/internship.html' },
   { year: '2025', title: 'Lens — Memory Maker', detail: 'SHIBUYA QWS 第22期採択', href: '/v2/lens' },
   { year: '2022', title: 'Focus on', detail: 'キャンパスベンチャーグランプリ大阪 最優秀賞', href: '/v2/focus-on' },
 ];
 
 const exhibitions = [
-  { year: '2026', title: 'OCTOMORPH', detail: 'メディア芸術祭アフターイベント｜渋谷サクラステージ 4F・404 Not Found' },
+  { year: '2026', title: 'OCTOMORPH', detail: 'メディア芸術祭アフターイベント｜渋谷サクラステージ 4F・404 Not Found', href: '/v2/octomorph' },
   { year: '2026', title: 'Knitted VJ System', detail: '攻殻機動隊展 Ghost and the Shell × TOKYO NODE', href: '/v2/knitted-vj-system' },
   { year: '2026', title: 'Knitted Display', detail: 'んあむぃむぉにょ展「暮らしの思想」', href: '/v2/knitted-display' },
   { year: '2025', title: 'Ryusei Wave', detail: '玉川髙島屋S・C', href: '/v2/ryusei-wave' },
@@ -41,8 +41,9 @@ function RecordList({ items }: { items: Entry[] }) {
       <span className="about-v2-record-description"><strong>{item.title}</strong><small>{item.detail}</small></span>
       <span className="about-v2-record-arrow" aria-hidden="true">{item.href ? '↗' : ''}</span>
     </>;
+    const external = item.href?.startsWith('http');
     return item.href
-      ? <a key={`${item.year}-${item.title}`} href={`${item.href}/`}>{content}</a>
+      ? <a key={`${item.year}-${item.title}`} href={external ? item.href : `${item.href}/`} target={external ? '_blank' : undefined} rel={external ? 'noreferrer' : undefined}>{content}</a>
       : <div key={`${item.year}-${item.title}`}>{content}</div>;
   })}</div>;
 }
