@@ -18,7 +18,7 @@ const experience = [
 ];
 
 const recognition = [
-  { year: '2026', title: '電通テクノロジーとアイデアの学校', detail: 'Silver Award', href: 'https://www.dentsu.co.jp/careers/internship.html' },
+  { year: '2026', title: '電通テクノロジーとアイデアの学校', detail: 'Silver Award', href: 'https://www.career.dentsu.jp/intern/technology/2026/' },
   { year: '2025', title: 'Lens — Memory Maker', detail: 'SHIBUYA QWS 第22期採択', href: '/v2/lens' },
   { year: '2022', title: 'Focus on', detail: 'キャンパスベンチャーグランプリ大阪 最優秀賞', href: '/v2/focus-on' },
 ];
